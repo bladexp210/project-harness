@@ -76,7 +76,7 @@ flowchart LR
 
 ## Worked example
 
-[Acme PTO FAQ](examples/acme-pto-faq/README.md) is a fictional HR/ops assistant: cite a clause from a single policy file, or refuse and log. Includes a stdlib Python reader, ten golden tests, and a non-engineer handover guide. It demonstrates judgment and evaluation — it is not a hosted LLM product.
+[Acme PTO FAQ](examples/acme-pto-faq/README.md) is a fictional HR/ops assistant: cite a clause from a single policy file, or refuse and log. Includes a stdlib Python reader, ten golden tests, and a non-engineer handover guide. The reader is **deterministic-first**. An optional LLM or webhook may sit behind the same cite-or-refuse gates. It is not a hosted LLM product.
 
 ## Quality bar and repository hygiene
 

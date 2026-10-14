@@ -8,8 +8,8 @@ updated: 2026-10-14
 
 # Project Harness
 
-![Validate](https://github.com/bladexp210/project-harness/actions/workflows/validate-md.yml/badge.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Validate](https://github.com/bladexp210/project-harness/actions/workflows/validate-md.yml/badge.svg)](https://github.com/bladexp210/project-harness/actions/workflows/validate-md.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **Problem this solves:** Internal AI tools often start as vibe-coded one-offs — insecure, hard to hand over, and impossible to maintain. This harness standardizes how teams **scope** a problem, **direct coding agents** inside bounds, **observe** work (optional Langfuse / LiteLLM), and **hand over or retire** the result.
 

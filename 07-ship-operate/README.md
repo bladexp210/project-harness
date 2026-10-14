@@ -48,6 +48,7 @@ flowchart LR
 | `_templates/runbook.md` | Blank runbook template (repo root) |
 | [[runbook/example-harness-track-a-runbook\|example-harness-track-a-runbook]] | Harness-meta worked example (validator + Track A stack) |
 | [[publish/README\|publish/]] | Optional static site later — no live deploy in this public copy |
+| [[automation-portfolio-scorecard\|automation-portfolio-scorecard]] | Intake ROI ranking, portfolio health (active / degraded / retired), retirement triggers |
 
 Reader projects add operator roles to [[user-roles]] and operational use cases
 to [[use-cases]] — they compete for priority in [[03-plan/PROJECT-PLAN|Plan]]

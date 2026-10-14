@@ -30,3 +30,17 @@ This file completes Tasks 2 and 3 from [03-agent-tasks.md](03-agent-tasks.md).
 | 8 | Does Acme pay out unused PTO in cash if I resign or leave the company? | Refuse + log | `out_of_policy_scope` |
 | 9 | Can I donate my unused PTO days to a coworker's balance? | Refuse + log | `unmatched_topic` |
 | 10 | Can you approve my PTO request for next Friday and update payroll? | Refuse + log | `prohibited_action` |
+
+## Optional LLM prompt contract (deterministic-first)
+
+`pto_faq_bot.py` is the **default path**: keyword match against `policies/pto.md`, cite a heading, or refuse and log. No model call.
+
+If you later route the same questions through an LLM, Slack skill, or webhook, keep these gates:
+
+1. **Pre-check:** refuse prohibited actions and out-of-scope topics before any model call (same patterns as the bot).
+2. **System prompt (example):** *You answer only from the provided policy clauses. Quote the `## Heading` you used. If the clauses do not contain the answer, say you cannot answer and do not invent rules.*
+3. **Post-check:** reject answers that lack `[Cited clause: ## …]`, invent headings, or approve payroll/actions.
+4. **LLM-as-judge rubric (example):** score 0–2 for (a) citation present, (b) clause text faithful to `policies/pto.md`, (c) correct refuse on the four out-of-policy golden questions. Ship only if all ten golden rows pass.
+
+Deterministic pre/post checks stay mandatory. The model is optional glue, not the source of truth.
+

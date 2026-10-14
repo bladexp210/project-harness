@@ -37,3 +37,15 @@ Use this when deciding what to automate next, what to keep, and what to retire. 
 - Nobody will own the runbook
 
 Record retirements under chapter `08-sunset/` for real products.
+
+## 90-day adoption and value realization (sample — fictional)
+
+Use after an automation is live. Numbers below are **illustrative** for a hiring reviewer, not employer metrics.
+
+| Automation | Champion owner | WAU % (start → day 90) | Verified deflection / time saved | Human escalation rate | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Acme PTO FAQ | HR ops lead | 18% → 62% of HR portal askers | ~40 repetitive policy pings / week deflected | 8% (logged refusals → policy gaps) | Active |
+| Weekly research digest draft | Comms | 25% → 30% | Low; feed drift | 22% | Degraded — fix or retire |
+
+**HITL quality checks:** citation present, refuse when silent, three-strike rule for repeated unanswered questions (see [Acme maintainer handover](../examples/acme-pto-faq/06-maintainer-handover.md)).
+

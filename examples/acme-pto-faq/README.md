@@ -7,7 +7,7 @@ tags: [example]
 
 # Acme PTO FAQ
 
-Fictional internal tool: problem and constraints first, then a small **stdlib Python** reader (not an LLM product), a 10-question golden suite, and an HR handover guide.
+Fictional internal tool: problem and constraints first, then a **deterministic-first** stdlib Python reader with optional LLM/webhook routes behind the same citation and refuse-or-log contract, a 10-question golden suite, and an HR handover guide. The shipped bot enforces pre/post checks without calling a model; see [05-answer-procedure-and-eval-set.md](05-answer-procedure-and-eval-set.md) for the optional LLM prompt contract.
 
 | Step | File | Purpose |
 | :--- | :--- | :--- |

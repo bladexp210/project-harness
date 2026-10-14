@@ -11,7 +11,7 @@ updated: 2026-10-14
 [![Validate](https://github.com/bladexp210/project-harness/actions/workflows/validate-md.yml/badge.svg)](https://github.com/bladexp210/project-harness/actions/workflows/validate-md.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Problem this solves:** Internal AI tools often start as vibe-coded one-offs — insecure, hard to hand over, and impossible to maintain. This harness standardizes how teams **scope** a problem, **direct coding agents** inside bounds, **observe** work (optional Langfuse / LiteLLM), and **hand over or retire** the result.
+**Problem this solves:** Internal AI tools often start as vibe-coded one-offs — insecure, hard to hand over, and impossible to maintain. This harness standardizes how teams **scope** a problem, **direct agents** inside bounds, **observe** work (optional Langfuse / LiteLLM), and **hand over or retire** the result — whether the build target is a **coding-agent task**, a **Slack/Claude skill**, or an **n8n/Make workflow**.
 
 A book-as-folder for humans who write specs and acceptance gates. Agents run bounded tasks. Maintainers get runbooks and clear retirement rules.
 

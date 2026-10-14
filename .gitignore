@@ -8,3 +8,6 @@ __pycache__/
 logs/sessions/
 outputs/
 05-build/execution-tools/track-a/.openhands-state/
+
+# Acme FAQ local refusal log
+examples/acme-pto-faq/unanswered_questions.jsonl

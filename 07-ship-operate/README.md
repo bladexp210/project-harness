@@ -138,3 +138,7 @@ health checks, one incident path, and one recurring task. Empty `runbook/`
 after shipping to production is a Canon Gap for your project.
 
 Harness readers: start from [[runbook/example-harness-track-a-runbook]].
+
+## Portfolio prioritization
+
+- [Automation portfolio scorecard](automation-portfolio-scorecard.md) — intake ROI ranking and sample portfolio health table.

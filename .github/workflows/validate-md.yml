@@ -18,3 +18,9 @@ jobs:
 
       - name: Markdown validator
         run: python scripts/validate_md.py --all
+
+      - name: Unit tests (scripts)
+        run: python -m unittest discover -s scripts -p "test_*.py" -v
+
+      - name: Unit tests (Acme PTO FAQ example)
+        run: python -m unittest discover -s examples/acme-pto-faq -p "test_*.py" -v

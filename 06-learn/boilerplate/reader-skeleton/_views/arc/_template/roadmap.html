@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your product — Arc YOUR-ARC roadmap</title>
+  <link rel="stylesheet" href="../../_shared/shell.css" />
+  <style>
+    .session-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: 0.75rem;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .session-board { grid-template-columns: 1fr; }
+    }
+    .session-column {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+    }
+    .session-column-header {
+      padding: 0.65rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--border);
+      border-radius: 10px 10px 0 0;
+    }
+    .session-column[data-col="todo"] .session-column-header {
+      background: color-mix(in srgb, var(--muted) 25%, var(--surface));
+    }
+    .session-column[data-col="doing"] .session-column-header {
+      background: color-mix(in srgb, var(--accent) 25%, var(--surface));
+    }
+    .session-column[data-col="done"] .session-column-header {
+      background: color-mix(in srgb, var(--promote) 25%, var(--surface));
+    }
+    .session-column-body {
+      flex: 1;
+      padding: 0.5rem;
+      min-height: 100px;
+    }
+    .session-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.55rem 0.65rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.8rem;
+    }
+    .session-card-title { font-weight: 600; margin-bottom: 0.25rem; }
+    .session-card-meta { color: var(--muted); font-size: 0.72rem; }
+  </style>
+</head>
+<body>
+  <nav id="breadcrumb" class="views-breadcrumb"></nav>
+  <div id="frozen-banner"></div>
+  <header>
+    <h1 id="arc-title"></h1>
+    <p id="mission-line"></p>
+  </header>
+  <main>
+    <section>
+      <h2>Sessions</h2>
+      <div id="session-kanban" class="session-board"></div>
+    </section>
+    <section><h2>Permanent defer</h2><div id="deferrals-table"></div></section>
+    <section>
+      <h2>Target snapshot</h2>
+      <p id="target-one-line"></p>
+      <ul id="success-criteria"></ul>
+    </section>
+    <section><h2>Current session</h2><p id="current-session"></p></section>
+  </main>
+  <script type="application/json" id="page-data">
+{
+  "arcId": "YOUR-ARC",
+  "title": "Session roadmap YOUR-ARC",
+  "missionLine": "YOUR mission boundary — one line.",
+  "frozen": false,
+  "closeHref": "close.html",
+  "sessions": [],
+  "deferrals": [
+    { "item": "YOUR defer item", "rationale": "YOUR rationale" }
+  ],
+  "targetSnapshot": {
+    "oneLine": "YOUR target snapshot one-liner at arc end state.",
+    "successCriteria": [
+      "YOUR success criterion 1"
+    ]
+  },
+  "currentSession": { "id": null, "focus": "Idle — arc not started" }
+}
+  </script>
+  <script src="../../_shared/export.js"></script>
+  <script src="../../_shared/nav.js"></script>
+  <script src="../../_shared/render.js"></script>
+  <script>
+    function sessionKanbanColumn(status) {
+      var s = String(status || "todo").toLowerCase();
+      if (s === "done") return "done";
+      if (s === "doing" || s === "active" || s === "in-progress") return "doing";
+      return "todo";
+    }
+
+    function renderSessionKanban(containerId, sessions) {
+      var root = document.getElementById(containerId);
+      if (!root) return;
+      var cols = { todo: [], doing: [], done: [] };
+      (sessions || []).forEach(function (sess) {
+        cols[sessionKanbanColumn(sess.status)].push(sess);
+      });
+      var labels = { todo: "Todo", doing: "Doing", done: "Done" };
+      root.innerHTML = ["todo", "doing", "done"].map(function (col) {
+        var cards = cols[col].map(function (s) {
+          return (
+            '<div class="session-card">' +
+            '<div class="session-card-title">' + s.id + "</div>" +
+            '<div class="session-card-meta">' + (s.primary || "") + "</div>" +
+            (s.branch ? '<div class="session-card-meta">' + s.branch + "</div>" : "") +
+            "</div>"
+          );
+        }).join("");
+        return (
+          '<div class="session-column" data-col="' + col + '">' +
+          '<div class="session-column-header">' + labels[col] + " (" + cols[col].length + ")</div>" +
+          '<div class="session-column-body">' + (cards || '<p style="color:var(--muted);font-size:0.75rem;margin:0">—</p>') + "</div>" +
+          "</div>"
+        );
+      }).join("");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var data = ViewsNav.readPageData();
+
+      ViewsNav.renderBreadcrumb("breadcrumb", [
+        { label: "Project", href: "../../project/index.html" },
+        { label: "Arc YOUR-ARC", href: null }
+      ]);
+
+      if (data.frozen) {
+        document.getElementById("frozen-banner").innerHTML =
+          '<div class="read-only-banner" style="margin:1rem 1.5rem 0">' +
+          'Arc complete — see <a href="' + (data.closeHref || "close.html") + '">close.html</a>' +
+          "</div>";
+      }
+
+      document.getElementById("arc-title").textContent = data.title || data.arcId || "Arc roadmap";
+      document.getElementById("mission-line").textContent = data.missionLine || "";
+
+      renderSessionKanban("session-kanban", data.sessions);
+
+      ViewsRender.renderTable(
+        "deferrals-table",
+        ["Item", "Rationale"],
+        (data.deferrals || []).map(function (d) {
+          return [d.item, d.rationale];
+        })
+      );
+
+      var snap = data.targetSnapshot || {};
+      document.getElementById("target-one-line").textContent = snap.oneLine || "";
+      var criteria = snap.successCriteria || [];
+      document.getElementById("success-criteria").innerHTML = criteria.length
+        ? criteria.map(function (c) { return "<li>" + c + "</li>"; }).join("")
+        : "";
+
+      var cur = data.currentSession || {};
+      document.getElementById("current-session").textContent =
+        cur.id ? cur.id + " — " + (cur.focus || "") : (cur.focus || "—");
+    });
+  </script>
+</body>
+</html>

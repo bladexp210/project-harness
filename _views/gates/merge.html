@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Harness — Merge gate (S48)</title>
+  <link rel="stylesheet" href="../_shared/shell.css" />
+</head>
+<body>
+  <nav id="breadcrumb" class="views-breadcrumb"></nav>
+  <header>
+    <h1>Merge gate — Session 48</h1>
+    <p>Final approval before merge to main. Validator green + close batch committed + human runs git (D-001).</p>
+  </header>
+  <div class="toolbar">
+    <button type="button" class="primary" id="copy">Copy as markdown</button>
+    <button type="button" id="previewBtn">Preview export</button>
+    <span class="hint">Gate: merge · Arc: s48-html-views</span>
+  </div>
+  <main>
+    <section id="gate-decide-will" class="gate-section">
+      <h2>What your review will decide</h2>
+      <h3>Will decide</h3>
+      <ol id="will-decide-list" class="gate-list"></ol>
+      <h3>Will not decide</h3>
+      <ol id="will-not-decide-list" class="gate-list"></ol>
+    </section>
+    <section id="gate-questions" class="gate-section">
+      <h2>Questions you need to answer</h2>
+      <ol id="questions-list" class="gate-questions"></ol>
+    </section>
+    <section id="gate-evidence" class="gate-section">
+      <h2>Evidence</h2>
+      <table class="views-table" id="evidence-table">
+        <thead>
+          <tr><th>Question</th><th>Where to look</th><th>Pass when</th><th>Your check</th></tr>
+        </thead>
+        <tbody id="evidence-body"></tbody>
+      </table>
+    </section>
+    <section id="gate-rule" class="gate-section">
+      <h2>Decision rule</h2>
+      <p id="decision-rule" class="gate-rule"></p>
+    </section>
+    <section id="gate-scope" class="gate-section gate-scope">
+      <h2>Scope confirmation (export)</h2>
+      <p style="color:var(--muted);font-size:0.875rem;margin:0 0 0.75rem">Past tense — filled into export after you approve.</p>
+      <div class="scope-block">
+        <h3>You signed off that</h3>
+        <textarea id="scope-signed" rows="3"></textarea>
+      </div>
+      <div class="scope-block">
+        <h3>You did not sign off that</h3>
+        <textarea id="scope-not-signed" rows="3"></textarea>
+      </div>
+      <div class="gate-answer">
+        <span>Gate approved?</span>
+        <label><input type="radio" name="gate-approved" value="yes" /> yes</label>
+        <label><input type="radio" name="gate-approved" value="no" checked /> no</label>
+      </div>
+    </section>
+  </main>
+  <pre id="preview" aria-label="Export preview"></pre>
+  <div id="toast">Copied to clipboard</div>
+
+  <script type="application/json" id="page-data">
+{
+  "gate": "merge",
+  "session": 48,
+  "arc": "s48-html-views",
+  "willDecide": [
+    "Merge session branch to main",
+    "Close batch is committed"
+  ],
+  "willNotDecide": [
+    "Further implementation on this branch",
+    "Starting next session automatically"
+  ],
+  "questions": [
+    "Did validate_md.py --all pass with 0 failures?",
+    "Is the close batch committed on the session branch?",
+    "Are you ready to run merge on the host shell (D-001)?"
+  ],
+  "evidence": [
+    { "question": "Validator green", "where": "python scripts/validate_md.py --all", "passWhen": "0 failures" },
+    { "question": "Close batch", "where": "git log on session branch", "passWhen": "Close checklist A–D committed" },
+    { "question": "Validate gate", "where": "Prior validate export or chat", "passWhen": "Human approved handoff docs" },
+    { "question": "Git merge", "where": "Host shell per constraints/host", "passWhen": "Human runs checkout main && merge" }
+  ],
+  "decisionRule": "Merge only if validator is green, validate gate passed, and close batch is committed."
+}
+  </script>
+
+  <script src="../_shared/export.js"></script>
+  <script src="../_shared/nav.js"></script>
+  <script src="../_shared/gate.js"></script>
+  <script>
+    ViewsGate.init({
+      exportedFrom: "_views/gates/merge.html",
+      gateLabel: "Merge gate",
+      breadcrumb: [
+        { label: "Project", href: "../project/index.html" },
+        { label: "Merge gate", href: null }
+      ]
+    });
+  </script>
+</body>
+</html>

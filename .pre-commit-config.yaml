@@ -1,0 +1,48 @@
+# Dimension 5 — Hooks. Fires at commit time, no bypass possible.
+#
+# One-time setup (Windows):
+#   pip install pre-commit
+#   pre-commit install --install-hooks
+#   pre-commit install --hook-type commit-msg
+#
+# Fast track: pre-commit run --all-files   (you own the outcome)
+# Keep versions fresh: pre-commit autoupdate
+#
+# S9 note: link-resolution (D-003) needs the full note index and runs only
+# when validate_md.py is invoked with --all. The hook below checks staged
+# files only (fast path). Run periodically:
+#   python scripts/validate_md.py --all
+# or add a CI job with --all so dangling [[wiki-links]] are caught.
+
+repos:
+  # Secret detection — Tier 1, non-negotiable
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0
+    hooks:
+      - id: gitleaks
+
+  # Conventional Commits — feeds post-mortems and git archaeology
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.4.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+
+  # Vault integrity — frontmatter, export artifacts, indented headings, budgets
+  - repo: local
+    hooks:
+      - id: validate-md
+        name: validate markdown (frontmatter + export artifacts + budgets)
+        entry: python scripts/validate_md.py
+        language: python
+        additional_dependencies: [pyyaml]
+        # .md gets all checks except link-resolution (needs --all).
+        # .yaml/.yml/.py get NUL/UTF-8 + line-budget only.
+        files: '\.(md|markdown|ya?ml|py)$'
+
+  # When code lands in this repo, uncomment (per overview.md dimension 5):
+  # - repo: https://github.com/astral-sh/ruff-pre-commit
+  #   rev: v0.6.9
+  #   hooks:
+  #     - id: ruff
+  #     - id: ruff-format

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mockup: BPMN2 Collaboration</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 1.5rem auto; padding: 0 1rem; }
+    .banner { background: #fef3c7; border: 1px solid #d97706; padding: 0.6rem 1rem; margin-bottom: 1rem; border-radius: 4px; font-size: 0.9rem; }
+    .pools { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
+    .pool { flex: 1; min-width: 10rem; border: 2px solid #333; padding: 0.75rem; }
+    .msg { text-align: center; margin: 0.75rem 0; font-size: 0.9rem; color: #2563eb; }
+    .box { background: #e8e8e8; border: 1px solid #333; padding: 0.4rem; margin: 0.25rem 0; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="banner"><strong>FICTITIOUS</strong> — BPMN2 <em>Collaboration</em> · L2 · dynamic</div>
+  <h1>BPMN2 — Collaboration (two pools)</h1>
+  <div class="pools">
+    <div class="pool"><strong>OrderLine</strong><div class="box">Send order</div></div>
+    <div class="pool"><strong>Payment Provider</strong><div class="box">Authorize</div></div>
+  </div>
+  <div class="msg">—— message flow: PaymentRequest ——→</div>
+  <div class="msg">←—— message flow: Authorization ——</div>
+  <p><strong>Shows well:</strong> message flows between pools.</p>
+  <p><strong>Poor at:</strong> steps inside each pool (add Process diagram per pool).</p>
+</body>
+</html>

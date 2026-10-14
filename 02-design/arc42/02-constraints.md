@@ -1,0 +1,101 @@
+---
+title: "arc42 §2 — Constraints"
+chapter: 02
+status: reference
+audience: [novice, seasoned, both]
+tags: [arc42, design, harness]
+---
+
+# arc42 §2 — Constraints
+
+**Question answered:** What limits design and implementation choices for the
+whole system?
+
+> [!NOTE] REAL — harness-meta
+> Constraints for **this repo**. Single source of truth lives in
+> `03-plan/constraints/` — this section indexes and summarizes; it does not
+> duplicate every row.
+
+## Constraint sources
+
+| Layer | File | Scope |
+| :---- | :--- | :---- |
+| Global (inherited) | [[global]] | Every reader inherits — repo discipline, budgets, AI execution |
+| Host (reader machine) | [[host\|constraints/host]] | OS, shell, copy-paste dialect, D-001 instance |
+| Project (this harness) | [[03-plan/constraints/project]] | Tool choices, git layout, Track A/B, harness-specific scope |
+
+Open the full files before changing behavior — §2 is the arc42 index.
+
+## Organizational and process
+
+| Constraint | In this harness | Source |
+| :--------- | :-------------- | :----- |
+| Session ritual | Branch `session-NN/<topic>`; Plan → Proceed → Execute; close draft before merge | [[session-workflow]], `project.md` |
+| Git writes on host shell | Human runs commit, merge, push (D-001) per [[host\|constraints/host]] | `host.md`, [[Agents.md\|Agents]] |
+| Protected `main` | Merge only after human validates work diff + handoff docs | `project.md` |
+| Atomic commits | One logical change per commit; Conventional Commits | [[global]] |
+| Significant decisions → ADR | Red-team challenge before final; index in §9 | [[global]], [[09-architectural-decisions]] |
+| Meta-work scope | STATE, dashboard, `context/system/` on session branches — not arbitrary build tasks | `project.md` |
+
+## Technical
+
+| Constraint | In this harness | Source |
+| :--------- | :-------------- | :----- |
+| Docs-only product | Book-as-folder-structure; no reader app code in this repo | `project.md` |
+| Track B authoring | Cursor IDE agent + `AGENTS.md` load table today | `project.md`, [[ADR-007-dual-execution-tracks]] |
+| Track A build target | OpenHands + LiteLLM compose when Docker ready | `project.md`, [[track-a-setup]] |
+| Deterministic context | Tasks name `context_load` paths — no vector search | [[context-loader]], `project.md` |
+| Validator on every commit | `validate_md.py` + pre-commit; frontmatter required | [[global]] |
+| Diagram budgets | ≤ 20 Mermaid nodes ([[ADR-002-modeling-conventions]]); separate Container vs Deployment canvases | [[diagram-taxonomy]], `viz/` |
+| No secrets in repo | gitleaks on commit; `.env` never committed | [[global]] |
+
+## Conventions
+
+| Constraint | In this harness | Source |
+| :--------- | :-------------- | :----- |
+| Chapter folders | `NN-short-title/` kebab-case ([[ADR-001-chapter-folder-naming]]) | ADR-001 |
+| Teaching vs artifact zones | ADR-006 delimiters; fog-word lint on artifact zones | [[ADR-006-teaching-block-convention]] |
+| Reader-facing gates | Plain language; numbered scope lists ([[ADR-008-reader-facing-language-and-visuals]]) | ADR-008 |
+| Removal vocabulary | prune · retire · sunset ([[ADR-003-removal-vocabulary]]) | ADR-003 |
+| Failure conditions | Every pattern names when not to apply ([[ADR-005-failure-condition-convention]]) | ADR-005 |
+
+## Budgets (split triggers)
+
+Inherited from [[global]] — machine-checked by `validate_md.py`:
+
+| Artifact | Budget | Over-budget action |
+| :------- | :----- | :----------------- |
+| Source module | ≤ 300 lines | Decompose or renegotiate + DEBT-LEDGER |
+| Layer 1 context file | ≤ 200 lines | Move detail to Layer 2 |
+| TASK.md | ≤ 100 lines | Decompose the task |
+| Agent yaml | ≤ 60 lines | Fork a specialist role |
+
+Grace band: ≤ 5% over = warning; > 5% = commit blocked.
+
+## Out of scope (project-level)
+
+From `project.md` — not constraints on the *method*, but boundaries on *this
+repo*:
+
+| Item | Why |
+| :---- | :---- |
+| Reader's product codebase | Separate repo when reader builds |
+| `_playground/` in agent context | Experiments — not canon until promoted |
+| `_inbox/` as canon | Intake only until promoted to chapter paths |
+
+## ESL checklist (this section)
+
+| Rule | Pass |
+| :---- | :---- |
+| Link don't duplicate | Full rows in `constraints/` |
+| Global + host + project split | All three sources indexed |
+| Applies everywhere | Process, technical, and convention rows |
+| Product fork reminder | Reader replaces `project.md` |
+
+## Where to go next
+
+- **Global guardrails:** [[global]]
+- **Host profile:** [[host|constraints/host]]
+- **Harness project file:** [[03-plan/constraints/project]]
+- **Solution strategy (§4):** [[04-solution-strategy]]
+- **Section index:** [[README]]

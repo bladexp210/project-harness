@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 01 — ICOM view (experimental)</title>
+  <style>
+    :root {
+      --box: #e8e8e8;
+      --border: #333;
+      --accent: #2563eb;
+      --muted: #555;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 52rem;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+      line-height: 1.45;
+      color: #111;
+    }
+    .banner {
+      background: #fef3c7;
+      border: 1px solid #d97706;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    h1 { font-size: 1.35rem; margin-bottom: 0.25rem; }
+    .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .idef0 {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 0.5rem 0.75rem;
+      align-items: center;
+      margin: 1.5rem 0;
+    }
+    .slot { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); text-align: center; }
+    .controls { grid-column: 2; }
+    .inputs { grid-column: 1; grid-row: 2; }
+    .function { grid-column: 2; grid-row: 2; }
+    .outputs { grid-column: 3; grid-row: 2; }
+    .mechanisms { grid-column: 2; grid-row: 3; }
+    .box {
+      background: var(--box);
+      border: 2px solid var(--border);
+      padding: 0.75rem 1rem;
+      border-radius: 2px;
+      min-height: 4rem;
+    }
+    .function .box {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 1.25rem;
+    }
+    .box ul { margin: 0; padding-left: 1.1rem; font-size: 0.9rem; }
+    .box a { color: var(--accent); }
+    .arrow-h { text-align: center; color: var(--muted); font-size: 1.25rem; }
+    footer { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="banner" role="status">
+    <strong>Experimental</strong> — lives in <code>_playground/</code>. Not loaded by agents.
+    Canon spec: <a href="../../../04-your-agents/tasks/01-threat-model-premortem.md">task 01 markdown</a>.
+  </div>
+
+  <h1>Task 01 — Threat-model pre-mortem</h1>
+  <p class="subtitle">ICOM / IDEF0-style view · labels match task markdown sections</p>
+
+  <div class="idef0" role="figure" aria-label="ICOM diagram for task 01">
+    <div class="slot controls">Controls</div>
+    <div class="controls box">
+      <ul>
+        <li><a href="../../../03-plan/constraints/global.md">global constraints</a></li>
+        <li>Scope — modify: threat-model review log only</li>
+        <li>Gherkin acceptance criteria</li>
+      </ul>
+    </div>
+
+    <div class="slot inputs">Inputs</div>
+    <div class="inputs box">
+      <ul>
+        <li><a href="../../../02-design/threat-model.md">threat-model</a></li>
+        <li><a href="../../../02-design/decisions/ADR-005-failure-condition-convention.md">ADR-005</a></li>
+        <li><a href="../../../research/red-team-seed.md">red-team seed</a></li>
+        <li><a href="../../../research/lifecycle-playbook-seed.md">playbook seed</a></li>
+      </ul>
+    </div>
+
+    <div class="function box">Pre-mortem<br>review</div>
+
+    <div class="slot outputs">Outputs</div>
+    <div class="outputs box">
+      <ul>
+        <li><code>## Review log</code> in threat-model.md</li>
+        <li>Gate B pass/fail evidence</li>
+        <li>Escalation if must-have gap</li>
+      </ul>
+    </div>
+
+    <div class="slot mechanisms">Mechanisms</div>
+    <div class="mechanisms box">
+      <ul>
+        <li>red-team agent</li>
+        <li><code>task_context.py</code> → stripped context</li>
+        <li><a href="../../../05-build/execution-tools/openhands.md">OpenHands</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="arrow-h" aria-hidden="true">↓ next task (placeholder) ↓</p>
+
+  <footer>
+    <p>Playground pilot · updated <time datetime="2026-06-12">2026-06-12</time> ·
+    promote to <code>viz/icom/task-01.html</code> when stable ·
+    <a href="../../README.md">playground rules</a></p>
+  </footer>
+</body>
+</html>

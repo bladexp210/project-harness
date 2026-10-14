@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mockup: BPMN2 Choreography</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 1.5rem auto; padding: 0 1rem; }
+    .banner { background: #fef3c7; border: 1px solid #d97706; padding: 0.6rem 1rem; margin-bottom: 1rem; border-radius: 4px; font-size: 0.9rem; }
+    .choreo { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+    .participant { border: 2px solid #333; padding: 0.5rem 0.75rem; font-size: 0.85rem; }
+    .interaction { border: 1px dashed #2563eb; padding: 0.4rem 0.6rem; font-size: 0.8rem; background: #eff6ff; }
+  </style>
+</head>
+<body>
+  <div class="banner"><strong>FICTITIOUS</strong> — BPMN2 <em>Choreography</em> · L3 · dynamic</div>
+  <h1>BPMN2 — Choreography (who invokes whom)</h1>
+  <div class="choreo">
+    <span class="participant">Customer</span>
+    <span class="interaction">initiates PlaceOrder</span>
+    <span class="participant">OrderLine</span>
+    <span class="interaction">invokes Charge</span>
+    <span class="participant">Payment</span>
+  </div>
+  <p><strong>Shows well:</strong> public message exchange contract between parties.</p>
+  <p><strong>Poor at:</strong> internal lane work (use Process inside pool).</p>
+</body>
+</html>

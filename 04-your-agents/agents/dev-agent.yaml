@@ -1,0 +1,29 @@
+# Dev agent — execution seat (Ch. 04 core roster)
+name: dev-agent
+role: dev
+model: capable-llm  # LiteLLM alias — TASK.md complexity axis selects fast/capable/frontier
+
+mandate:
+  - Execute bounded tasks within Scope — modify from TASK.md
+  - Implement against acceptance criteria; one logical change per commit
+  - Escalate when a change would touch Layer 1/2 context (constraints/global)
+  - Load only task-listed context; respect ADR-006 teaching-block strip
+
+does_not:
+  - Run pre-mortems or own the threat model (red-team agent)
+  - Adversarial break testing (tester agents)
+  - Score design options or k-voting tiebreak (evaluator)
+
+context_load_default:
+  - context/system/agent-team.md
+  - 03-plan/constraints/global.md
+  - _templates/new-task.md
+
+outputs:
+  - Code and docs within task Scope — modify list
+  - Acceptance-criteria evidence (tests, demos, notes)
+  - Escalations when scope boundaries are hit
+
+complexity_axis_note: >
+  Model alias comes from TASK.md Model field (fast-llm / capable-llm /
+  frontier-llm) per task complexity — not fixed in this file.

@@ -1,0 +1,10 @@
+__pycache__/
+.obsidian/
+.env
+.build-context/
+.cursor/*
+!.cursor/hooks.json
+.history/
+logs/sessions/
+outputs/
+05-build/execution-tools/track-a/.openhands-state/

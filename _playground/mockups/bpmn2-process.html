@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mockup: BPMN2 Process</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 1.5rem auto; padding: 0 1rem; }
+    .banner { background: #fef3c7; border: 1px solid #d97706; padding: 0.6rem 1rem; margin-bottom: 1rem; border-radius: 4px; font-size: 0.9rem; }
+    h1 { font-size: 1.2rem; }
+    .pool { border: 2px solid #333; padding: 1rem; margin: 1rem 0; }
+    .lane { border-top: 1px dashed #666; padding: 0.75rem 0; }
+    .lane:first-child { border-top: none; }
+    .lane-label { font-size: 0.75rem; color: #555; text-transform: uppercase; }
+    .flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-top: 0.5rem; }
+    .event { width: 1.5rem; height: 1.5rem; border: 2px solid #333; border-radius: 50%; }
+    .task { border: 2px solid #333; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.85rem; background: #e8e8e8; }
+    .gateway { width: 1.2rem; height: 1.2rem; border: 2px solid #333; transform: rotate(45deg); margin: 0.25rem; }
+    .arrow { color: #555; }
+    footer { margin-top: 1.5rem; font-size: 0.8rem; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="banner"><strong>FICTITIOUS</strong> — BPMN2 <em>Process</em> diagram · L2/L3/L4 · family: <strong>dynamic</strong></div>
+  <h1>BPMN2 — Process (checkout pool)</h1>
+  <div class="pool">
+    <strong>Pool:</strong> OrderLine Checkout
+    <div class="lane">
+      <div class="lane-label">Lane: Customer</div>
+      <div class="flow">
+        <div class="event" title="Start"></div>
+        <span class="arrow">→</span>
+        <div class="task">Submit cart</div>
+      </div>
+    </div>
+    <div class="lane">
+      <div class="lane-label">Lane: System</div>
+      <div class="flow">
+        <div class="task">Validate stock</div>
+        <span class="arrow">→</span>
+        <div class="gateway" title="Exclusive gateway"></div>
+        <span class="arrow">→</span>
+        <div class="task">Charge payment</div>
+        <span class="arrow">→</span>
+        <div class="event" title="End"></div>
+      </div>
+    </div>
+  </div>
+  <p><strong>Shows well:</strong> tasks, gateways, lanes, events in one pool.</p>
+  <p><strong>Poor at:</strong> class structure; static container map.</p>
+  <footer>BPMN2 full notation includes event types, boundary events, subprocesses — this is a learning stub.</footer>
+</body>
+</html>

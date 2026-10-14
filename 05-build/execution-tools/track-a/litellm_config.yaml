@@ -1,0 +1,38 @@
+# LiteLLM proxy — maps agent yaml aliases to upstream models.
+# OpenHands uses litellm_proxy/<alias> — never point OpenHands at OpenRouter directly.
+#
+# Langfuse (S27): LiteLLM success/failure callbacks → langfuse-web on compose network.
+# Keys: LANGFUSE_PUBLIC_KEY + LANGFUSE_SECRET_KEY in track-a/.env (from Langfuse UI).
+# Setup: ../track-a-setup.md § Observability
+
+model_list:
+  - model_name: frontier-llm
+    litellm_params:
+      model: openrouter/anthropic/claude-sonnet-4
+      api_key: os.environ/OPENROUTER_API_KEY
+      api_base: https://openrouter.ai/api/v1
+
+  - model_name: capable-llm
+    litellm_params:
+      model: openrouter/anthropic/claude-sonnet-4
+      api_key: os.environ/OPENROUTER_API_KEY
+      api_base: https://openrouter.ai/api/v1
+
+  - model_name: fast-llm
+    litellm_params:
+      model: openrouter/anthropic/claude-haiku-4-5
+      api_key: os.environ/OPENROUTER_API_KEY
+      api_base: https://openrouter.ai/api/v1
+
+  - model_name: condenser-llm
+    litellm_params:
+      model: openrouter/anthropic/claude-haiku-4-5
+      api_key: os.environ/OPENROUTER_API_KEY
+      api_base: https://openrouter.ai/api/v1
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+
+litellm_settings:
+  success_callback: ["langfuse"]
+  failure_callback: ["langfuse"]

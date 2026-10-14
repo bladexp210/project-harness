@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Harness — Session NN close</title>
+  <link rel="stylesheet" href="../../_shared/shell.css" />
+</head>
+<body>
+  <nav id="breadcrumb" class="views-breadcrumb"></nav>
+  <header>
+    <h1 id="session-title">Session NN close</h1>
+    <p id="outcome-line"></p>
+    <p id="closed-at" style="color:var(--muted);font-size:0.875rem"></p>
+  </header>
+  <main>
+    <div class="read-only-banner">
+      Historical snapshot — do not edit. Generated at session close.
+    </div>
+    <section>
+      <h2>Boot</h2>
+      <p><strong>Branch:</strong> <span id="branch"></span></p>
+      <p id="boot-line"></p>
+    </section>
+    <section>
+      <h2>Decisions</h2>
+      <ul id="decisions"></ul>
+    </section>
+    <section>
+      <h2>Next bootstrap</h2>
+      <p id="next-bootstrap"></p>
+    </section>
+  </main>
+  <script type="application/json" id="page-data">
+{
+  "session": null,
+  "branch": "session-NN/your-topic",
+  "boot": "YOUR boot line — primary intent for this session",
+  "closed": "YYYY-MM-DD HH:mm",
+  "outcome": "YOUR one-line outcome from STATE History",
+  "decisions": [],
+  "nextBootstrap": "YOUR next session bootstrap or null if arc final session"
+}
+  </script>
+  <script src="../../_shared/nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var data = ViewsNav.readPageData();
+
+      ViewsNav.renderBreadcrumb("breadcrumb", [
+        { label: "Project", href: "../../project/index.html" },
+        { label: "Arc YOUR-ARC", href: "../../arc/YOUR-ARC/close.html" },
+        { label: "Session close", href: null }
+      ]);
+
+      document.getElementById("session-title").textContent =
+        data.session != null ? "Session " + data.session + " close" : "Session close";
+      document.getElementById("outcome-line").textContent = data.outcome || "";
+      document.getElementById("closed-at").textContent =
+        data.closed ? "Closed " + data.closed : "";
+      document.getElementById("branch").textContent = data.branch || "—";
+      document.getElementById("boot-line").textContent = data.boot || "";
+
+      var decisions = data.decisions || [];
+      document.getElementById("decisions").innerHTML = decisions.length
+        ? decisions.map(function (d) { return "<li>" + d + "</li>"; }).join("")
+        : "<li>None recorded</li>";
+
+      var next = data.nextBootstrap;
+      document.getElementById("next-bootstrap").textContent =
+        next != null && next !== "" ? next : "—";
+    });
+  </script>
+</body>
+</html>

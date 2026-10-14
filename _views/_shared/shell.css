@@ -1,0 +1,58 @@
+:root {
+  --bg: #0f1419;
+  --surface: #1a2332;
+  --surface2: #243044;
+  --border: #3d4f66;
+  --text: #e7ecf3;
+  --muted: #8b9cb3;
+  --accent: #38bdf8;
+  --promote: #22c55e;
+  --warn: #eab308;
+  --danger: #ef4444;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.45;
+}
+header { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); background: var(--surface); }
+header h1 { margin: 0 0 0.25rem; font-size: 1.25rem; font-weight: 600; }
+header p { margin: 0; color: var(--muted); font-size: 0.875rem; }
+.views-breadcrumb { padding: 0.5rem 1.5rem; font-size: 0.8rem; color: var(--muted); border-bottom: 1px solid var(--border); }
+.views-breadcrumb a { color: var(--accent); text-decoration: none; }
+.views-breadcrumb a:hover { text-decoration: underline; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--surface2); border-bottom: 1px solid var(--border); align-items: center; }
+button { font: inherit; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--text); padding: 0.45rem 0.85rem; border-radius: 6px; }
+button:hover { background: var(--surface2); border-color: var(--accent); }
+button.primary { background: #0ea5e9; border-color: #0284c7; color: #fff; }
+button.primary:hover { background: #0284c7; }
+.hint { color: var(--muted); font-size: 0.8rem; margin-left: auto; }
+main { padding: 1rem 1.5rem 2rem; }
+.views-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.views-table th, .views-table td { border: 1px solid var(--border); padding: 0.5rem 0.65rem; text-align: left; }
+.views-table th { background: var(--surface2); }
+.views-table tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 80%, transparent); }
+#toast { position: fixed; bottom: 1.25rem; right: 1.25rem; background: var(--promote); color: #052e16; padding: 0.65rem 1rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+#toast.show { opacity: 1; }
+pre#preview { display: none; margin: 0 1.5rem 1.5rem; padding: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: 0.75rem; overflow-x: auto; white-space: pre-wrap; }
+.read-only-banner { background: color-mix(in srgb, var(--warn) 20%, var(--surface)); border: 1px solid var(--warn); padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1rem; }
+.gate-section { margin-bottom: 1.5rem; }
+.gate-section h2 { font-size: 1rem; margin: 0 0 0.5rem; }
+.gate-section h3 { font-size: 0.875rem; color: var(--muted); margin: 0.75rem 0 0.35rem; font-weight: 600; }
+.gate-list { margin: 0; padding-left: 1.25rem; }
+.gate-list li { margin-bottom: 0.35rem; }
+.gate-list textarea { width: 100%; min-height: 2.4em; padding: 0.35rem 0.5rem; font: inherit; font-size: 0.875rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg); color: var(--text); resize: vertical; }
+.gate-questions { list-style: decimal; padding-left: 1.25rem; margin: 0; }
+.gate-questions li { margin-bottom: 0.75rem; }
+.gate-questions .q-text { display: block; margin-bottom: 0.35rem; }
+.gate-answer { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; font-size: 0.875rem; }
+.gate-answer label { display: inline-flex; align-items: center; gap: 0.25rem; cursor: pointer; }
+.gate-answer textarea { width: 100%; min-height: 2.4em; padding: 0.35rem 0.5rem; font: inherit; font-size: 0.875rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg); color: var(--text); resize: vertical; }
+.gate-rule { padding: 0.65rem 0.85rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; font-size: 0.875rem; margin: 0; }
+.gate-scope { border-top: 1px solid var(--border); padding-top: 1rem; }
+.gate-scope .scope-block { margin-bottom: 0.75rem; }
+.gate-scope textarea { width: 100%; min-height: 3em; padding: 0.35rem 0.5rem; font: inherit; font-size: 0.875rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg); color: var(--text); resize: vertical; }

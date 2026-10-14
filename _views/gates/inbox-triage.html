@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Harness — Inbox triage board (S41)</title>
+  <link rel="stylesheet" href="../_shared/shell.css" />
+  <style>
+    :root {
+      --shipped: #6366f1;
+      --strip: #eab308;
+      --archive: #64748b;
+      --defer: #a855f7;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(180px, 1fr));
+      gap: 0.75rem;
+      padding: 1rem 1.5rem 2rem;
+      min-height: calc(100vh - 140px);
+      align-items: start;
+    }
+    @media (max-width: 1100px) {
+      .board { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .board { grid-template-columns: 1fr; }
+    }
+    .column {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    .column-header {
+      padding: 0.65rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--border);
+      border-radius: 10px 10px 0 0;
+    }
+    .column[data-col="shipped"] .column-header { background: color-mix(in srgb, var(--shipped) 25%, var(--surface)); }
+    .column[data-col="promote"] .column-header { background: color-mix(in srgb, var(--promote) 25%, var(--surface)); }
+    .column[data-col="strip"] .column-header { background: color-mix(in srgb, var(--strip) 25%, var(--surface)); }
+    .column[data-col="archive"] .column-header { background: color-mix(in srgb, var(--archive) 35%, var(--surface)); }
+    .column[data-col="defer"] .column-header { background: color-mix(in srgb, var(--defer) 25%, var(--surface)); }
+    .column-body {
+      flex: 1;
+      padding: 0.5rem;
+      min-height: 120px;
+    }
+    .column-body.drag-over { background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 0 0 10px 10px; }
+    .card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.55rem 0.65rem;
+      margin-bottom: 0.45rem;
+      cursor: grab;
+      font-size: 0.8rem;
+    }
+    .card:active { cursor: grabbing; }
+    .card-title { font-weight: 600; word-break: break-word; margin-bottom: 0.25rem; }
+    .card-meta { color: var(--muted); font-size: 0.72rem; }
+    .card-note {
+      width: 100%;
+      margin-top: 0.35rem;
+      padding: 0.3rem 0.4rem;
+      font-size: 0.72rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg);
+      color: var(--text);
+      resize: vertical;
+      min-height: 2.2em;
+    }
+    .card-note::placeholder { color: var(--muted); }
+    .count { opacity: 0.7; font-weight: 400; }
+  </style>
+</head>
+<body>
+  <nav id="breadcrumb" class="views-breadcrumb"></nav>
+  <header>
+    <h1>Project Harness — Inbox triage (S41)</h1>
+    <p>Drag each file to a disposition column. Add notes inline. Copy markdown → paste into <code>session-41-inbox-triage.md</code> § Human decisions.</p>
+  </header>
+  <div class="toolbar">
+    <button type="button" id="reset">Reset to defaults</button>
+    <button type="button" class="primary" id="copy">Copy as markdown</button>
+    <button type="button" id="previewBtn">Preview export</button>
+    <span class="hint">Source of truth: Markdown session artifact · This board is review-only</span>
+  </div>
+  <div class="board" id="board"></div>
+  <pre id="preview" aria-label="Export preview"></pre>
+  <div id="toast">Copied to clipboard</div>
+
+  <script type="application/json" id="page-data">
+  {
+    "items": [
+      { "id": "1", "file": "five_papers_practical_report.md", "col": "shipped", "target": "Ch. 02 + templates (S33/S35)", "session": "—", "note": "Consumed; archive at S47" },
+      { "id": "2", "file": "Langfuse Integration Report — Observability Layer for the LiteLLM + OpenRouter + OpenHands Stack.md", "col": "promote", "target": "ADR-009 + arc42 §8", "session": "S42", "note": "Cite; don't paste" },
+      { "id": "3", "file": "LiteLLM + OpenRouter + OpenHands — Integration Guide & Critical Analysis.md", "col": "promote", "target": "ADR-009 + track-a-setup", "session": "S42", "note": "Stack shipped S21" },
+      { "id": "4", "file": "PROJECT_EVALUATION_TRACK-A.md", "col": "archive", "target": "ADR-009 input", "session": "S42", "note": "Read once; then research/" },
+      { "id": "5", "file": "Root Cause Analysis Techniques for AI-Assisted Software Development.md", "col": "promote", "target": "Ch. 06 post-mortem", "session": "S47", "note": "Distill checklists" },
+      { "id": "6", "file": "software-eol-best-practices.md", "col": "promote", "target": "Ch. 08 sunset", "session": "S47", "note": "Decision tree only" },
+      { "id": "7", "file": "Docker Best Practices — From Tutorial Debt to Production Grade.md", "col": "promote", "target": "track-a/docker-compose", "session": "S47", "note": "Patterns in compose" },
+      { "id": "8", "file": "Visual Notation Strategy for an AI-Assisted Software Methodology Book.md", "col": "strip", "target": "diagram-taxonomy §", "session": "S47", "note": "One section + bib" },
+      { "id": "9", "file": "UX & UI Design Decision Heuristics  An Evidence-Based Guide for AI-Assisted Software Development.md", "col": "strip", "target": "layers/ux callouts", "session": "S47", "note": "Heuristic table only" },
+      { "id": "10", "file": "Evidence-Based Requirements Discovery & Early User Research.md", "col": "strip", "target": "Ch. 01 discovery", "session": "S47", "note": "JTBD boundaries" },
+      { "id": "11", "file": "ai-assisted-software-product-lifecycle-playbook.md", "col": "archive", "target": "research/", "session": "S41", "note": "Meta overlap with spine" },
+      { "id": "12", "file": "An_introduction_to_arc42_The_first_time_I_stumbled_upon_arc42…_by_Manserpatrice_Medium.md", "col": "archive", "target": "—", "session": "S41", "note": "arc42 complete" },
+      { "id": "13", "file": "An_introduction_to_arc42_The_first_time_I_stumbled_upon_arc42…_by_Manserpatrice_Medium (1).md", "col": "archive", "target": "—", "session": "S41", "note": "Duplicate — delete S47" },
+      { "id": "14", "file": "2026-06-11 1617 project-harness_critical_analysis.md", "col": "archive", "target": "research/", "session": "S41", "note": "Historical red-team" },
+      { "id": "15", "file": "Against the Canon  A Rigorous Critique of Mainstream System-Design and AI-Assisted Development Practices.md", "col": "archive", "target": "research/", "session": "S41", "note": "Teaching bib" },
+      { "id": "16", "file": "_Gemini_-_direct_access_to_Google_AI.md", "col": "archive", "target": "—", "session": "S41", "note": "Consumed ADR-002" },
+      { "id": "17", "file": "diagram-explorers/bpmn_2_0_interactive_explorer.tsx", "col": "defer", "target": "_playground/diagram-explorers/", "session": "—", "note": "Playground only" },
+      { "id": "18", "file": "diagram-explorers/c4_model_interactive_explorer.tsx", "col": "defer", "target": "_playground/diagram-explorers/", "session": "—", "note": "Playground only" },
+      { "id": "19", "file": "diagram-explorers/idef3_interactive_explorer.tsx", "col": "defer", "target": "_playground/diagram-explorers/", "session": "—", "note": "Playground only" }
+    ]
+  }
+  </script>
+
+  <script src="../_shared/export.js"></script>
+  <script src="../_shared/nav.js"></script>
+  <script>
+    const COLUMNS = [
+      { id: "shipped", label: "Shipped", disposition: "shipped" },
+      { id: "promote", label: "Promote / cite", disposition: "promote" },
+      { id: "strip", label: "Strip", disposition: "strip" },
+      { id: "archive", label: "Archive", disposition: "archive" },
+      { id: "defer", label: "Defer", disposition: "defer" },
+    ];
+
+    const pageData = ViewsNav.readPageData();
+    const DEFAULT_ITEMS = pageData.items || [];
+    let items = structuredClone(DEFAULT_ITEMS);
+    let dragId = null;
+
+    ViewsNav.renderBreadcrumb("breadcrumb", [
+      { label: "Project", href: "../project/index.html" },
+      { label: "Inbox triage", href: null },
+    ]);
+
+    function render() {
+      const board = document.getElementById("board");
+      board.innerHTML = "";
+      COLUMNS.forEach((col) => {
+        const colEl = document.createElement("div");
+        colEl.className = "column";
+        colEl.dataset.col = col.id;
+        const inCol = items.filter((i) => i.col === col.id);
+        colEl.innerHTML =
+          '<div class="column-header">' + col.label + ' <span class="count">(' + inCol.length + ")</span></div>" +
+          '<div class="column-body" data-drop="' + col.id + '"></div>';
+        const body = colEl.querySelector(".column-body");
+        body.addEventListener("dragover", (e) => { e.preventDefault(); body.classList.add("drag-over"); });
+        body.addEventListener("dragleave", () => body.classList.remove("drag-over"));
+        body.addEventListener("drop", (e) => {
+          e.preventDefault();
+          body.classList.remove("drag-over");
+          if (!dragId) return;
+          const item = items.find((x) => x.id === dragId);
+          if (item) item.col = col.id;
+          dragId = null;
+          render();
+        });
+        inCol.forEach((item) => body.appendChild(makeCard(item)));
+        board.appendChild(colEl);
+      });
+    }
+
+    function makeCard(item) {
+      const el = document.createElement("div");
+      el.className = "card";
+      el.draggable = true;
+      el.dataset.id = item.id;
+      el.innerHTML =
+        '<div class="card-title">' + escapeHtml(item.file) + "</div>" +
+        '<div class="card-meta">' + escapeHtml(item.target) + " · " + escapeHtml(item.session) + "</div>" +
+        '<textarea class="card-note" placeholder="Note (optional)" data-note="' + item.id + '">' +
+        escapeHtml(item.note || "") + "</textarea>";
+      el.addEventListener("dragstart", () => { dragId = item.id; });
+      el.querySelector(".card-note").addEventListener("input", (e) => {
+        item.note = e.target.value;
+      });
+      return el;
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function dispositionLabel(colId) {
+      return COLUMNS.find((c) => c.id === colId)?.disposition || colId;
+    }
+
+    function exportMarkdown() {
+      const rows = items
+        .slice()
+        .sort((a, b) => a.file.localeCompare(b.file))
+        .map((i) => [
+          "`" + i.file.replace(/`/g, "\\`") + "`",
+          "**" + dispositionLabel(i.col) + "**",
+          i.target,
+          i.session,
+          i.note || "",
+        ]);
+      return ViewsExport.buildExport(
+        {
+          exportedFrom: "_views/gates/inbox-triage.html",
+          gate: "inbox-triage",
+          session: "41",
+        },
+        ["File", "Disposition", "Target", "Session", "Note"],
+        rows
+      );
+    }
+
+    document.getElementById("reset").addEventListener("click", () => {
+      items = structuredClone(DEFAULT_ITEMS);
+      render();
+    });
+
+    document.getElementById("copy").addEventListener("click", async () => {
+      const md = exportMarkdown();
+      try {
+        await ViewsExport.copyText(md);
+      } catch {
+        /* copyText fallback inside export.js */
+      }
+      ViewsExport.showToast("Copied to clipboard");
+    });
+
+    document.getElementById("previewBtn").addEventListener("click", () => {
+      const pre = document.getElementById("preview");
+      if (pre.style.display === "block") {
+        pre.style.display = "none";
+        return;
+      }
+      pre.textContent = exportMarkdown();
+      pre.style.display = "block";
+    });
+
+    render();
+  </script>
+</body>
+</html>

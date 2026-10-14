@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mockup: IDEF0 Function</title>
+  <style>
+    :root { --box: #e8e8e8; --border: #333; }
+    body { font-family: system-ui, sans-serif; max-width: 44rem; margin: 1.5rem auto; padding: 0 1rem; }
+    .banner { background: #fef3c7; border: 1px solid #d97706; padding: 0.6rem 1rem; margin-bottom: 1rem; border-radius: 4px; font-size: 0.9rem; }
+    .idef0 { display: grid; grid-template-columns: 1fr 2fr 1fr; grid-template-rows: auto auto auto; gap: 0.4rem 0.6rem; align-items: center; margin: 1.5rem 0; }
+    .slot { font-size: 0.7rem; text-transform: uppercase; color: #555; text-align: center; }
+    .controls { grid-column: 2; }
+    .inputs { grid-column: 1; grid-row: 2; }
+    .function { grid-column: 2; grid-row: 2; }
+    .outputs { grid-column: 3; grid-row: 2; }
+    .mechanisms { grid-column: 2; grid-row: 3; }
+    .box { background: var(--box); border: 2px solid var(--border); padding: 0.6rem; font-size: 0.85rem; }
+    .function .box { text-align: center; font-weight: 600; padding: 1rem; }
+    .box ul { margin: 0; padding-left: 1rem; }
+    footer { font-size: 0.8rem; color: #666; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="banner"><strong>FICTITIOUS</strong> — IDEF0 function box · L1/L3 · dynamic · parent: design-phase-gate (example)</div>
+  <h1>IDEF0 — Function model (one box)</h1>
+  <div class="idef0">
+    <div class="slot" style="grid-column:2">Controls (top)</div>
+    <div class="controls box"><ul><li>Security policy</li><li>Gate B checklist</li></ul></div>
+    <div class="slot inputs">Inputs (left)</div>
+    <div class="inputs box"><ul><li>Threat model draft</li><li>Use-case matrix</li></ul></div>
+    <div class="function box">Run pre-mortem<br>review</div>
+    <div class="slot outputs">Outputs (right)</div>
+    <div class="outputs box"><ul><li>Review log</li><li>Gate B status</li></ul></div>
+    <div class="slot mechanisms">Mechanisms (bottom)</div>
+    <div class="mechanisms box"><ul><li>Red-team agent</li><li>OpenHands</li></ul></div>
+  </div>
+  <p><strong>Shows well:</strong> I/C/O/M on one function; decomposition to child boxes.</p>
+  <p><strong>Poor at:</strong> precise timing; code-level types.</p>
+  <footer>Decomposition: child boxes link output → input. See taxonomy L3 workflow pages (future).</footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mockup: ICOM Task</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 1.5rem auto; padding: 0 1rem; }
+    .banner { background: #fef3c7; border: 1px solid #d97706; padding: 0.6rem 1rem; margin-bottom: 1rem; border-radius: 4px; font-size: 0.9rem; }
+    .meta { font-size: 0.85rem; color: #444; margin-bottom: 1rem; }
+    .grid { display: grid; grid-template-columns: 1fr 2fr 1fr; grid-template-rows: auto auto auto; gap: 0.35rem 0.5rem; }
+    .lbl { font-size: 0.65rem; text-transform: uppercase; color: #666; text-align: center; }
+    .c { grid-column: 2; background: #f3f4f6; border: 1px solid #999; padding: 0.5rem; font-size: 0.8rem; }
+    .i { grid-column: 1; grid-row: 2; background: #e8e8e8; border: 2px solid #333; padding: 0.5rem; font-size: 0.8rem; }
+    .fn { grid-column: 2; grid-row: 2; background: #d1d5db; border: 2px solid #333; padding: 0.75rem; text-align: center; font-weight: 600; }
+    .o { grid-column: 3; grid-row: 2; background: #e8e8e8; border: 2px solid #333; padding: 0.5rem; font-size: 0.8rem; }
+    .m { grid-column: 2; grid-row: 3; background: #f3f4f6; border: 1px solid #999; padding: 0.5rem; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="banner"><strong>FICTITIOUS</strong> — Book ICOM frame · L4 · canon = <code>tasks/*.md</code></div>
+  <h1>ICOM — Task (one sitting)</h1>
+  <p class="meta">zoom: L4 · parent: design-phase-gate (L3) · canon: task 01 threat-model premortem</p>
+  <div class="grid">
+    <div class="lbl" style="grid-column:2">Controls</div>
+    <div class="c">global constraints; scope — modify; Gherkin</div>
+    <div class="lbl i">Inputs</div>
+    <div class="i">threat-model; ADR-005; seeds</div>
+    <div class="fn">Pre-mortem</div>
+    <div class="lbl o">Outputs</div>
+    <div class="o">review log; Gate B evidence</div>
+    <div class="lbl m">Mechanisms</div>
+    <div class="m">red-team agent; task_context.py; OpenHands</div>
+  </div>
+  <p><strong>Shows well:</strong> what one task consumes, obeys, uses, produces.</p>
+  <p><strong>Poor at:</strong> multi-task loops (parent IDEF0/BPMN2 at L3).</p>
+</body>
+</html>

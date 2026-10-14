@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py sessionStart"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py sessionEnd"
+      }
+    ],
+    "beforeSubmitPrompt": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py beforeSubmitPrompt"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py preToolUse"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py postToolUse"
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py postToolUseFailure"
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py beforeShellExecution"
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py afterShellExecution"
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py beforeMCPExecution"
+      }
+    ],
+    "afterMCPExecution": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py afterMCPExecution"
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py beforeReadFile"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py afterFileEdit"
+      }
+    ],
+    "stop": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py stop"
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": "python scripts/langfuse_trace_bridge.py afterAgentResponse"
+      }
+    ]
+  }
+}

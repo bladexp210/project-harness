@@ -1,0 +1,30 @@
+# Copy to OPENHANDS_STATE_DIR/config.toml if you prefer file config over the UI.
+# UI path (OpenHands 1.8): Settings → LLM → Advanced tab — NOT the Basic provider dropdown.
+# LiteLLM is not a provider option; use litellm_proxy/ prefix per:
+# https://docs.openhands.dev/openhands/usage/llms/litellm-proxy
+# Agent sandbox image is set in docker-compose.yml (AGENT_SERVER_IMAGE_*), not here.
+
+[core]
+workspace_base = "/opt/workspace_base"
+max_iterations = 100
+max_budget_per_task = 2.0
+
+[llm]
+model = "litellm_proxy/capable-llm"
+api_key = YOUR_LITELLM_VIRTUAL_KEY
+base_url = "http://host.docker.internal:4000"
+temperature = 0.0
+num_retries = 5
+retry_min_wait = 10
+retry_max_wait = 60
+
+[llm.condenser]
+# Or set via Settings → Condenser in the UI
+model = "litellm_proxy/condenser-llm"
+base_url = "http://host.docker.internal:4000"
+api_key = YOUR_LITELLM_VIRTUAL_KEY
+temperature = 0.1
+max_tokens = 1024
+
+[security]
+confirmation_mode = true

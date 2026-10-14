@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your product — Validate gate</title>
+  <link rel="stylesheet" href="../_shared/shell.css" />
+</head>
+<body>
+  <nav id="breadcrumb" class="views-breadcrumb"></nav>
+  <header>
+    <h1>Validate gate</h1>
+    <p>Review work diff and handoff docs (STATE + dashboard L1–L3 + bootstrap) before merge is offered.</p>
+  </header>
+  <div class="toolbar">
+    <button type="button" class="primary" id="copy">Copy as markdown</button>
+    <button type="button" id="previewBtn">Preview export</button>
+    <span class="hint">Gate: validate · Arc: your-arc</span>
+  </div>
+  <main>
+    <section id="gate-decide-will" class="gate-section">
+      <h2>What your review will decide</h2>
+      <h3>Will decide</h3>
+      <ol id="will-decide-list" class="gate-list"></ol>
+      <h3>Will not decide</h3>
+      <ol id="will-not-decide-list" class="gate-list"></ol>
+    </section>
+    <section id="gate-questions" class="gate-section">
+      <h2>Questions you need to answer</h2>
+      <ol id="questions-list" class="gate-questions"></ol>
+    </section>
+    <section id="gate-evidence" class="gate-section">
+      <h2>Evidence</h2>
+      <table class="views-table" id="evidence-table">
+        <thead>
+          <tr><th>Question</th><th>Where to look</th><th>Pass when</th><th>Your check</th></tr>
+        </thead>
+        <tbody id="evidence-body"></tbody>
+      </table>
+    </section>
+    <section id="gate-rule" class="gate-section">
+      <h2>Decision rule</h2>
+      <p id="decision-rule" class="gate-rule"></p>
+    </section>
+    <section id="gate-scope" class="gate-section gate-scope">
+      <h2>Scope confirmation (export)</h2>
+      <p style="color:var(--muted);font-size:0.875rem;margin:0 0 0.75rem">Past tense — filled into export after you approve.</p>
+      <div class="scope-block">
+        <h3>You signed off that</h3>
+        <textarea id="scope-signed" rows="4"></textarea>
+      </div>
+      <div class="scope-block">
+        <h3>You did not sign off that</h3>
+        <textarea id="scope-not-signed" rows="3"></textarea>
+      </div>
+      <div class="gate-answer">
+        <span>Gate approved?</span>
+        <label><input type="radio" name="gate-approved" value="yes" /> yes</label>
+        <label><input type="radio" name="gate-approved" value="no" checked /> no</label>
+      </div>
+    </section>
+  </main>
+  <pre id="preview" aria-label="Export preview"></pre>
+  <div id="toast">Copied to clipboard</div>
+
+  <script type="application/json" id="page-data">
+{
+  "gate": "validate",
+  "session": 1,
+  "arc": "your-arc",
+  "willDecide": [
+    "Work diff matches session goal",
+    "STATE.md handoff is accurate",
+    "Dashboard L1–L3 reflects current position",
+    "Next session bootstrap is ready"
+  ],
+  "willNotDecide": [
+    "Merge to main",
+    "Git operations (D-001 — human runs shell)"
+  ],
+  "questions": [
+    "Does the work diff match the session primary goal?",
+    "Is STATE.md boot line replaced with closed paragraph?",
+    "Do dashboard L1–L3 match STATE?",
+    "Is the next session bootstrap block complete?"
+  ],
+  "evidence": [
+    { "question": "Work diff", "where": "Session branch diff vs main", "passWhen": "Primary goal delivered; no scope creep" },
+    { "question": "STATE.md", "where": "STATE.md History + boot block", "passWhen": "Closed paragraph; open threads accurate" },
+    { "question": "Dashboard L1–L3", "where": "_index/dashboard/01–03-*.md", "passWhen": "Matches STATE snapshot" },
+    { "question": "Next bootstrap", "where": "STATE.md § Next session bootstrap", "passWhen": "Primary, load first, defer, human gate filled" }
+  ],
+  "decisionRule": "Approve validation if work diff and all handoff docs (STATE + dashboard L1–L3 + bootstrap) pass."
+}
+  </script>
+
+  <script src="../_shared/export.js"></script>
+  <script src="../_shared/nav.js"></script>
+  <script src="../_shared/gate.js"></script>
+  <script>
+    ViewsGate.init({
+      exportedFrom: "_views/gates/validate.html",
+      gateLabel: "Validate gate",
+      breadcrumb: [
+        { label: "Project", href: "../project/index.html" },
+        { label: "Validate gate", href: null }
+      ]
+    });
+  </script>
+</body>
+</html>

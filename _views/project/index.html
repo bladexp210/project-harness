@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Harness — Project dashboard</title>
+  <link rel="stylesheet" href="../_shared/shell.css" />
+</head>
+<body>
+  <nav id="breadcrumb" class="views-breadcrumb"></nav>
+  <header>
+    <h1 id="project-title">Project Harness</h1>
+    <p id="mission-line"></p>
+  </header>
+  <main>
+    <section id="phase-card"></section>
+    <section><h2>Milestones</h2><div id="milestones"></div></section>
+    <section><h2>Active arc</h2><div id="active-arc"></div></section>
+    <section><h2>Arc history</h2><div id="arc-history"></div></section>
+  </main>
+  <script type="application/json" id="page-data">
+{
+  "mission": "Solo business-side POC → engineering handoff — achieved",
+  "phase": "idle",
+  "spinePercent": 98,
+  "validator": "validate_md.py --all — 0 failures",
+  "activeArc": null,
+  "arcHistory": [
+    {
+      "id": "s41-s47",
+      "label": "S41–S47",
+      "closed": "2026-07-02",
+      "closeHref": "../arc/s41-s47/close.html"
+    }
+  ],
+  "milestones": [
+    { "name": "Spine 00–08 partial", "status": "done", "session": "S25" },
+    { "name": "Harness tasks 01–04", "status": "done", "session": "S22–S23" },
+    { "name": "Track A stack + Langfuse Path A", "status": "done", "session": "S21, S27" },
+    { "name": "viz/ harness examples (5 families)", "status": "done", "session": "S31, S36" },
+    { "name": "arc42 §1–§12 harness fills", "status": "done", "session": "S32–S39" },
+    { "name": "Post-arc42 roadmap S41–S47", "status": "done", "session": "S40" },
+    { "name": "Roadmap target snapshot canon", "status": "done", "session": "S40" },
+    { "name": "Inbox triage table + HTML gate pilot", "status": "done", "session": "S41" },
+    { "name": "ADR-009 observability Paths A/B/C", "status": "done", "session": "S42" },
+    { "name": "VS Code hub + tooling-manifest + host profile", "status": "done", "session": "S43" },
+    { "name": "Path C Langfuse hooks (smoke trace)", "status": "done", "session": "S44" },
+    { "name": "Temporal awareness + session log schema", "status": "done", "session": "S45" },
+    { "name": "Golden-task examples", "status": "done", "session": "S46" },
+    { "name": "GitHub remote + CI + handoff", "status": "done", "session": "S47" }
+  ]
+}
+  </script>
+  <script src="../_shared/export.js"></script>
+  <script src="../_shared/nav.js"></script>
+  <script src="../_shared/render.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var data = ViewsNav.readPageData();
+
+      ViewsNav.renderBreadcrumb("breadcrumb", [{ label: "Project", href: null }]);
+
+      document.getElementById("mission-line").textContent = data.mission || "";
+
+      document.getElementById("phase-card").innerHTML =
+        "<p><strong>Phase:</strong> " + (data.phase || "—") + "</p>" +
+        "<p><strong>Spine progress:</strong> " + (data.spinePercent != null ? data.spinePercent + "%" : "—") + "</p>" +
+        "<p><strong>Validator:</strong> " + (data.validator || "—") + "</p>";
+
+      ViewsRender.renderMilestoneBar("milestones", data.milestones || []);
+
+      var activeEl = document.getElementById("active-arc");
+      if (data.activeArc && data.activeArc.roadmapHref) {
+        activeEl.innerHTML =
+          '<a href="' + data.activeArc.roadmapHref + '">' +
+          (data.activeArc.label || data.activeArc.id) + "</a>";
+      } else {
+        activeEl.textContent = "None — idle";
+      }
+
+      var history = data.arcHistory || [];
+      if (history.length) {
+        document.getElementById("arc-history").innerHTML =
+          "<ul>" +
+          history
+            .map(function (a) {
+              return "<li>" +
+                (a.closeHref
+                  ? '<a href="' + a.closeHref + '">' + (a.label || a.id) + "</a>"
+                  : a.label || a.id) +
+                (a.closed ? ' <span style="color:var(--muted)">(closed ' + a.closed + ")</span>" : "") +
+                "</li>";
+            })
+            .join("") +
+          "</ul>";
+      } else {
+        document.getElementById("arc-history").textContent = "None";
+      }
+    });
+  </script>
+</body>
+</html>

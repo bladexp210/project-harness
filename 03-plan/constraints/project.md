@@ -9,7 +9,7 @@ tags: [constraint, harness]
 # Project constraints — this harness repo
 
 Project-specific rules for **this book-as-harness repository**. You inherit
-[[global|constraints/global]] and [[host|constraints/host]]; this file holds
+[constraints/global](global.md) and [constraints/host](host.md); this file holds
 identity, track choice, and tool adapters — not OS/shell facts (those live in
 `host.md`).
 
@@ -19,7 +19,7 @@ identity, track choice, and tool adapters — not OS/shell facts (those live in
 > `project.md` — tool choices, git layout, adapters.
 
 > [!TIP] Fast Track
-> Fill [[host|constraints/host]] first → identity → execution track → git layout
+> Fill [constraints/host](host.md) first → identity → execution track → git layout
 > → tool adapters → models.
 
 ## Identity
@@ -29,29 +29,29 @@ identity, track choice, and tool adapters — not OS/shell facts (those live in
 | Project | Methodology book / harness (`project-harness`) |
 | Product type | Docs-only repo — teaches and operates as a real harness |
 | Primary author | Human (Alex) + Track B IDE agents |
-| Remote | None (local-only; D-001 per [[host\|constraints/host]]) |
+| Remote | None (local-only; D-001 per [constraints/host](host.md)) |
 
 ## Execution track
 
 | Field | Value |
 | :---- | :---- |
 | **Authoring today** | Track B — Cursor IDE agent |
-| **Target for build tasks** | Track A — [[openhands]] when Docker + LiteLLM ready (S21) |
-| **Decision record** | [[ADR-007-dual-execution-tracks]] |
-| **Session ritual** | [[session-workflow]] — branch `session-NN/<topic>` per session |
+| **Target for build tasks** | Track A — [openhands](../../05-build/execution-tools/openhands.md) when Docker + LiteLLM ready (S21) |
+| **Decision record** | [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md) |
+| **Session ritual** | [session-workflow](../../context/system/session-workflow.md) — branch `session-NN/<topic>` per session |
 
 ## Git layout
 
 | Field | Value |
 | :---- | :---- |
 | **Current (ramp)** | Normal clone; session branches on same working tree |
-| **Target** | Bare hub + worktrees per [[bare-worktree-setup]] |
+| **Target** | Bare hub + worktrees per [bare-worktree-setup](../../05-build/execution-tools/bare-worktree-setup.md) |
 | **Protected branch** | `main` — merge only after session close + human review |
 | **Commit author** | Human on host shell — see `constraints/host.md` (D-001) |
 
 ## Tool adapters (Track B — VS Code hub / Cursor)
 
-Living instance of `_templates/tooling-manifest.md`. Map [[track-b-checklist]]
+Living instance of `_templates/tooling-manifest.md`. Map [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md)
 concerns to this workspace — update here and in the manifest when tools change.
 
 | Checklist concern | This project |
@@ -63,7 +63,7 @@ concerns to this workspace — update here and in the manifest when tools change
 | Diff review | Cursor source control panel |
 | Model choice | Composer / subscription tier (yaml aliases advisory until LiteLLM wired) |
 | Automation hooks | Cursor skills, MCP (Obsidian, browser, Atlassian as enabled) |
-| Observability export | Path C planned S44; process trace via STATE + git ([[ADR-009-observability-paths-abc]]) |
+| Observability export | Path C planned S44; process trace via STATE + git ([ADR-009-observability-paths-abc](../../02-design/decisions/ADR-009-observability-paths-abc.md)) |
 
 ## Models and endpoints
 
@@ -80,16 +80,16 @@ Fill when Track A is live. Record after first successful stack bring-up (task 02
 
 ## Harness-specific scope
 
-Rules beyond [[global|constraints/global]] for **this repo**:
+Rules beyond [constraints/global](global.md) for **this repo**:
 
 - **Meta-work** (STATE, dashboard, session docs) may touch `context/system/` and
   `_index/dashboard/` on session branches — not during arbitrary build tasks.
 - **Build tasks** use `04-your-agents/tasks/*.md` scope lists only.
 - **`_playground/`** is experiment space — never load into agent context unless
-  the human names a path ([[Agents.md|Agents]]).
+  the human names a path ([Agents](../../Agents.md)).
 - **`_inbox/`** is intake — not canon until promoted into chapter paths.
 - **No reader product code** in this repo — spine completion is harness/canon
-  work per [[session-roadmap-s19-s23]].
+  work per [session-roadmap-s19-s23](../../context/system/sessions/session-roadmap-s19-s23.md).
 
 ## Out of scope (this project)
 
@@ -101,9 +101,9 @@ Rules beyond [[global|constraints/global]] for **this repo**:
 
 ## Reference
 
-- Global guardrails: [[global|constraints/global]]
-- Host machine: [[host|constraints/host]]
-- Living task order: [[03-plan/PROJECT-PLAN|PROJECT-PLAN]]
-- Execution: [[vscode-hub]] · [[track-b-checklist]] · [[openhands]] · [[bare-worktree-setup]]
-- Tooling seam: `_templates/tooling-manifest.md` · [[ADR-010-vscode-hub-barbell]]
-- Host seam: `_templates/host-profile.md` · [[ADR-011-host-profile-seam]]
+- Global guardrails: [constraints/global](global.md)
+- Host machine: [constraints/host](host.md)
+- Living task order: [PROJECT-PLAN](../PROJECT-PLAN.md)
+- Execution: [vscode-hub](../../05-build/execution-tools/vscode-hub.md) · [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) · [openhands](../../05-build/execution-tools/openhands.md) · [bare-worktree-setup](../../05-build/execution-tools/bare-worktree-setup.md)
+- Tooling seam: `_templates/tooling-manifest.md` · [ADR-010-vscode-hub-barbell](../../02-design/decisions/ADR-010-vscode-hub-barbell.md)
+- Host seam: `_templates/host-profile.md` · [ADR-011-host-profile-seam](../../02-design/decisions/ADR-011-host-profile-seam.md)

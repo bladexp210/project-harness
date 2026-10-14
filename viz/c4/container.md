@@ -56,14 +56,14 @@ flowchart TB
 | Container | In this harness | In your product |
 | :-------- | :-------------- | :-------------- |
 | Chapter spine | Teaching folders `00`–`08` | Your user-facing app or docs |
-| Harness meta | `STATE.md`, `_index/dashboard/`, [[session-workflow]] | Ops runbooks, status boards |
+| Harness meta | `STATE.md`, `_index/dashboard/`, [session-workflow](../../context/system/session-workflow.md) | Ops runbooks, status boards |
 | Agent pack | `agents/*.yaml`, `tasks/`, golden-tasks, evaluator | Your agent config + task specs |
 | Context tree | `context/` architecture domains | Your shared context / knowledge base |
 | Design canon | `02-design/`, `viz/`, `arc42/` | ADRs, diagrams, design docs |
 | Plan layer | `PROJECT-PLAN.md`, `constraints/` | Backlog, constraints registry |
 | Validator scripts | `validate_md.py`, pre-commit hooks | CI linters, test runners |
 | Execution tools | Track A/B docs, `track-a/` compose | Your deploy stack, IDE tooling |
-| Not shown here | Parts inside Agent pack — see [[component]] | Your service internals — L3 |
+| Not shown here | Parts inside Agent pack — see [component](component.md) | Your service internals — L3 |
 
 ## ESL checklist (this file)
 
@@ -74,20 +74,20 @@ flowchart TB
 | Embedded legend | Table above |
 | L2 node budget ≤ 12 | 8 containers + 1 actor |
 | Static only | No numbered sequence; no gateways |
-| Container ≠ Deployment | Physical mapping — see [[deployment]] |
+| Container ≠ Deployment | Physical mapping — see [deployment](deployment.md) |
 
 ## Pairing
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| L1 boundary unclear | [[context]] |
-| Runtime handoff for one scenario | [[dynamic]] or [[../uml/sequence]] |
-| Where modules run | [[deployment]] |
-| Inside one module | [[component]] |
+| L1 boundary unclear | [context](context.md) |
+| Runtime handoff for one scenario | [dynamic](dynamic.md) or [sequence](../uml/sequence.md) |
+| Where modules run | [deployment](deployment.md) |
+| Inside one module | [component](component.md) |
 
 ## Where to go next
 
-- **Worked L1 example:** [[context]]
-- **C4 section index:** [[README]]
+- **Worked L1 example:** [context](context.md)
+- **C4 section index:** [README](README.md)
 - **FICTITIOUS teaching mockup:** `_playground/mockups/c4-container.md`
-- **Track A compose (execution slice):** [[track-a-setup]]
+- **Track A compose (execution slice):** [track-a-setup](../../05-build/execution-tools/track-a-setup.md)

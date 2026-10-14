@@ -18,7 +18,7 @@ tags: [playground, l4, commit, reference-box]
 | :---- | :---- |
 | **Task ID** | `t_01_validate_batch` |
 | **Task name** | Validate batch |
-| **Parent** | `wf_commit_process` (L3 · [[L3-commit-process]]) |
+| **Parent** | `wf_commit_process` (L3 · [L3-commit-process](L3-commit-process.md)) |
 | **Executor** | `exe_agent_cursor` · `agent:cursor` |
 | **Supervisor** | `human:Alex` (accepts evidence; can halt batch) |
 
@@ -49,7 +49,7 @@ Handoffs **to executors only**; next task or supervisor.
 | Validator summary (`N checked, 0 failed`) | shell | chat transcript | `human:Alex` |
 | Unit test summary (`all passed` or failures) | shell | chat transcript | `human:Alex` |
 | FAIL / WARN lines with paths | shell | chat transcript | `exe_agent_cursor` (fix loop) |
-| Go / no-go for commit batch | signal | task handoff | `exe_agent_cursor` → [[02-draft-commit-blocks]] |
+| Go / no-go for commit batch | signal | task handoff | `exe_agent_cursor` → [02-draft-commit-blocks](02-draft-commit-blocks.md) |
 
 ---
 
@@ -70,7 +70,7 @@ Harness scripts (`validate_md.py`, `test_*.py`) are **inputs / canon**, not tool
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | [[global]] — WARN grace band; 0 failures before task 02 |
+| Policy | [global](../../../03-plan/constraints/global.md) — WARN grace band; 0 failures before task 02 |
 | Gherkin | see below |
 
 ```gherkin
@@ -98,4 +98,4 @@ Scenario: Batch validation passes
 ## Done when
 
 Supervisor sees **0 failures** in validator output (WARN acceptable per
-[[global]]). On failure, executor loops here — task 02 stays closed.
+[global](../../../03-plan/constraints/global.md)). On failure, executor loops here — task 02 stays closed.

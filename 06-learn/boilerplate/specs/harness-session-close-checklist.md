@@ -8,7 +8,7 @@ tags: [boilerplate, handoff, harness-meta]
 # Harness session close — checklist pattern
 
 Worked **harness-meta** example: handoff after a spine session. Matches
-[[session-workflow]] close order. Use at session close before offering merge.
+[session-workflow](../../../context/system/session-workflow.md) close order. Use at session close before offering merge.
 
 ## When to use
 

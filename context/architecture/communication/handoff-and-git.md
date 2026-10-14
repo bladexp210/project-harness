@@ -43,8 +43,8 @@ sequenceDiagram
 
 ## Git rules (D-001)
 
-General rule ([[ADR-011-host-profile-seam|ADR-011]]): **git write operations**
-run on the **host shell** documented in [[host|constraints/host]] — not in agent
+General rule ([ADR-011](../../../02-design/decisions/ADR-011-host-profile-seam.md)): **git write operations**
+run on the **host shell** documented in [constraints/host](../../../03-plan/constraints/host.md) — not in agent
 sandboxes where the profile documents a known failure mode.
 
 | Policy | This harness (see host profile) |
@@ -57,7 +57,7 @@ sandboxes where the profile documents a known failure mode.
 
 ## Human gates (six-step)
 
-Review tasks use the shape in [[Agents.md|Agents]] § Human gate:
+Review tasks use the shape in [Agents](../../../Agents.md) § Human gate:
 
 1. What your review will decide (future tense)
 2. Questions you must answer
@@ -78,6 +78,6 @@ Session close validates **work diff and** STATE + dashboard + bootstrap together
 
 | This repo | Reader product |
 | :---- | :---- |
-| Chat + git + markdown | Your APIs, events, webhooks per [[02-design/layers/communication\|communication layer]] |
+| Chat + git + markdown | Your APIs, events, webhooks per [communication layer](../../../02-design/layers/communication.md) |
 | `session-workflow.md` | Your runbooks and CI notifications |
 | D-001 human git | Host shell per `constraints/host.md` — your deployment pipelines |

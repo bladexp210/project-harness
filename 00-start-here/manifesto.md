@@ -56,7 +56,7 @@ applied.
 
 ## Addendum — Plain language and visuals
 
-*(Session 14 — aligns with [[ADR-008-reader-facing-language-and-visuals|ADR-008]])*
+*(Session 14 — aligns with [ADR-008](../02-design/decisions/ADR-008-reader-facing-language-and-visuals.md))*
 
 Trust requires **readability**, not performance. If someone needs insider
 vocabulary to use the harness, the harness failed — whether their English is

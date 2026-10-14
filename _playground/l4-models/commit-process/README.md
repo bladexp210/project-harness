@@ -10,7 +10,7 @@ tags: [playground, l4, icom, commit]
 
 > [!NOTE] Learning folder — not canon
 > Full stack L1→L4 for Track B session commit. Reference L4 box:
-> [[01-validate-batch]].
+> [01-validate-batch](01-validate-batch.md).
 
 ## Stack map
 
@@ -25,9 +25,9 @@ flowchart TB
 
 | Level | ID | File | Governance |
 | :---- | :--- | :--- | :--------- |
-| L1 Capability | `app_book_harness` | [[L1-cap-session-governance]] | Owner |
-| L2 Process | `proc_session_build` | [[L2-proc-session-build]] | Manager |
-| L3 Workflow | `wf_commit_process` | [[L3-commit-process]] | Orchestrator |
+| L1 Capability | `app_book_harness` | [L1-cap-session-governance](L1-cap-session-governance.md) | Owner |
+| L2 Process | `proc_session_build` | [L2-proc-session-build](L2-proc-session-build.md) | Manager |
+| L3 Workflow | `wf_commit_process` | [L3-commit-process](L3-commit-process.md) | Orchestrator |
 | L4 Task | `t_*` | `01`–`04` | Executor + Supervisor |
 
 ## Two stacks (decision 1)
@@ -97,20 +97,20 @@ Do not rename process levels into C4 levels.
 
 | File | Level |
 | :---- | :---- |
-| [[L1-cap-session-governance]] | L1 capability |
-| [[L2-proc-session-build]] | L2 process |
-| [[L3-commit-process]] | L3 workflow |
-| [[01-validate-batch]] | L4 — reference box |
-| [[02-draft-commit-blocks]] | L4 task |
-| [[03-human-review-diff]] | L4 task |
-| [[04-human-git-commit]] | L4 — irreversible gate |
+| [L1-cap-session-governance](L1-cap-session-governance.md) | L1 capability |
+| [L2-proc-session-build](L2-proc-session-build.md) | L2 process |
+| [L3-commit-process](L3-commit-process.md) | L3 workflow |
+| [01-validate-batch](01-validate-batch.md) | L4 — reference box |
+| [02-draft-commit-blocks](02-draft-commit-blocks.md) | L4 task |
+| [03-human-review-diff](03-human-review-diff.md) | L4 task |
+| [04-human-git-commit](04-human-git-commit.md) | L4 — irreversible gate |
 
 **Defer:** auditing task.
 
-**Colors:** [[context/system/icom-plus-convention#Color map (roles)|ICOM+ role color map]].
+**Colors:** [ICOM+ role color map](../../../context/system/icom-plus-convention.md#color-map-roles).
 
 ## How to read
 
 1. Top-down: L1 → L2 → L3 → L4.
-2. Bottom-up: [[01-validate-batch]] then follow 01→04 handoffs.
-3. Convention: [[context/system/icom-plus-convention|ICOM+ v0.3]] · [[context/system/icom-plus-convention#Color map (roles)|colors]].
+2. Bottom-up: [01-validate-batch](01-validate-batch.md) then follow 01→04 handoffs.
+3. Convention: [ICOM+ v0.3](../../../context/system/icom-plus-convention.md) · [colors](../../../context/system/icom-plus-convention.md#color-map-roles).

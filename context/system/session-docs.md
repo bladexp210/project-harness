@@ -17,31 +17,31 @@ Local copies live in `context/system/sessions/` — the vault is self-sufficient
 
 ### v1 — Dimensions 1–7 (full detail)
 
-**Local:** [[session-1-v1]] · **Provenance:** [Google Doc](https://docs.google.com/document/d/1MdxaChwpc-Ej3JOEDjpcDjLDPf5pVZ_IUQNNa57HCuI)
+**Local:** [session-1-v1](sessions/session-1-v1.md) · **Provenance:** [Google Doc](https://docs.google.com/document/d/1MdxaChwpc-Ej3JOEDjpcDjLDPf5pVZ_IUQNNa57HCuI)
 
 Covers: LLM Routing, Tracing, Isolation, Blast Radius, Hooks, Post-mortems, Composability. Machine context, guiding principles, the antifragility loop, key repos, decisions not taken and why.
 
 ### v2 — Design-first Workflow (full detail)
 
-**Local:** [[session-1-v2]] · **Provenance:** [Google Doc](https://docs.google.com/document/d/13_uRIJTv_fGH_Ny53vA-j54ZJzSoKe3wRzD6FKHhFeY)
+**Local:** [session-1-v2](sessions/session-1-v2.md) · **Provenance:** [Google Doc](https://docs.google.com/document/d/13_uRIJTv_fGH_Ny53vA-j54ZJzSoKe3wRzD6FKHhFeY)
 
 Covers: Exploration-Execution loops, two-axis model selection, three-layer context (C4 × DOK), WhiteBoxMAKER / ahead-by-k voting, boilerplate `lifecycle`, ADRs, full file structure, workflow phases. Also contains: the five workflow phases and three human approval gates.
 
 ### A/B Testing Addendum
 
-**Local:** [[session-1-ab-testing]] · **Provenance:** [Google Doc](https://docs.google.com/document/d/1KpFg7_bPr5aAyYmt_U2OKQ3Dbyq1qMoEDW_CzaVty2s)
+**Local:** [session-1-ab-testing](sessions/session-1-ab-testing.md) · **Provenance:** [Google Doc](https://docs.google.com/document/d/1KpFg7_bPr5aAyYmt_U2OKQ3Dbyq1qMoEDW_CzaVty2s)
 
 Covers: A/B testing as selective tool (not systematic gate), dual triggers (judgment + process), evaluator agent, Langfuse experiment runner, evaluation criteria templates per layer type, k-voting tiebreaker flow, design phase comparison flow, integration with existing stack.
 
 ### Agent Composition Addendum
 
-**Local:** [[session-1-agent-composition]] · **Provenance:** [Google Doc](https://docs.google.com/document/d/1efd5Sw5baf-cbKHs5fztJi-nIdM2CW8Lr37QOHat8Jg)
+**Local:** [session-1-agent-composition](sessions/session-1-agent-composition.md) · **Provenance:** [Google Doc](https://docs.google.com/document/d/1efd5Sw5baf-cbKHs5fztJi-nIdM2CW8Lr37QOHat8Jg)
 
 Covers: k as margin (not agent count), three criticality dimensions (runs, k, specialists), core team (5 roles), specialist team (3 forks), orchestrator (human + tools), all seed repositories with purpose, coherence principles.
 
 ### Book Architecture & Session Close
 
-**Local:** [[session-1-book-architecture]] · **Provenance:** [Google Doc](https://docs.google.com/document/d/1vTN4-kaLRHax4hMzdLCeWThNVjNw70j6UHRuEduoDDY)
+**Local:** [session-1-book-architecture](sessions/session-1-book-architecture.md) · **Provenance:** [Google Doc](https://docs.google.com/document/d/1vTN4-kaLRHax4hMzdLCeWThNVjNw70j6UHRuEduoDDY)
 
 Covers: The meta-reframe (this IS the system, not a project using the system), the slogan, manifesto, audience, Agents.md naming, dual path rationale, Obsidian optimization, publication workflow (Drive → GitHub → Quartz), Cowork as author, full book structure, tool alternatives for design and execution, next session agenda.
 

@@ -13,18 +13,18 @@ supplementaries**. C4 answers *what exists* — not step-by-step process
 
 | File | Diagram | Level | Status |
 | :---- | :------ | :---- | :----- |
-| [[context]] | System Context | L1 | **harness example** |
-| [[container]] | Container | L2 | stub |
-| [[component]] | Component | L3 | stub |
-| [[dynamic]] | Dynamic (supplementary) | L2–L3 | stub |
-| [[deployment]] | Deployment (supplementary) | L2 | stub |
+| [context](context.md) | System Context | L1 | **harness example** |
+| [container](container.md) | Container | L2 | stub |
+| [component](component.md) | Component | L3 | stub |
+| [dynamic](dynamic.md) | Dynamic (supplementary) | L2–L3 | stub |
+| [deployment](deployment.md) | Deployment (supplementary) | L2 | stub |
 
 Core four are **static only** — no flowcharts, sequence arrows, or swimlanes
-on Context / Container / Component / Code canvases. Use [[dynamic]] or
-[[../uml/sequence]] for runtime order.
+on Context / Container / Component / Code canvases. Use [dynamic](dynamic.md) or
+[sequence](../uml/sequence.md) for runtime order.
 
 ## Where to go next
 
-- **viz index:** [[../README]]
-- **Taxonomy L1–L2:** [[diagram-taxonomy]]
+- **viz index:** [../](../README.md)
+- **Taxonomy L1–L2:** [diagram-taxonomy](../../_playground/diagram-taxonomy.md)
 - **Playground mockups:** `_playground/mockups/c4-*.md` (FICTITIOUS OrderLine)

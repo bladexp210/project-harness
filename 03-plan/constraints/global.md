@@ -10,7 +10,7 @@ tags: [constraint]
 
 > [!TEACH] Teach
 > Pre-filled guardrails. You inherit these; you do not write them. Project-specific
-> rules go in [[project|constraints/project]] instead. Every constraint here exists
+> rules go in [constraints/project](project.md) instead. Every constraint here exists
 > because skipping it has a documented failure mode.
 
 ## Repository discipline
@@ -31,7 +31,7 @@ tags: [constraint]
 > [!TEACH] Teach
 > Budgets make drift visible before it becomes architecture. Hitting a trigger
 > means: split, or renegotiate with explicit human approval plus a
-> [[DEBT-LEDGER]] entry. Never silently exceed.
+> [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md) entry. Never silently exceed.
 
 | Artifact | Budget | Trigger action |
 |----------|--------|----------------|
@@ -46,7 +46,7 @@ tags: [constraint]
 > ≤ 20-node Mermaid limit from ADR-002, applying a **grace band**: a file over
 > budget by ≤ 5% is a **warning** (drift is visible, commit still passes); over by
 > > 5% is a **failure** (the commit is blocked until you split or renegotiate).
-> Renegotiating still requires explicit human approval plus a [[DEBT-LEDGER]]
+> Renegotiating still requires explicit human approval plus a [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md)
 > entry — the grace band buys a margin, not an exemption.
 
 ## AI execution discipline
@@ -69,5 +69,5 @@ Generated output is untrusted input entering a controlled system. Hard rules:
 - Significant decisions produce an ADR (`02-design/decisions/ADR-NNN.md`); the
   red-team agent challenges before the decision is final.
 - Pruned branches in PROJECT-PLAN.md cite their ADR — `[PRUNED: reason]`.
-- Known compromises are logged in [[DEBT-LEDGER]] with a trigger, at the moment
+- Known compromises are logged in [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md) with a trigger, at the moment
   they are taken — not when they hurt.

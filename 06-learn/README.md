@@ -8,23 +8,23 @@ tags: [orientation, learning-loop, boilerplate]
 
 # 06 — Learn
 
-Build from [[05-build|Ch. 05]] produces code and commits. Learn closes the
+Build from [Ch. 05](../05-build/README.md) produces code and commits. Learn closes the
 loop: every failure or success becomes a durable artifact the next task can
 load. Without this chapter, agents repeat the same mistakes; with it, execution
 gets cheaper and more reliable over time.
 
 > [!LEARN] Learn It
 > Three sinks capture what the build cycle taught:
-> **[[DEBT-LEDGER]]** — trigger-based compromises;
-> **[[06-learn/boilerplate/README|boilerplate/]]** — promoted working patterns;
-> **[[_templates/post-mortem|post-mortem template]]** — structured failure analysis;
-> **[[engineering-handoff-checklist]]** — POC → engineering day-1 (S47).
+> **[DEBT-LEDGER](DEBT-LEDGER.md)** — trigger-based compromises;
+> **[boilerplate/](boilerplate/README.md)** — promoted working patterns;
+> **[post-mortem template](../_templates/post-mortem.md)** — structured failure analysis;
+> **[engineering-handoff-checklist](engineering-handoff-checklist.md)** — POC → engineering day-1 (S47).
 > A task closes in Build; a *lesson* closes here.
 
 > [!TIP] Fast Track
 > After any failed or surprising task run: copy `_templates/post-mortem.md` →
 > `06-learn/post-mortems/`, fill it, then promote any reusable pattern into
-> `boilerplate/` and log trigger debts in [[DEBT-LEDGER]].
+> `boilerplate/` and log trigger debts in [DEBT-LEDGER](DEBT-LEDGER.md).
 
 ## Learning loop
 
@@ -44,9 +44,9 @@ flowchart LR
 
 | Path | Purpose |
 | :---- | :---- |
-| [[DEBT-LEDGER]] | Trigger-based debt register — inherited from WhiteBoxMAKER |
-| [[06-learn/boilerplate/README\|boilerplate/]] | Living library: specs, tasks, code patterns |
-| [[06-learn/post-mortems/README\|post-mortems/]] | Filled post-mortems after build cycles |
+| [DEBT-LEDGER](DEBT-LEDGER.md) | Trigger-based debt register — inherited from WhiteBoxMAKER |
+| [boilerplate/](boilerplate/README.md) | Living library: specs, tasks, code patterns |
+| [post-mortems/](post-mortems/README.md) | Filled post-mortems after build cycles |
 | `_templates/post-mortem.md` | Blank template (repo root — copy before each post-mortem) |
 
 ## Promotion rules

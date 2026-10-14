@@ -23,15 +23,15 @@ Track A/B execution run.
 
 ## Inputs
 
-- [[overview]] — three-layer context principle
-- [[book-architecture]] — Ch. 04 reader job (populate `context/`)
-- [[context-loader]] — strip rules and `task_context.py` wiring
+- [overview](../../context/system/overview.md) — three-layer context principle
+- [book-architecture](../../context/system/book-architecture.md) — Ch. 04 reader job (populate `context/`)
+- [context-loader](../context-loader.md) — strip rules and `task_context.py` wiring
 - Layer 2 arch files under `context/architecture/` (created by this task)
-- [[implementation/context-tree/task-03-scope]] — deliverables checklist
+- [task-03-scope](../../context/implementation/context-tree/task-03-scope.md) — deliverables checklist
 
 ## Controls
 
-*Inherited — do not rewrite.* Governed by [[global|constraints]] and the
+*Inherited — do not rewrite.* Governed by [constraints](../../03-plan/constraints/global.md) and the
 acceptance criteria below.
 
 **Scope — modify:**
@@ -48,13 +48,13 @@ acceptance criteria below.
 
 ## Mechanisms
 
-Run by the **dev agent** ([[dev-agent]]). Context via
-`python scripts/task_context.py` per [[context-loader]].
+Run by the **dev agent** ([dev-agent](../agents/dev-agent.yaml)). Context via
+`python scripts/task_context.py` per [context-loader](../context-loader.md).
 
 | Track | Guide | S22 choice |
 | :---- | :---- | :---- |
-| **A** (ideal) | [[openhands]] | **Not run** — document-only session |
-| **B** (fallback) | [[track-b-checklist]] | **Not run** — canon authored directly |
+| **A** (ideal) | [openhands](../../05-build/execution-tools/openhands.md) | **Not run** — document-only session |
+| **B** (fallback) | [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) | **Not run** — canon authored directly |
 
 ## Outputs
 

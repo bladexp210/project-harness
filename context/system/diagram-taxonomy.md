@@ -11,10 +11,10 @@ tags: [modeling, taxonomy, reference]
 # Diagram taxonomy v3 — which diagram at which level
 
 > [!NOTE] Reference v0.3
-> **Rendering stubs** live in [[viz/README|viz/]] (Mermaid first; HTML explorers later).
-> **Architecture documentation template:** [[02-design/arc42/README|arc42/]] (12 sections under Ch. 02).
+> **Rendering stubs** live in [viz/](../../viz/README.md) (Mermaid first; HTML explorers later).
+> **Architecture documentation template:** [arc42/](../../02-design/arc42/README.md) (12 sections under Ch. 02).
 > This file answers: *which diagram type, at which level, for which question?*
-> Dynamic task boxes: [[icom-plus-convention|ICOM+ v0.3]]. Mockups:
+> Dynamic task boxes: [ICOM+ v0.3](icom-plus-convention.md). Mockups:
 > `_playground/mockups/` · **FICTITIOUS** unless marked REAL.
 
 ---
@@ -30,7 +30,7 @@ tags: [modeling, taxonomy, reference]
 
 Capability ≈ app · Process ≈ module (Container in C4 labels) · Workflow ≈
 component grain · Task ≈ one sitting. **Link** stacks in prose; do not rename C4
-levels into process levels. REAL Track B: [[_playground/l4-models/README|l4-models/]].
+levels into process levels. REAL Track B: [l4-models/](../../_playground/l4-models/README.md).
 
 ### C4 — four core + three supplementaries
 
@@ -94,7 +94,7 @@ Pool · Lane · Task · Gateway (XOR/AND/OR) · Data Object · Message Flow.
 - Title = **question answered**, not notation name
 - Labels ≤ **5 words**; verb + object
 - Embedded legend on every diagram
-- **Color = role only** — see [[icom-plus-convention#Color map (roles)|ICOM+ color map]]
+- **Color = role only** — see [ICOM+ color map](icom-plus-convention.md#color-map-roles)
 - Node budgets: L1 ≤7 · L2 ≤12 · L3 ≤15 (split if exceeded)
 - Non-color fallback prefixes required (`[Exec:agent]`, etc.)
 
@@ -149,18 +149,18 @@ level, never compound zoom on one page.
 | :---- | :---- |
 | **Static vs dynamic** | C4 answers structure; BPMN answers step sequence — never on the same diagram |
 | **BPMN default subset** | Pool + lane + task + gateway + data object + message flow — not full OMG spec |
-| **L4 task frame** | ICOM+ concept as Markdown table ([[icom-plus-convention]]) — strict IDEF0 syntax optional |
+| **L4 task frame** | ICOM+ concept as Markdown table ([icom-plus-convention](icom-plus-convention.md)) — strict IDEF0 syntax optional |
 | **Track B sessions** | Kanban status board — not BPMN (different question: session orientation) |
 | **ESL readability** | ≤5 words per node label; integrated legend; diagram + prose dual coding |
 | **AI agent workflows** | No published notation standard yet — use sequence/state at L3/L4 boundary |
 
 Full report (67K) stays in archive for bibliography; canon holds this section
 only. Primary references: Simon Brown *The C4 Model*; OMG BPMN 2.0 subset;
-[[ADR-002-modeling-conventions|ADR-002]] Mermaid budgets.
+[ADR-002](../../02-design/decisions/ADR-002-modeling-conventions.md) Mermaid budgets.
 
 ---
 
 ## Continued
 
-L3–L4 tables, Track B, combination matrix, appendix: [[diagram-taxonomy-levels]].
+L3–L4 tables, Track B, combination matrix, appendix: [diagram-taxonomy-levels](diagram-taxonomy-levels.md).
 

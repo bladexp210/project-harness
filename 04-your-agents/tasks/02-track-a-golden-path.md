@@ -22,15 +22,15 @@ gate without product code.
 
 ## Inputs
 
-- [[track-a-setup]] — stack setup, `.env`, virtual keys
-- [[openhands]] — stack setup, prompt template, run log table
+- [track-a-setup](../../05-build/execution-tools/track-a-setup.md) — stack setup, `.env`, virtual keys
+- [openhands](../../05-build/execution-tools/openhands.md) — stack setup, prompt template, run log table
 - `05-build/execution-tools/track-a/docker-compose.yml` — pinned compose
 - `05-build/execution-tools/track-a/litellm_config.yaml` — agent yaml aliases
-- [[project|constraints/project]] — model and version rows to fill
+- [constraints/project](../../03-plan/constraints/project.md) — model and version rows to fill
 
 ## Controls
 
-*Inherited — do not rewrite.* Governed by [[global|constraints]] and the
+*Inherited — do not rewrite.* Governed by [constraints](../../03-plan/constraints/global.md) and the
 acceptance criteria below.
 
 **Scope — modify:**
@@ -44,13 +44,13 @@ acceptance criteria below.
 
 ## Mechanisms
 
-Run by the **dev agent** ([[dev-agent]]). Context via
-`python scripts/task_context.py` per [[context-loader]].
+Run by the **dev agent** ([dev-agent](../agents/dev-agent.yaml)). Context via
+`python scripts/task_context.py` per [context-loader](../context-loader.md).
 
 | Track | Guide | When |
 | :---- | :---- | :--- |
-| **A** (ideal) | [[openhands]] + `track-a/` stack | This task — golden path proof |
-| **B** (fallback) | [[track-b-checklist]] | Only if Docker blocked — document blocker instead |
+| **A** (ideal) | [openhands](../../05-build/execution-tools/openhands.md) + `track-a/` stack | This task — golden path proof |
+| **B** (fallback) | [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) | Only if Docker blocked — document blocker instead |
 
 Stack rules (non-negotiable):
 

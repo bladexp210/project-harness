@@ -12,12 +12,12 @@ inside one scenario.
 
 | File | Diagram | Level | Status |
 | :---- | :------ | :---- | :----- |
-| [[sequence]] | Sequence | L3/L4 | stub |
-| [[state]] | State machine | L3/L4 | stub |
+| [sequence](sequence.md) | Sequence | L3/L4 | stub |
+| [state](state.md) | State machine | L3/L4 | stub |
 
-Full UML catalog: [[diagram-taxonomy-levels#Core catalog vs appendix]].
+Full UML catalog: [diagram-taxonomy-levels](../../context/system/diagram-taxonomy-levels.md#core-catalog-vs-appendix).
 
 ## Where to go next
 
-- **viz index:** [[../README]]
-- **C4 Dynamic alternative:** [[../c4/dynamic]]
+- **viz index:** [../](../README.md)
+- **C4 Dynamic alternative:** [dynamic](../c4/dynamic.md)

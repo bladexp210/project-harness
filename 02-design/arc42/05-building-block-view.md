@@ -24,15 +24,15 @@ view (C4 L3). Other containers stay at L2 unless you need their internals.
 
 | Level           | Question                          | Harness diagram       |
 | :-------------- | :-------------------------------- | :-------------------- |
-| L2 — Containers | What modules make up the repo?    | [[viz/c4/container]]  |
-| L3 — Components | What parts sit inside Agent pack? | [[viz/c4/component]]  |
-| L4 — Task grain | One ICOM+ work unit               | [[viz/icom/task-box]] |
+| L2 — Containers | What modules make up the repo?    | [container](../../viz/c4/container.md)  |
+| L3 — Components | What parts sit inside Agent pack? | [component](../../viz/c4/component.md)  |
+| L4 — Task grain | One ICOM+ work unit               | [task-box](../../viz/icom/task-box.md) |
 | Code grain      | Optional C4 Code                  | defer until needed    |
 
 Open the diagrams:
 
-- [[viz/c4/container|C4 Container — harness example]]
-- [[viz/c4/component|C4 Component — harness example]]
+- [C4 Container — harness example](../../viz/c4/container.md)
+- [C4 Component — harness example](../../viz/c4/component.md)
 
 ## Container inventory (this harness)
 
@@ -47,7 +47,7 @@ Open the diagrams:
 | Validator scripts | `scripts/`, pre-commit | `validate_md.py`, golden-task tests |
 | Execution tools | `05-build/execution-tools/` | Track A/B guides, compose scaffolds |
 
-Cross-container dependencies (static only) are on the [[viz/c4/container]]
+Cross-container dependencies (static only) are on the [container](../../viz/c4/container.md)
 canvas — not repeated here.
 
 ## Component zoom — Agent pack
@@ -59,24 +59,24 @@ When the question is *inside* `04-your-agents/`, use L3:
 | Agent definitions | `agents/*.yaml` — roles and policies |
 | Task specs | `tasks/*.md` — ICOM+ work units with `context_load` |
 | Golden tasks | Regression fixtures for evaluator |
-| Context loader | `task_context.py` + [[context-loader]] rules |
+| Context loader | `task_context.py` + [context-loader](../../04-your-agents/context-loader.md) rules |
 | Evaluator path | Golden tests + fog-word lint |
 
-Full diagram: [[viz/c4/component|C4 Component — harness example]]
+Full diagram: [C4 Component — harness example](../../viz/c4/component.md)
 
 ## ESL checklist (this section)
 
 | Rule | Pass |
 | :---- | :---- |
-| Static decomposition only | Runtime order → §6 or [[viz/c4/dynamic]] |
-| Diagram linked not pasted | [[viz/c4/container]], [[viz/c4/component]] |
+| Static decomposition only | Runtime order → §6 or [dynamic](../../viz/c4/dynamic.md) |
+| Diagram linked not pasted | [container](../../viz/c4/container.md), [component](../../viz/c4/component.md) |
 | L2 before L3 | Container drawn before Component zoom |
-| Container ≠ Deployment | Physical nodes → §7 or [[viz/c4/deployment]] |
+| Container ≠ Deployment | Physical nodes → §7 or [deployment](../../viz/c4/deployment.md) |
 | One container per L3 canvas | Agent pack only at L3 in harness |
 
 ## Where to go next
 
-- **Context boundary (§3):** [[03-context-and-scope]]
-- **Runtime collaboration (§6):** [[06-runtime-view]]
-- **C4 section index:** [[viz/c4/README]]
-- **Section index:** [[README]]
+- **Context boundary (§3):** [03-context-and-scope](03-context-and-scope.md)
+- **Runtime collaboration (§6):** [06-runtime-view](06-runtime-view.md)
+- **C4 section index:** [c4/](../../viz/c4/README.md)
+- **Section index:** [README](README.md)

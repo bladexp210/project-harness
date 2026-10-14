@@ -34,14 +34,14 @@ flowchart TB
 
 | Domain | File | Hint |
 | :---- | :---- | :---- |
-| data | [[architecture/data/your-data-layer]] | Schema, storage, migration rules |
-| application | [[architecture/application/your-application-layer]] | Modules, boundaries, runtime |
-| communication | [[architecture/communication/your-communication-layer]] | APIs, events, provider contracts |
-| ux | [[architecture/ux/your-ux-layer]] | Roles, flows, latency budgets |
+| data | [your-data-layer](architecture/data/your-data-layer.md) | Schema, storage, migration rules |
+| application | [your-application-layer](architecture/application/your-application-layer.md) | Modules, boundaries, runtime |
+| communication | [your-communication-layer](architecture/communication/your-communication-layer.md) | APIs, events, provider contracts |
+| ux | [your-ux-layer](architecture/ux/your-ux-layer.md) | Roles, flows, latency budgets |
 
 ## Layer 3 — add per feature
 
-Start from [[implementation/_example-feature/README|implementation/_example-feature/]].
+Start from [implementation/_example-feature/](implementation/_example-feature/README.md).
 Add one folder per bounded feature when architecture files are not enough.
 
 ## Wiring a task

@@ -22,7 +22,7 @@ One record per **whole-product sunset**. Feature-level removal uses Ch. 07
 
 | Record | Type |
 | :---- | :---- |
-| [[example-harness-repo-sunset]] | Harness-meta — winding down this book repo |
-| [[example-fictional-saas-sunset]] | Fictional SaaS — **NoteShelf** training artifact |
+| [example-harness-repo-sunset](example-harness-repo-sunset.md) | Harness-meta — winding down this book repo |
+| [example-fictional-saas-sunset](example-fictional-saas-sunset.md) | Fictional SaaS — **NoteShelf** training artifact |
 
 Replace both with your product's record when you sunset for real.

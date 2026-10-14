@@ -8,7 +8,7 @@ tags: [git, worktree, setup, skeleton]
 
 # Git layout — reader product
 
-Trimmed from [[bare-worktree-setup]]. Replace `my-project` with your product
+Trimmed from [bare-worktree-setup](../../../../05-build/execution-tools/bare-worktree-setup.md). Replace `my-project` with your product
 name and paths with your host folders.
 
 ## Maturity levels
@@ -55,4 +55,4 @@ Upgrade to bare + worktrees before parallel agents share one working tree.
 ## Protected branch
 
 Keep `main` merge-only after human review — same session ritual as the book
-([[session-workflow]]). Commits on session branches; merge when the task closes.
+([session-workflow](../../../../context/system/session-workflow.md)). Commits on session branches; merge when the task closes.

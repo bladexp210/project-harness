@@ -50,7 +50,7 @@ git on Windows only).
 | Step | Action |
 | :---- | :---- |
 | 1 | Read failure path in output — budget WARN vs hard FAIL |
-| 2 | Fix canon file or renegotiate budget per [[DEBT-LEDGER]] |
+| 2 | Fix canon file or renegotiate budget per [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md) |
 | 3 | Re-run `validate_md.py --all` |
 | 4 | If near-miss caught pre-merge → optional post-mortem in `06-learn/post-mortems/` |
 
@@ -61,7 +61,7 @@ git on Windows only).
 | 1 | Check Docker daemon: `docker version` |
 | 2 | Check `.env` in `track-a/` — keys present, not committed |
 | 3 | `docker compose ... logs litellm` / `openhands` |
-| 4 | See [[track-a-setup]] troubleshooting; log blocker ADR if upstream break |
+| 4 | See [track-a-setup](../../05-build/execution-tools/track-a-setup.md) troubleshooting; log blocker ADR if upstream break |
 
 ### INC-3 — Stale file bytes from sandbox (D-001)
 
@@ -76,9 +76,9 @@ git on Windows only).
 | Task | Cadence | Procedure |
 | :---- | :---- | :---- |
 | Session close validator | every session | `validate_md.py --all` before merge offer |
-| STATE + dashboard sync | every session | [[harness-session-close-checklist]] |
+| STATE + dashboard sync | every session | [harness-session-close-checklist](../../06-learn/boilerplate/specs/harness-session-close-checklist.md) |
 | Track A `.env` key rotation | quarterly or on leak | OpenRouter revoke + reissue; update local `.env` only |
-| Dependency pin review | quarterly | `docker-compose.yml` image tags; [[project\|constraints/project]] Models table |
+| Dependency pin review | quarterly | `docker-compose.yml` image tags; [constraints/project](../../03-plan/constraints/project.md) Models table |
 
 ## Docker hygiene (Track A compose)
 
@@ -103,7 +103,7 @@ your product app.
 
 When **retiring** a harness capability (not whole-repo sunset — see Ch. 08):
 
-- Document deprecate → migrate → remove per [[ADR-003-removal-vocabulary]]
+- Document deprecate → migrate → remove per [ADR-003-removal-vocabulary](../../02-design/decisions/ADR-003-removal-vocabulary.md)
 - Example: retiring Track B-only path while keeping Track A — update
   `05-build/README.md` and runbook health checks; post-mortem if users
   depended on removed path
@@ -113,7 +113,7 @@ When **retiring** a harness capability (not whole-repo sunset — see Ch. 08):
 | Role | This harness |
 | :---- | :---- |
 | Operator | human reader |
-| Agent execution | [[dev-agent]] via [[openhands]] |
+| Agent execution | [dev-agent](../../04-your-agents/agents/dev-agent.yaml) via [openhands](../../05-build/execution-tools/openhands.md) |
 | Escalation | human gate — no unattended prod (N/A for local harness) |
 
 ## Change log

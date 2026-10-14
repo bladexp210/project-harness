@@ -46,7 +46,7 @@ flowchart LR
 | Central system | Book repo (`00`–`08`, agents, validator) | Your app or service name |
 | Human actor | Reader learning the methodology | Your end users or operators |
 | External systems | Product repo reader builds; LLM API; Obsidian | Payment, identity, data vendors, etc. |
-| Not shown here | Containers inside Harness — see [[container]] | Your modules — L2 |
+| Not shown here | Containers inside Harness — see [container](container.md) | Your modules — L2 |
 
 ## ESL checklist (this file)
 
@@ -63,12 +63,12 @@ flowchart LR
 | Also draw when | Diagram |
 | :------------- | :------ |
 | Wider than one product | C4 System Landscape (taxonomy supplementary) |
-| Runtime collaboration | [[dynamic]] or [[../uml/sequence]] |
-| Session orientation | Dashboard L1 — not this C4 level ([[diagram-taxonomy#Track B — Session operations]]) |
+| Runtime collaboration | [dynamic](dynamic.md) or [sequence](../uml/sequence.md) |
+| Session orientation | Dashboard L1 — not this C4 level ([diagram-taxonomy](../../_playground/diagram-taxonomy.md#track-b-session-operations)) |
 
 ## Where to go next
 
-- **C4 section index:** [[README]]
+- **C4 section index:** [README](README.md)
 - **Dashboard L1 (different zoom):** `_index/dashboard/01-context.md`
 - **FICTITIOUS teaching mockup:** `_playground/mockups/c4-system-context.md`
-- **Container example (L2):** [[container]]
+- **Container example (L2):** [container](container.md)

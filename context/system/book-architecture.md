@@ -26,7 +26,7 @@ This system is designed for durability, not just speed. AI is a multiplier — n
 **setup/** documents tools with the dual path. Design tools and execution tools are separate sub-folders. Each tool gets its own file. Primary tools get full scaffold + fast track. Alternatives get stubs.
 
 Design tools: cowork.md (primary), cursor.md, antigravity.md. Execution tools:
-[[openhands]] (Track A), [[track-b-checklist]] (Track B); Ch. 00 index only.
+[openhands](../../05-build/execution-tools/openhands.md) (Track A), [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) (Track B); Ch. 00 index only.
 
 ### 01 — Understand Your Project
 
@@ -94,7 +94,7 @@ Boilerplate grows from the learning loop. Good agent outputs → candidate boile
 
 All internal references use `[[note-name]]`, not standard markdown links. The
 graph view becomes the book's visual table of contents. **Table rows:**
-`[[stem]]` or `[[stem\|alias]]` only — see [[chapter-what-lives-here-table]].
+`[[stem]]` or `[[stem\|alias]]` only — see [chapter-what-lives-here-table](../../_templates/chapter-what-lives-here-table.md).
 
 ```
 Correct:   See [[data-layer]] for schema design guidance.
@@ -125,14 +125,14 @@ tags: [design, data-layer]
 | 03/PROJECT-PLAN | Task dependency graph |
 
 Dialect is chosen by the *question* the diagram answers — see the
-question→dialect table in [[ADR-002-modeling-conventions]]. Size budget:
+question→dialect table in [ADR-002-modeling-conventions](../../02-design/decisions/ADR-002-modeling-conventions.md). Size budget:
 ≤ 20 nodes per diagram; bigger means wrong zoom level, split C4-style.
 Decision logic uses markdown decision tables (DMN-lite), not diagrams.
 
 ### Task model (ICOM + Gherkin)
 
 Every task file in `tasks/` follows the ICOM frame from
-[[ADR-002-modeling-conventions]]: **Inputs** (Layer-3 context list),
+[ADR-002-modeling-conventions](../../02-design/decisions/ADR-002-modeling-conventions.md): **Inputs** (Layer-3 context list),
 **Controls** (inherited constraints + acceptance criteria), **Mechanisms**
 (agent + execution tool), **Outputs** (required artifacts). Acceptance
 criteria are Gherkin scenarios; each `Then` clause is one test the agent
@@ -159,7 +159,7 @@ ingress). Agents do not load `_playground/` unless the human names a path.
 - `02-containers.md` — per-chapter status and major artifacts  
 - `03-components.md` — current session focus and next actions  
 
-Updated at every session close per [[session-workflow]]. Optional future:
+Updated at every session close per [session-workflow](session-workflow.md). Optional future:
 Dataview queries on top of the same files (Obsidian-only).
 
 ### Templater
@@ -207,4 +207,4 @@ The fast track is never dismissive. It acknowledges expertise. "You own the outc
 
 **Flow:** Cowork authors files → local folder (Obsidian vault) → Google Drive Desktop sync → Google Drive (backup/collab) → push when ready → GitHub repository (public) → Quartz site repo → GitHub Pages website.
 
-**Quartz** (quartz.jzhao.xyz) can publish an Obsidian-style vault as a static site (wiki-links, callouts, Mermaid). This public copy does not include deploy credentials or a live site. See [[../../07-ship-operate/publish/README|Publish later]].
+**Quartz** (quartz.jzhao.xyz) can publish an Obsidian-style vault as a static site (wiki-links, callouts, Mermaid). This public copy does not include deploy credentials or a live site. See [Publish later](../../07-ship-operate/publish/README.md).

@@ -11,12 +11,12 @@ tags: [handoff, poc, engineering]
 
 Solo POC → engineering day-1. Complete before inviting a second contributor
 or forking to a product repo. Complements per-session
-[[boilerplate/specs/harness-session-close-checklist|session close checklist]].
+[session close checklist](boilerplate/specs/harness-session-close-checklist.md).
 
 ## When to use
 
 - End of S41–S47 post-arc42 arc (this harness)
-- Before copying [[boilerplate/reader-skeleton|reader-skeleton]] to a new repo
+- Before copying [reader-skeleton](boilerplate/reader-skeleton/README.md) to a new repo
 - Before granting write access to engineering
 
 ## Checklist
@@ -63,7 +63,7 @@ or forking to a product repo. Complements per-session
 | Question | Start here |
 | :---- | :---- |
 | What is this repo? | `00/README.md`, `_index/dashboard/01-context.md` |
-| How do sessions work? | [[session-workflow]], `STATE.md` |
-| How do I run agents? | [[vscode-hub]], `04-your-agents/` |
-| How do I trace failures? | [[ADR-009-observability-paths-abc]], `06-learn/post-mortems/README.md` |
+| How do sessions work? | [session-workflow](../context/system/session-workflow.md), `STATE.md` |
+| How do I run agents? | [vscode-hub](../05-build/execution-tools/vscode-hub.md), `04-your-agents/` |
+| How do I trace failures? | [ADR-009-observability-paths-abc](../02-design/decisions/ADR-009-observability-paths-abc.md), `06-learn/post-mortems/README.md` |
 | How do I shut down cleanly? | `08-sunset/README.md` |

@@ -14,11 +14,11 @@ tags: [playground, l4, session, close]
 | :---- | :---- |
 | **Task ID** | `t_02_draft_state` |
 | **Task name** | Draft STATE close |
-| **Parent** | `wf_session_close` (L3 · [[L3-wf-session-close]]) |
+| **Parent** | `wf_session_close` (L3 · [L3-wf-session-close](L3-wf-session-close.md)) |
 | **Executor** | `exe_agent_cursor` · `agent:cursor` |
 | **Supervisor** | `human:Alex` |
 
-**Maps to:** [[session-workflow]] close checklist **B. STATE.md**.
+**Maps to:** [session-workflow](../../../context/system/session-workflow.md) close checklist **B. STATE.md**.
 
 **C4 link:** writes **module** `m_book_repo` file `STATE.md` (uncommitted until merge).
 
@@ -28,7 +28,7 @@ tags: [playground, l4, session, close]
 
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
-| Go signal from final validate | signal | task handoff | `exe_agent_cursor` ← [[01-final-validate]] |
+| Go signal from final validate | signal | task handoff | `exe_agent_cursor` ← [01-final-validate](01-final-validate.md) |
 | Current `STATE.md` on session branch | file | repo root | `exe_agent_cursor` |
 | Session outcome (shipped, branch, threads) | signal | chat | `human:Alex` |
 
@@ -41,8 +41,8 @@ tags: [playground, l4, session, close]
 | Updated **Last 3 decisions** | file | `STATE.md` | `human:Alex` |
 | **Current branch** → `main` (post-merge intent) | file | `STATE.md` | `human:Alex` |
 | Trimmed Current position (≤~15 lines) | file | `STATE.md` | `human:Alex` |
-| Archive pointer if prose moved | signal | chat | `human:Alex` → [[session-docs]] |
-| Go for dashboard draft | signal | task handoff | `exe_agent_cursor` → [[03-draft-dashboard]] |
+| Archive pointer if prose moved | signal | chat | `human:Alex` → [session-docs](../../../context/system/session-docs.md) |
+| Go for dashboard draft | signal | task handoff | `exe_agent_cursor` → [03-draft-dashboard](03-draft-dashboard.md) |
 
 ## Tools
 
@@ -56,7 +56,7 @@ Harness `STATE.md` is **canon / input**, not a Tool.
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | [[session-workflow]] B — boot line → closed paragraph |
+| Policy | [session-workflow](../../../context/system/session-workflow.md) B — boot line → closed paragraph |
 | Policy | D-004 — STATE must be accurate for next session |
 | Gherkin | see below |
 

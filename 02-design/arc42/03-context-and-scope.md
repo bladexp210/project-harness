@@ -34,7 +34,7 @@ until promoted.
 ## Context diagram
 
 arc42 §3 maps to **C4 System Context** (L1 static). The worked harness
-diagram lives in [[viz/c4/context]] — single source; this section links it
+diagram lives in [context](../../viz/c4/context.md) — single source; this section links it
 rather than duplicating the canvas.
 
 | Element | In this harness |
@@ -42,9 +42,9 @@ rather than duplicating the canvas.
 | Central system | Project Harness Book repo |
 | Human actors | Reader; co-author (human gate) |
 | External systems | Reader product repo; LLM API; Obsidian vault |
-| Not at this zoom | LiteLLM, OpenHands, Langfuse — L2 Container ([[viz/c4/container]]) |
+| Not at this zoom | LiteLLM, OpenHands, Langfuse — L2 Container ([container](../../viz/c4/container.md)) |
 
-Open the diagram: [[viz/c4/context|C4 System Context — harness example]]
+Open the diagram: [C4 System Context — harness example](../../viz/c4/context.md)
 
 ## External interfaces (summary)
 
@@ -60,12 +60,12 @@ Open the diagram: [[viz/c4/context|C4 System Context — harness example]]
 | Rule | Pass |
 | :---- | :---- |
 | Boundary explicit | In/out scope table above |
-| Diagram linked not pasted | [[viz/c4/context]] |
+| Diagram linked not pasted | [context](../../viz/c4/context.md) |
 | L1 node budget | See diagram file (≤ 7) |
-| Static context only | Runtime order → §6 or [[viz/c4/dynamic]] |
+| Static context only | Runtime order → §6 or [dynamic](../../viz/c4/dynamic.md) |
 
 ## Where to go next
 
-- **C4 Context diagram:** [[viz/c4/context]]
-- **Building blocks (§5):** [[05-building-block-view]]
+- **C4 Context diagram:** [context](../../viz/c4/context.md)
+- **Building blocks (§5):** [05-building-block-view](05-building-block-view.md)
 - **Dashboard L1 (session zoom, not C4):** `_index/dashboard/01-context.md`

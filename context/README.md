@@ -10,7 +10,7 @@ tags: [context, agents, harness]
 Agents load **only** what a task lists. This repo's worked example uses
 **harness-meta** context: it describes the book-as-harness itself, not a
 reader product. Your fork replaces Layer 2 and Layer 3 with distillations
-from [[02-design/layers/data|Ch. 02 layer designs]]. The three layers implement
+from [Ch. 02 layer designs](../02-design/layers/data.md). The three layers implement
 **information hiding** (Parnas): system orientation, domain architecture, and
 feature implementation can each change without forcing agents to load the whole
 repo.
@@ -37,22 +37,22 @@ flowchart TB
 
 > [!NOTE] Deterministic loading
 > Tasks name paths explicitly in `context_load:` frontmatter. No vector search.
-> See [[context-loader]] and `scripts/task_context.py`.
+> See [context-loader](../04-your-agents/context-loader.md) and `scripts/task_context.py`.
 
 ## Layer 2 — architecture domains (harness example)
 
 | Domain | File | What it captures for *this* repo |
 | :---- | :---- | :---- |
-| data | [[architecture/data/harness-artifacts]] | Canon artifacts, frontmatter, STATE as truth |
-| application | [[architecture/application/validation-and-loader]] | Validator, context loader, task assembler |
-| communication | [[architecture/communication/handoff-and-git]] | Human gates, session workflow, git (D-001) |
-| ux | [[architecture/ux/book-structure]] | Chapter spine, dual path, dashboard zoom |
+| data | [harness-artifacts](architecture/data/harness-artifacts.md) | Canon artifacts, frontmatter, STATE as truth |
+| application | [validation-and-loader](architecture/application/validation-and-loader.md) | Validator, context loader, task assembler |
+| communication | [handoff-and-git](architecture/communication/handoff-and-git.md) | Human gates, session workflow, git (D-001) |
+| ux | [book-structure](architecture/ux/book-structure.md) | Chapter spine, dual path, dashboard zoom |
 
 ## Layer 3 — implementation (harness example)
 
 | Feature | File | What it captures |
 | :---- | :---- | :---- |
-| context-tree | [[implementation/context-tree/task-03-scope]] | Task 03 scope — populating this tree |
+| context-tree | [task-03-scope](implementation/context-tree/task-03-scope.md) | Task 03 scope — populating this tree |
 
 ## Wiring a task
 
@@ -61,11 +61,11 @@ flowchart TB
 3. Add Layer 3 files only when the task needs task-specific detail beyond arch.
 4. Run `python scripts/task_context.py <task-file>` to preview stripped prompt text.
 
-Example: [[04-your-agents/tasks/03-populate-context-tree]].
+Example: [03-populate-context-tree](../04-your-agents/tasks/03-populate-context-tree.md).
 
 ## Your project
 
-Copy [[06-learn/boilerplate/reader-skeleton/README|reader-skeleton]] to a new repo,
+Copy [reader-skeleton](../06-learn/boilerplate/reader-skeleton/README.md) to a new repo,
 then replace harness-meta files with your product's layer designs:
 
 - `context/architecture/data/` — schema, storage, migration rules

@@ -11,7 +11,7 @@ tags: [viz, c4, static, L2, harness]
 nodes?
 
 > [!NOTE] REAL — harness-meta
-> Maps [[container]] modules to **deployment nodes**. Draw [[container]]
+> Maps [container](container.md) modules to **deployment nodes**. Draw [container](container.md)
 > first; this diagram second — never merge both on one canvas.
 
 ## Diagram
@@ -62,7 +62,7 @@ flowchart TB
 | Docker host | Execution tools — Track A compose only | K8s cluster, cloud VM |
 | LLM cloud | External — not a harness container | Your SaaS dependencies |
 | Langfuse | Optional observability for Track A | Your APM / tracing vendor |
-| Not shown here | Logical dependencies — see [[container]] | Service mesh at L2 static |
+| Not shown here | Logical dependencies — see [container](container.md) | Service mesh at L2 static |
 
 ## ESL checklist (this file)
 
@@ -71,7 +71,7 @@ flowchart TB
 | Title = question | Where containers run |
 | Labels ≤ 5 words | Yes |
 | Embedded legend | Table above |
-| Deployment ≠ Container | Separate canvas from [[container]] |
+| Deployment ≠ Container | Separate canvas from [container](container.md) |
 | L2 node budget ≤ 12 | 3 nodes + 6 mapped elements |
 | Static only | No numbered sequence |
 
@@ -79,13 +79,13 @@ flowchart TB
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| Logical modules unclear | [[container]] |
-| Track A runtime messages | [[../uml/sequence]] Variant B |
-| Session close flow | [[dynamic]] |
+| Logical modules unclear | [container](container.md) |
+| Track A runtime messages | [sequence](../uml/sequence.md) Variant B |
+| Session close flow | [dynamic](dynamic.md) |
 
 ## Where to go next
 
-- **Logical containers:** [[container]]
-- **Track A compose detail:** [[track-a-setup]]
-- **C4 section index:** [[README]]
-- **L1 externals:** [[context]]
+- **Logical containers:** [container](container.md)
+- **Track A compose detail:** [track-a-setup](../../05-build/execution-tools/track-a-setup.md)
+- **C4 section index:** [README](README.md)
+- **L1 externals:** [context](context.md)

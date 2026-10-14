@@ -37,7 +37,7 @@ flowchart TD
     V --> V3[Link resolution]
 ```
 
-Diagram budget: 12 nodes ([[ADR-002-modeling-conventions|ADR-002]]).
+Diagram budget: 12 nodes ([ADR-002](../decisions/ADR-002-modeling-conventions.md)).
 
 ## Quality scenarios
 
@@ -52,7 +52,7 @@ Each scenario ties one §1 goal to a measurable response.
 | **Response** | STATE closed paragraph, dashboard L1–L3 updated, S(N+1) bootstrap present |
 | **Measure** | Next agent reads only STATE + dashboard — no chat archaeology needed |
 
-**Evidence hook:** [[session-workflow]] close draft is postcondition before merge is offered.
+**Evidence hook:** [session-workflow](../../context/system/session-workflow.md) close draft is postcondition before merge is offered.
 
 ### QS-2 — Human gate integrity (Proceed)
 
@@ -74,7 +74,7 @@ Each scenario ties one §1 goal to a measurable response.
 | **Response** | Human runs merge to `main`; deletes session branch |
 | **Measure** | Irreversible git actions require explicit human run — not agent default |
 
-**Evidence hook:** [[Agents.md|Agents]] human gate shape; dashboard **Git branch** row returns to `main`.
+**Evidence hook:** [Agents](../../Agents.md) human gate shape; dashboard **Git branch** row returns to `main`.
 
 ### QS-4 — Verifiable canon (validator)
 
@@ -85,7 +85,7 @@ Each scenario ties one §1 goal to a measurable response.
 | **Response** | Zero validator failures; warnings within grace band |
 | **Measure** | `python scripts/validate_md.py --all` exit code 0 |
 
-**Evidence hook:** [[global|constraints/global]] budgets; link resolution (D-003 resolved S9).
+**Evidence hook:** [constraints/global](../../03-plan/constraints/global.md) budgets; link resolution (D-003 resolved S9).
 
 ### QS-5 — Verifiable canon (golden tasks)
 
@@ -107,7 +107,7 @@ Each scenario ties one §1 goal to a measurable response.
 | **Response** | ADR written; §9 row appended; affected arc42 section linked |
 | **Measure** | Decision traceable without opening git blame |
 
-**Evidence hook:** §9 process table; [[09-architectural-decisions]].
+**Evidence hook:** §9 process table; [09-architectural-decisions](09-architectural-decisions.md).
 
 ## Deferred quality work
 
@@ -131,7 +131,7 @@ Lower priority for this harness — tracked in §11, not blocking arc42 complete
 
 ## Where to go next
 
-- **Goals (§1):** [[01-introduction-and-goals]]
-- **Risks (§11):** [[11-risks-and-technical-debt]]
-- **Glossary (§12):** [[12-glossary]]
-- **Section index:** [[README]]
+- **Goals (§1):** [01-introduction-and-goals](01-introduction-and-goals.md)
+- **Risks (§11):** [11-risks-and-technical-debt](11-risks-and-technical-debt.md)
+- **Glossary (§12):** [12-glossary](12-glossary.md)
+- **Section index:** [README](README.md)

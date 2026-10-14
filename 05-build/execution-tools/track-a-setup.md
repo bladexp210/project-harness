@@ -9,7 +9,7 @@ tags: [execution, setup, docker, openhands, litellm]
 # Track A setup — install and configure
 
 One-time setup for **Track A**: Docker, OpenRouter, LiteLLM, and OpenHands
-wired as a local stack. After this guide, use [[openhands]] to run tasks.
+wired as a local stack. After this guide, use [openhands](openhands.md) to run tasks.
 
 > [!LEARN] Learn It
 > **What this file owns:** the order of setup, what to configure in *this*
@@ -19,7 +19,7 @@ wired as a local stack. After this guide, use [[openhands]] to run tasks.
 
 > [!TIP] Fast Track
 > Docker installed → OpenRouter key → copy `.env` → `docker compose up` →
-> OpenHands UI on `127.0.0.1:3000` → record versions in [[project|constraints/project]].
+> OpenHands UI on `127.0.0.1:3000` → record versions in [constraints/project](../../03-plan/constraints/project.md).
 > Details in [Scaffold path](#scaffold-path).
 
 ## What you are building
@@ -57,13 +57,13 @@ flowchart TB
 
 OpenHands runs the agent. LiteLLM routes models and budgets. OpenRouter bills
 upstream models. Langfuse captures **model-level traces** from LiteLLM (Path A).
-Your repo mounts as the workspace — see [[bare-worktree-setup]].
+Your repo mounts as the workspace — see [bare-worktree-setup](bare-worktree-setup.md).
 
 The **agent-server** sandbox is **not** on the compose network — see step 5
 Base URL note.
 
 **Chain rule:** OpenHands → LiteLLM → provider. Never point OpenHands at
-OpenRouter directly ([[ADR-007-dual-execution-tracks]]).
+OpenRouter directly ([ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md)).
 
 ## Book vs external docs
 
@@ -92,7 +92,7 @@ OpenRouter directly ([[ADR-007-dual-execution-tracks]]).
 python scripts/test_task_context.py
 ```
 
-No Docker or unwilling to run containers? Use [[track-b-checklist]] instead —
+No Docker or unwilling to run containers? Use [track-b-checklist](track-b-checklist.md) instead —
 same task files, different runtime.
 
 ## Scaffold path
@@ -205,7 +205,7 @@ WORKSPACE_PATH=C:/Users/you/src/project-harness # your repo — forward slashes 
 ```
 
 Also set `WORKSPACE_PATH` to the folder where your session branch is checked out
-— not your home directory. See [[bare-worktree-setup]] for worktree layout.
+— not your home directory. See [bare-worktree-setup](bare-worktree-setup.md) for worktree layout.
 
 **Two mounts — do not skip either:**
 
@@ -420,11 +420,11 @@ Agent yaml aliases (already in `litellm_config.yaml`):
 > [!NOTE] S21 verified
 > Harness smoke test passed 2026-06-20: `litellm_proxy/capable-llm` via
 > `http://host.docker.internal:4000`, agent-server on default bridge, LiteLLM
-> 2G memory limit + Postgres. See [[openhands]] run log.
+> 2G memory limit + Postgres. See [openhands](openhands.md) run log.
 
 ### 6. Record your setup
 
-Fill **Models and endpoints** in [[project|constraints/project]] — OpenHands
+Fill **Models and endpoints** in [constraints/project](../../03-plan/constraints/project.md) — OpenHands
 image tag, LiteLLM endpoint, alias status. This is your audit trail when
 upstream docs change.
 
@@ -446,7 +446,7 @@ OpenHands security context:
 
 ## Verify checklist
 
-You are ready for [[openhands]] § Run a task when **all** are yes:
+You are ready for [openhands](openhands.md) § Run a task when **all** are yes:
 
 - [ ] `docker compose ps` shows LiteLLM healthy and OpenHands running
 - [ ] OpenHands UI responds on localhost
@@ -462,7 +462,7 @@ python scripts/task_context.py 04-your-agents/tasks/02-track-a-golden-path.md `
   > .build-context/02-track-a-context.md
 ```
 
-- [ ] [[project|constraints/project]] records versions and endpoint
+- [ ] [constraints/project](../../03-plan/constraints/project.md) records versions and endpoint
 
 ## Common blockers
 
@@ -480,7 +480,7 @@ python scripts/task_context.py 04-your-agents/tasks/02-track-a-golden-path.md `
 | LiteLLM unhealthy, proxy works | Healthcheck used `curl` (not in image) | Fixed — uses `python3` + `/health/liveliness` per [LiteLLM issue #11094](https://github.com/BerriAI/litellm/issues/11094) |
 | Unicode error pasting context (Windows) | Console encoding | Redirect to file — see verify checklist command |
 
-Still blocked after upstream docs? Document evidence in [[openhands]] run log and
+Still blocked after upstream docs? Document evidence in [openhands](openhands.md) run log and
 use Track B for the same task file.
 
 ## Image pull errors
@@ -565,15 +565,15 @@ POSTGRES_PASSWORD=YOUR_LOCAL_ONLY_PASSWORD
 
 ## What to do next
 
-1. Read [[openhands]] — context assembly and run-a-task loop
-2. Run your first task (example: [[tasks/02-track-a-golden-path]])
+1. Read [openhands](openhands.md) — context assembly and run-a-task loop
+2. Run your first task (example: [02-track-a-golden-path](../../04-your-agents/tasks/02-track-a-golden-path.md))
 3. Human review on Windows (D-001) → commit
 
 ## Observability (Langfuse)
 
 The stack includes **Langfuse v3** for model-level traces (LiteLLM Path A).
 OpenHands agent-level OTEL (Path B) is deferred — see
-[[spine-sitrep-s26]].
+[spine-sitrep-s26](../../context/system/sessions/spine-sitrep-s26.md).
 
 | UI | URL |
 | :-- | :-- |
@@ -595,7 +595,7 @@ When you author on Track B (Cursor/VS Code), the same Langfuse project receives
 | :------- | :--- |
 | Hook wiring | `.cursor/hooks.json` |
 | Bridge script | `scripts/langfuse_trace_bridge.py` |
-| Contract | [[path-c-hook-contract]] |
+| Contract | [path-c-hook-contract](path-c-hook-contract.md) |
 
 **Setup:** reuse `LANGFUSE_PUBLIC_KEY` / `LANGFUSE_SECRET_KEY` from step 4b in
 this guide. Restart the IDE after key changes. **Smoke:** new agent chat → one
@@ -606,8 +606,8 @@ agent continues. Process trace (STATE, git) remains mandatory per ADR-009.
 
 ## Reference
 
-- Execution loop: [[openhands]]
-- Git workspace: [[bare-worktree-setup]]
-- Track B fallback: [[track-b-checklist]]
-- Decision: [[ADR-007-dual-execution-tracks]]
+- Execution loop: [openhands](openhands.md)
+- Git workspace: [bare-worktree-setup](bare-worktree-setup.md)
+- Track B fallback: [track-b-checklist](track-b-checklist.md)
+- Decision: [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md)
 - Stack files: `05-build/execution-tools/track-a/`

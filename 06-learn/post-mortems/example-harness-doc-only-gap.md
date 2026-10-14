@@ -33,7 +33,7 @@ agent defaulted to "fix code when docs mention code."
 
 ## What we learned
 
-Explicit Track A/B **Not run** rows (see [[harness-task-spec-example]]) prevent
+Explicit Track A/B **Not run** rows (see [harness-task-spec-example](../boilerplate/specs/harness-task-spec-example.md)) prevent
 scope creep in canon sessions.
 
 ## Action items
@@ -46,7 +46,7 @@ scope creep in canon sessions.
 ## Artifacts updated
 
 - `06-learn/boilerplate/specs/harness-task-spec-example.md` — Track table row
-- No [[DEBT-LEDGER]] entry — caught pre-commit
+- No [DEBT-LEDGER](../DEBT-LEDGER.md) entry — caught pre-commit
 
 ## Gherkin evidence (would-have-failed)
 

@@ -11,13 +11,13 @@ tags: [playground, l2, session, process]
 
 **Question:** How does a session branch land on `main` with a clean handoff?
 
-**Parent capability:** `app_book_harness` · [[../commit-process/L1-cap-session-governance|L1]]
+**Parent capability:** `app_book_harness` · [L1](../commit-process/L1-cap-session-governance.md)
 
 **Process ID:** `proc_session_close` · **C4 link:** **module** `m_book_repo`
 (C4 Container — diagram label unchanged).
 
 **Precondition:** `proc_session_build` finished — all batches committed on
-`session-NN/topic` via [[../commit-process/L3-commit-process|wf_commit_process]].
+`session-NN/topic` via [wf_commit_process](../commit-process/L3-commit-process.md).
 
 ---
 
@@ -34,7 +34,7 @@ tags: [playground, l2, session, process]
 ### Orchestrator
 
 `human:Alex` + `exe_agent_cursor` — agent drafts close artifacts; human runs
-final validation and **merge** (D-001). Per [[session-workflow]].
+final validation and **merge** (D-001). Per [session-workflow](../../../context/system/session-workflow.md).
 
 ### Input
 
@@ -49,7 +49,7 @@ final validation and **merge** (D-001). Per [[session-workflow]].
 | Artifact | Form | Where | To |
 | :------- | :--- | :---- | :--- |
 | `main` updated with session work | git ref | local + remote | `human:Alex` |
-| Updated [[STATE]] | file | `STATE.md` | `human:Alex` · `exe_agent_cursor` |
+| Updated [STATE](../../../STATE.md) | file | `STATE.md` | `human:Alex` · `exe_agent_cursor` |
 | Updated dashboard L1–L3 | file | `_index/dashboard/` | `human:Alex` · `exe_agent_cursor` |
 | Next-session bootstrap block | signal | `STATE.md` | `exe_agent_cursor` (next open) |
 | Session branch deleted (optional) | git ref | — | `human:Alex` |
@@ -68,7 +68,7 @@ final validation and **merge** (D-001). Per [[session-workflow]].
 
 | Workflow ID | Name | File |
 | :------------ | :--- | :--- |
-| `wf_session_close` | Draft close handoff | [[L3-wf-session-close]] |
+| `wf_session_close` | Draft close handoff | [L3-wf-session-close](L3-wf-session-close.md) |
 
 ```mermaid
 flowchart TB

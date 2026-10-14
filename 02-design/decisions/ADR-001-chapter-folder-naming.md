@@ -20,7 +20,7 @@ before more chapters materialize. Two folders already exist (`03-plan/`,
 ## Decision
 
 Kebab-case, zero-padded number plus short title, derived from the chapter
-titles in [[Agents]]:
+titles in [Agents](../../Agents.md):
 
 ```
 00-start-here/   01-understand/   02-design/   03-plan/
@@ -32,7 +32,7 @@ extension.
 
 ## Why
 
-[[agent-team]] already referred to "the 04-your-agents chapter" — the scheme
+[agent-team](../../context/system/agent-team.md) already referred to "the 04-your-agents chapter" — the scheme
 existed implicitly; this ADR makes it official. Numbers preserve reading order
 in every file browser. Kebab-case survives git, URLs, CLIs, and Quartz
 publishing without escaping. Short titles keep the graph view legible.
@@ -50,7 +50,7 @@ publishing without escaping. Short titles keep the graph view legible.
 
 *If this decision fails a year from now, why?* (1) A chapter title changed and
 the folder was renamed, silently breaking links → mitigation: chapter titles
-are frozen in [[Agents]]; any rename requires a superseding ADR plus a
+are frozen in [Agents](../../Agents.md); any rename requires a superseding ADR plus a
 vault-wide link audit. (2) The book outgrew 9 chapters → zero-padding holds to
 99; no action needed. (3) A publishing tool dislikes leading digits → Quartz
 handles them today; if a future tool does not, slugs can be remapped at the

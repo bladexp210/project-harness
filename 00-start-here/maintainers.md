@@ -11,7 +11,7 @@ updated: 2026-07-03
 
 **Purpose:** Operational map for people who **author or maintain this harness
 repo** — not for first-time readers. New adopters start at
-[[getting-started|Getting started]].
+[Getting started](getting-started.md).
 
 ---
 
@@ -21,11 +21,11 @@ repo** — not for first-time readers. New adopters start at
 | :--: | :--- |
 | Open | **Plan → Proceed → Execute** — agent plans; human says proceed before edits |
 | Branch | `session-NN/<topic>` per task or session |
-| Git writes | Human runs git on host shell (D-001) — see [[host\|constraints/host]] |
-| Close | Update [[STATE]], dashboard L1–L3, bootstrap next session |
+| Git writes | Human runs git on host shell (D-001) — see [constraints/host](../03-plan/constraints/host.md) |
+| Close | Update [STATE](../STATE.md), dashboard L1–L3, bootstrap next session |
 
-Full procedure: [[context/system/session-workflow|session-workflow]].
-Agent rules: [[Agents.md]].
+Full procedure: [session-workflow](../context/system/session-workflow.md).
+Agent rules: [Agents](../Agents.md).
 
 ---
 
@@ -58,10 +58,10 @@ Pre-commit hooks run the validator on commit when installed.
 
 | Track | Use | Entry |
 | :---- | :-- | :---- |
-| **Track B** | Authoring canon, session meta-work (default) | [[Agents.md]], [[05-build/execution-tools/track-b-checklist\|track-b-checklist]] |
-| **Track A** | Build tasks via OpenHands + LiteLLM | [[05-build/execution-tools/track-a-setup\|track-a-setup]] |
+| **Track B** | Authoring canon, session meta-work (default) | [Agents](../Agents.md), [track-b-checklist](../05-build/execution-tools/track-b-checklist.md) |
+| **Track A** | Build tasks via OpenHands + LiteLLM | [track-a-setup](../05-build/execution-tools/track-a-setup.md) |
 
-Decision: [[02-design/decisions/ADR-007-dual-execution-tracks|ADR-007]].
+Decision: [ADR-007](../02-design/decisions/ADR-007-dual-execution-tracks.md).
 
 ---
 
@@ -74,7 +74,7 @@ Decision: [[02-design/decisions/ADR-007-dual-execution-tracks|ADR-007]].
 | `outputs/` | Generated or scratch — not source of truth |
 | `.history/` | Local editor history — ignore |
 
-Known compromises: [[06-learn/DEBT-LEDGER|DEBT-LEDGER]].
+Known compromises: [DEBT-LEDGER](../06-learn/DEBT-LEDGER.md).
 
 ---
 
@@ -82,4 +82,4 @@ Known compromises: [[06-learn/DEBT-LEDGER|DEBT-LEDGER]].
 
 GitHub does not render `[[wiki-links]]`. This public copy does not ship a
 live site, deploy token, or sync script. See
-[[../07-ship-operate/publish/README|Publish later]] when you want a static site.
+[Publish later](../07-ship-operate/publish/README.md) when you want a static site.

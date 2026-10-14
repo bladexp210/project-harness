@@ -13,19 +13,19 @@ context_load:
 # Task 01 — Threat-model pre-mortem review
 
 Run the red-team agent's pre-mortem pass on the harness project's
-[[threat-model]] before Ch. 05 build work begins — smallest task that
+[threat-model](../../02-design/threat-model.md) before Ch. 05 build work begins — smallest task that
 exercises agent assignment + context load + ICOM/Gherkin closure.
 
 ## Inputs
 
-- [[02-design/threat-model]] (artifact sections — loader strips teaching blocks)
-- [[ADR-005-failure-condition-convention]] (failure-condition convention)
+- [threat-model](../../02-design/threat-model.md) (artifact sections — loader strips teaching blocks)
+- [ADR-005-failure-condition-convention](../../02-design/decisions/ADR-005-failure-condition-convention.md) (failure-condition convention)
 - `research/red-team-seed.md` (AI-specific threat evidence)
 - `research/lifecycle-playbook-seed.md` (Gate B — design-phase gate)
 
 ## Controls
 
-*Inherited — do not rewrite.* Governed by [[global|constraints]] and the
+*Inherited — do not rewrite.* Governed by [constraints](../../03-plan/constraints/global.md) and the
 acceptance criteria below.
 
 **Scope — modify:** `02-design/threat-model.md` (add review-log section only)
@@ -35,17 +35,17 @@ acceptance criteria below.
 
 ## Mechanisms
 
-Run by the **red-team agent** ([[red-team-agent]]). Context via
-`python scripts/task_context.py` per [[context-loader]] — teaching callouts
+Run by the **red-team agent** ([red-team-agent](../agents/red-team-agent.yaml)). Context via
+`python scripts/task_context.py` per [context-loader](../context-loader.md) — teaching callouts
 stripped from dual-purpose inputs.
 
 | Track | Guide | When |
 | :---- | :---- | :--- |
-| **A** (ideal) | [[openhands]] | Docker + LiteLLM/OpenRouter ready |
-| **B** (fallback) | [[track-b-checklist]] | IDE/CLI agent; use checklist §1–§7 |
+| **A** (ideal) | [openhands](../../05-build/execution-tools/openhands.md) | Docker + LiteLLM/OpenRouter ready |
+| **B** (fallback) | [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) | IDE/CLI agent; use checklist §1–§7 |
 
 Pick one track per run; same task file and acceptance criteria either way
-([[ADR-007-dual-execution-tracks]]).
+([ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md)).
 
 > [!NOTE] Visual map (experimental)
 > Open `_playground/icom/task-01/task-01.html` in a browser for an ICOM

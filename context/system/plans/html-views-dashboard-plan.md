@@ -17,7 +17,7 @@ tags: [html-gate, dashboard, plan]
 
 **Tech Stack:** Static HTML/CSS/vanilla JS, `file://` friendly relative paths, optional `scripts/test_views_export.py` for export contract tests, `validate_md.py --all` after doc edits.
 
-**Design spec:** [[html-views-dashboard-design]]
+**Design spec:** [html-views-dashboard-design](../html-views-dashboard-design.md)
 
 **Open decisions locked (Phase 0):**
 
@@ -426,7 +426,7 @@ On load: `var data = ViewsNav.readPageData(); items = structuredClone(data.items
 
 Add row to Files table:
 
-| `_views/gates/inbox-triage.html` | `_inbox/` triage (canonical) | [[session-41-inbox-triage]] |
+| `_views/gates/inbox-triage.html` | `_inbox/` triage (canonical) | [session-41-inbox-triage](../sessions/session-41-inbox-triage.md) |
 
 Add note: `review/inbox-triage-board.html` is a legacy pointer.
 
@@ -849,7 +849,7 @@ git commit -m "feat(views): complete A/B framework and layout experiment (Phase 
 
 **Primary:** Phase 0 shared kit + triage migration
 
-**Load first:** [[html-views-dashboard-design]], this plan, `review/inbox-triage-board.html`
+**Load first:** [html-views-dashboard-design](../html-views-dashboard-design.md), this plan, `review/inbox-triage-board.html`
 
 **Defer:** Phases 1–5 until Phase 0 smoke test passes
 

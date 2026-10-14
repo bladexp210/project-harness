@@ -15,9 +15,9 @@ tags:
 
 ## Context
 
-Ch. 05 shipped [[openhands]] as the book's first **full** execution guide
+Ch. 05 shipped [openhands](../../05-build/execution-tools/openhands.md) as the book's first **full** execution guide
 (Session 12). The harness itself is often authored with **Track B** IDE agents
-under [[session-workflow]] — same task files, same review gates, different
+under [session-workflow](../../context/system/session-workflow.md) — same task files, same review gates, different
 runtime. Without a decision, agents and readers inherit ambiguous wording
 ("primary execution tool" vs "how we actually work") and task `Mechanisms`
 sections drift.
@@ -35,7 +35,7 @@ and how handoffs stay mechanical.
 Hard constraints already in force:
 
 - **D-001** — all git operations on the Windows host (sandbox NUL corruption).
-- **ADR-006** — dual-purpose inputs strip via [[context-loader]] before agent
+- **ADR-006** — dual-purpose inputs strip via [context-loader](../../04-your-agents/context-loader.md) before agent
   consumption.
 - **ADR-002** — tasks are ICOM frames with Gherkin acceptance criteria.
 - **ICOM+ v0.3** — L4 **Executor** names who runs one sitting; **Tools** are
@@ -73,18 +73,18 @@ Track A full (bare + multi-worktree + Docker per agent).
 | **Context assembly** | `python scripts/task_context.py <task.md>` → paste into OpenHands initial prompt | **Same command** → paste into chat, **or** attach paths and instruct agent to treat loader output as authoritative stripped context |
 | **Agent identity** | Task `agent` field → `04-your-agents/agents/*.yaml` role + LiteLLM/OpenRouter alias | Same yaml **role** in prompt header; model from IDE subscription unless wired to LiteLLM gateway |
 | **Git topology** | **Bare repo + worktrees** (target); see [Git layout](#git-layout-bare-repo--worktrees) | **Bare repo + worktrees** — IDE opens one session worktree; no Docker mount layer |
-| **ICOM+ Executor (L4)** | `agent:<yaml-role>` (e.g. `agent:red-team-agent`) | `human:<name>` orchestrating; IDE product named under **Tools** / Mechanisms prose (see [[icom-plus-convention]]) |
-| **ICOM+ Mechanisms** | `task_context.py` → [[openhands]] | `task_context.py` → named IDE/CLI product |
+| **ICOM+ Executor (L4)** | `agent:<yaml-role>` (e.g. `agent:red-team-agent`) | `human:<name>` orchestrating; IDE product named under **Tools** / Mechanisms prose (see [icom-plus-convention](../../_playground/icom-plus-convention.md)) |
+| **ICOM+ Mechanisms** | `task_context.py` → [openhands](../../05-build/execution-tools/openhands.md) | `task_context.py` → named IDE/CLI product |
 | **Human gates** | Review diff → `validate_md.py --all` → Conventional Commit on Windows (D-001) | **Identical** — agent suggests; human approves; no IDE auto-commit to `main` |
-| **Session workflow** | Bootstrap / build / review / close per [[session-workflow]] | **Identical** — branch `session-NN/<topic>`; agent edits on branch; human merges |
+| **Session workflow** | Bootstrap / build / review / close per [session-workflow](../../context/system/session-workflow.md) | **Identical** — branch `session-NN/<topic>`; agent edits on branch; human merges |
 | **Handoff in** | Ch. 04 agent yaml + `context_load` + assembled stripped context | Same |
 | **Handoff out** | Changed files + Gherkin evidence → human commit | Same |
-| **Canon doc home** | Ch. 05 [[openhands]] (full Track A guide) | Ch. 05 [[track-b-checklist]] (one generic checklist); Ch. 00 index names tools only |
+| **Canon doc home** | Ch. 05 [openhands](../../05-build/execution-tools/openhands.md) (full Track A guide) | Ch. 05 [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) (one generic checklist); Ch. 00 index names tools only |
 
 ### Track B tool roster (awareness only)
 
 Examples — not an documentation obligation. The book does **not** maintain
-per-tool guides; [[track-b-checklist]] is the single Track B canon.
+per-tool guides; [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) is the single Track B canon.
 
 | Tool | Surface | Notes |
 | :---- | :------ | :---- |
@@ -101,12 +101,12 @@ per-tool guides; [[track-b-checklist]] is the single Track B canon.
 (workspace, context, identity, execution, safety, close, adapter). The reader's
 chosen tool maps harness artifacts to its own rules, @-mentions, MCP, etc.
 Rejected: per-tool stub files in Ch. 00 / Ch. 05 — too many products, too much
-doc rot. Track A alone gets a full scaffold ([[openhands]]).
+doc rot. Track A alone gets a full scaffold ([openhands](../../05-build/execution-tools/openhands.md)).
 
 ### Git layout — bare repo + worktrees
 
 **Prior decision (Session 1, Dimension 3 — Isolation):** documented in
-[[overview]] and `context/system/sessions/session-1-v1.md`, not yet a
+[overview](../../context/system/overview.md) and `context/system/sessions/session-1-v1.md`, not yet a
 standalone ADR. OpenHands (Docker) and git bare repo + worktrees operate at
 **different layers** and are designed **together**:
 
@@ -127,8 +127,8 @@ Host (Windows — git author per D-001)
 
 | Mode | Tracks | Bare + worktrees? | Notes |
 | :---- | :----- | :---------------- | :---- |
-| **Target** | A + B | **Yes** | Session 1 blast-radius stack; worktrees = Layer 2 in [[overview]] six-layer model |
-| **Track A ramp** | A only | **One worktree** from bare (or transitional single clone) | Valid for first OpenHands task; [[openhands]] today documents simple clone mount — upgrade path to bare layout is Ch. 05 follow-on |
+| **Target** | A + B | **Yes** | Session 1 blast-radius stack; worktrees = Layer 2 in [overview](../../context/system/overview.md) six-layer model |
+| **Track A ramp** | A only | **One worktree** from bare (or transitional single clone) | Valid for first OpenHands task; [openhands](../../05-build/execution-tools/openhands.md) today documents simple clone mount — upgrade path to bare layout is Ch. 05 follow-on |
 | **Track A full** | A | **Bare + N worktrees + N containers** | Parallel agents; each branch in its own worktree + container |
 | **Track B** | B | **Bare + worktrees** | Human + IDE work in one session worktree; git on Windows (D-001); no container per agent |
 | **Harness repo today** | B (authoring) | **Transitional** — normal clone + `session-NN/<topic>` branch | Matches current practice; migrate to bare layout when reader adopts Track B canon |
@@ -145,12 +145,12 @@ These are **non-negotiable** — switching tracks does not relax them:
 | Surface | Role |
 | :------ | :--- |
 | `04-your-agents/tasks/*.md` | Canonical task spec: Inputs, Controls, Mechanisms, Outputs, Gherkin |
-| `scripts/task_context.py` + [[context-loader]] | Merge agent `context_load_default` + task `context_load`; ADR-006 strip |
+| `scripts/task_context.py` + [context-loader](../../04-your-agents/context-loader.md) | Merge agent `context_load_default` + task `context_load`; ADR-006 strip |
 | `04-your-agents/agents/*.yaml` | Role, mandate, default context paths |
 | `03-plan/constraints/global.md` | Scope discipline, budgets, commit hygiene |
 | `scripts/validate_md.py` | Pre-commit gate; NUL check (D-001) |
-| [[session-workflow]] + [[STATE]] + `_index/dashboard/` | Session bootstrap, close, visual status |
-| [[icom-plus-convention]] + `context/system/icom-plus-examples*.md` | How to document L4 tasks and governance flows |
+| [session-workflow](../../context/system/session-workflow.md) + [STATE](../../STATE.md) + `_index/dashboard/` | Session bootstrap, close, visual status |
+| [icom-plus-convention](../../_playground/icom-plus-convention.md) + `context/system/icom-plus-examples*.md` | How to document L4 tasks and governance flows |
 | D-001 | Git add / commit / merge on **Windows PowerShell** only |
 | Branch discipline | `session-NN/<topic>` branch per worktree; never direct commit to `main` without close ritual |
 | Bare repo + worktrees (target) | Shared git layout; see [Git layout](#git-layout-bare-repo--worktrees) |
@@ -208,13 +208,13 @@ worktrees. ICOM+ already encodes both patterns (Executor `agent:*` vs
 ## Alternatives considered (red-teamed)
 
 - **OpenHands only** — simpler story. Rejected: blocks readers who honestly
-  cannot run Docker yet; Jules/Codex stubs in [[book-architecture]] would be
+  cannot run Docker yet; Jules/Codex stubs in [book-architecture](../../context/system/book-architecture.md) would be
   lies without a supported fallback.
 - **IDE only** — drop Docker path. Rejected: loses sandbox boundary,
   LiteLLM alias wiring, and the Ch. 05 exercise that proves agent yaml →
   context → execution.
 - **Per-tool stub tree** — one file per IDE/CLI product in Ch. 00 / Ch. 05.
-  Rejected: maintenance burden and vendor churn; generic [[track-b-checklist]]
+  Rejected: maintenance burden and vendor churn; generic [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md)
   plus reader-side adapter mapping is sufficient.
 - **Merge tracks in ICOM+** — single Executor type. Rejected: L4 examples
   already show `agent:red-team-agent` vs `human:Alex`; erasing that
@@ -247,6 +247,6 @@ worktrees. ICOM+ already encodes both patterns (Executor `agent:*` vs
 
 - Task `Mechanisms` lines name **track** explicitly; Track B names tool in
   prose or `constraints/project.md` adapter lines, not a book chapter per tool.
-- [[openhands]] → **Track A ideal**; [[track-b-checklist]] → **Track B fallback**.
+- [openhands](../../05-build/execution-tools/openhands.md) → **Track A ideal**; [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) → **Track B fallback**.
 - Ch. 00 `setup/execution-tools/README.md` — index + pointers only.
 - Dashboard T10 (ADR-006 Phase 3 lint) still waits for first Track A task run.

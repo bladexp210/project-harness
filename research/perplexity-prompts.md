@@ -12,7 +12,7 @@ UX/UI (thin in all backend-centric sources), product sunset (zero coverage
 anywhere), and requirements discovery (Ch. 01; the company framework assumes
 requirements arrive pre-made). **Prompt 4** (2026-06-12): modeling notation
 selection, combination rules, and session visualization — see
-[[model-visualization-research-brief]]. Paste each prompt into Perplexity deep
+[model-visualization-research-brief](model-visualization-research-brief.md). Paste each prompt into Perplexity deep
 research. Results land in `_inbox/`, then get distilled into `research/`
 seeds with provenance.
 
@@ -128,7 +128,7 @@ list with links. Exclude: generic agile ceremony descriptions, tool ads.
 
 ## Prompt 4 — Modeling notation selection, combinations, and session visualization
 
-**Brief:** [[model-visualization-research-brief]] · playground catalog:
+**Brief:** [model-visualization-research-brief](model-visualization-research-brief.md) · playground catalog:
 `_playground/diagram-taxonomy.md` v0.2.
 
 ```text

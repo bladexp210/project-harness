@@ -78,4 +78,4 @@ Scenario: [completion shape]
 | Validator clean | `validate_md.py --all` output |
 | PROJECT-PLAN row | Status `done` + file link |
 
-Quote each `Then` in the closing commit message or post-mortem per [[ADR-002-modeling-conventions|ADR-002]].
+Quote each `Then` in the closing commit message or post-mortem per [ADR-002](../../../02-design/decisions/ADR-002-modeling-conventions.md).

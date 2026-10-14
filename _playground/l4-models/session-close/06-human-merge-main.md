@@ -14,11 +14,11 @@ tags: [playground, l4, session, close]
 | :---- | :---- |
 | **Task ID** | `t_06_human_merge_main` |
 | **Task name** | Merge to main |
-| **Parent** | `wf_session_close` (L3 · [[L3-wf-session-close]]) |
+| **Parent** | `wf_session_close` (L3 · [L3-wf-session-close](L3-wf-session-close.md)) |
 | **Executor** | `exe_human_alex` · `human:Alex` |
 | **Supervisor** | `human:Alex` (**irreversible gate**) |
 
-**Maps to:** [[session-workflow]] close checklist **E. Git**.
+**Maps to:** [session-workflow](../../../context/system/session-workflow.md) close checklist **E. Git**.
 
 ---
 
@@ -26,9 +26,9 @@ tags: [playground, l4, session, close]
 
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
-| Approval from task 05 | signal | chat | `exe_human_alex` ← [[05-human-review-close]] |
-| PS merge + branch-delete blocks | shell | chat | `exe_agent_cursor` ← [[04-draft-bootstrap]] |
-| Final validate evidence | shell | chat | `exe_agent_cursor` ← [[01-final-validate]] |
+| Approval from task 05 | signal | chat | `exe_human_alex` ← [05-human-review-close](05-human-review-close.md) |
+| PS merge + branch-delete blocks | shell | chat | `exe_agent_cursor` ← [04-draft-bootstrap](04-draft-bootstrap.md) |
+| Final validate evidence | shell | chat | `exe_agent_cursor` ← [01-final-validate](01-final-validate.md) |
 
 ## Output
 
@@ -71,4 +71,4 @@ Scenario: Session merges to main
 ## Done when
 
 Supervisor confirms `main` has session work and chat confirmation posted.
-Bootstrap for session N+1 is in `STATE.md` from [[04-draft-bootstrap]].
+Bootstrap for session N+1 is in `STATE.md` from [04-draft-bootstrap](04-draft-bootstrap.md).

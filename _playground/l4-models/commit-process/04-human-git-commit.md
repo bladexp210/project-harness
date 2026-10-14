@@ -14,7 +14,7 @@ tags: [playground, l4, commit]
 | :---- | :---- |
 | **Task ID** | `t_04_human_git_commit` |
 | **Task name** | Git commit |
-| **Parent** | `wf_commit_process` (L3 · [[L3-commit-process]]) |
+| **Parent** | `wf_commit_process` (L3 · [L3-commit-process](L3-commit-process.md)) |
 | **Executor** | `exe_human_alex` · `human:Alex` |
 | **Supervisor** | `human:Alex` (**irreversible gate** — human only) |
 
@@ -29,8 +29,8 @@ Handoffs **from executors only**.
 
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
-| Explicit approval | signal | chat | `exe_human_alex` ← [[03-human-review-diff]] |
-| PS `git add` / `git commit` blocks | shell | chat transcript | `exe_agent_cursor` ← [[02-draft-commit-blocks]] |
+| Explicit approval | signal | chat | `exe_human_alex` ← [03-human-review-diff](03-human-review-diff.md) |
+| PS `git add` / `git commit` blocks | shell | chat transcript | `exe_agent_cursor` ← [02-draft-commit-blocks](02-draft-commit-blocks.md) |
 | Staging intent (only listed paths) | signal | local judgment | `exe_human_alex` |
 
 ---
@@ -44,7 +44,7 @@ Handoffs **to executors only**.
 | New commit SHA | git object | `session-NN/topic` ref | `exe_human_alex` (local repo) |
 | Clean status for staged batch | shell | `git status` stdout | `exe_human_alex` |
 | Pre-commit hook pass log | shell | terminal | `exe_human_alex` |
-| Hook failure + auto-fixed files | shell + file | terminal · worktree | `exe_agent_cursor` → [[01-validate-batch]] |
+| Hook failure + auto-fixed files | shell + file | terminal · worktree | `exe_agent_cursor` → [01-validate-batch](01-validate-batch.md) |
 | Confirmation in chat | signal | chat transcript | `exe_agent_cursor` (session continuity) |
 
 ---
@@ -65,7 +65,7 @@ External only — not developed in this repo.
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | D-001 (git on Windows host); [[global]] — no `--no-verify` unless explicit |
+| Policy | D-001 (git on Windows host); [global](../../../03-plan/constraints/global.md) — no `--no-verify` unless explicit |
 | Policy | User commit rules — **new** commit on hook fix, no amend unless allowed |
 | Gherkin | see below |
 
@@ -95,5 +95,5 @@ Scenario: Human commits one logical batch
 ## Done when
 
 Supervisor confirms: `git log -1` matches intent, hooks green, chat confirmation
-posted. **Merge to `main`** is [[../session-close/L3-wf-session-close|wf_session_close]] —
+posted. **Merge to `main`** is [wf_session_close](../session-close/L3-wf-session-close.md) —
 separate workflow at session close.

@@ -12,9 +12,9 @@ tags: [html-gate, dashboard, index]
 Full spec (301 lines) lives in the session archive to stay within Layer-1
 line budget:
 
-**[[sessions/html-views-dashboard-design|Full design spec]]**
+**[Full design spec](html-views-dashboard-design.md)**
 
-Implementation plan: [[plans/html-views-dashboard-plan]]
+Implementation plan: [html-views-dashboard-plan](plans/html-views-dashboard-plan.md)
 
 Operational entry: `_views/README.md` · open `_views/project/index.html` in a
 browser.

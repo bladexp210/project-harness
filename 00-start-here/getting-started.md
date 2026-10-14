@@ -13,7 +13,7 @@ updated: 2026-07-03
 reading the whole book first.
 
 > [!TIP] Fast Track
-> Clone → open Obsidian → read [[manifesto]] → pick a path below → run the
+> Clone → open Obsidian → read [manifesto](manifesto.md) → pick a path below → run the
 > **Day 1 checklist** → stop when the success check passes.
 
 ---
@@ -25,7 +25,7 @@ You need exactly one path. Mixing them on day one causes confusion.
 | Path | You want to… | Start in | Done when… |
 | :---- | :----------- | :------- | :--------- |
 | **A — Learn the method** | Study how the book works using its own examples | This repo (harness) | You finish Ch. 01 with the book's sample roles and use cases |
-| **B — Build your product** | Apply the method to *your* software | [[06-learn/boilerplate/reader-skeleton\|reader-skeleton]] (copy to a new repo) | You run one bounded task and commit a real change in *your* repo |
+| **B — Build your product** | Apply the method to *your* software | [reader-skeleton](../06-learn/boilerplate/reader-skeleton/README.md) (copy to a new repo) | You run one bounded task and commit a real change in *your* repo |
 
 | Path | Do **not** do on day one |
 | :---- | :----------------------- |
@@ -68,14 +68,14 @@ You can change tools later. Pick one default now to avoid paralysis.
 
 | Layer | Default | Alternative |
 | :---- | :------ | :------------ |
-| **Design (Ch. 01–04)** | Cursor (same window as code) | [[setup/design-tools/cowork\|Cowork]], [[setup/design-tools/antigravity\|Antigravity]] |
-| **Build (Ch. 05+)** | Track B — IDE/CLI agent in your editor | Track A — OpenHands + Docker ([[05-build/execution-tools/track-a-setup\|track-a-setup]]) |
-| **Git layout** | Single clone + session branch | Bare repo + worktrees ([[bare-worktree-setup]]) — defer until parallel agents |
+| **Design (Ch. 01–04)** | Cursor (same window as code) | [Cowork](setup/design-tools/cowork.md), [Antigravity](setup/design-tools/antigravity.md) |
+| **Build (Ch. 05+)** | Track B — IDE/CLI agent in your editor | Track A — OpenHands + Docker ([track-a-setup](../05-build/execution-tools/track-a-setup.md)) |
+| **Git layout** | Single clone + session branch | Bare repo + worktrees ([bare-worktree-setup](../05-build/execution-tools/bare-worktree-setup.md)) — defer until parallel agents |
 
 Full tool indexes (when you outgrow the default):
 
-- Design: [[setup/design-tools/README|design-tools index]]
-- Build: [[setup/execution-tools/README|execution-tools index]]
+- Design: [design-tools index](setup/design-tools/README.md)
+- Build: [execution-tools index](setup/execution-tools/README.md)
 
 ---
 
@@ -86,10 +86,10 @@ Full tool indexes (when you outgrow the default):
 | # | Do | Pass when |
 | :-: | :--- | :-------- |
 | 1 | Clone the repo and open it as an Obsidian vault | Wiki-links resolve; Mermaid renders in Ch. 00 |
-| 2 | Read [[manifesto]] (one page) | You can state who owns decisions vs who executes |
+| 2 | Read [manifesto](manifesto.md) (one page) | You can state who owns decisions vs who executes |
 | 3 | Run the validator | Command exits 0 (see below) |
-| 4 | Read [[01-understand/user-roles\|user-roles]] and [[01-understand/use-cases\|use-cases]] | You see how the *book* filled its own examples |
-| 5 | Skim [[Agents.md]] only if you use an AI co-author in this repo | You know agents load [[STATE]], not every file |
+| 4 | Read [user-roles](../01-understand/user-roles.md) and [use-cases](../01-understand/use-cases.md) | You see how the *book* filled its own examples |
+| 5 | Skim [Agents](../Agents.md) only if you use an AI co-author in this repo | You know agents load [STATE](../STATE.md), not every file |
 
 **Validator (from repo root):**
 
@@ -109,12 +109,12 @@ Review the output: teaching callouts (`[!LEARN]`, `[!TIP]`) should be stripped.
 
 | Defer until… | Topic |
 | :----------- | :---- |
-| You maintain the book repo | [[STATE]], dashboard, session-NN branches, [[context/system/session-workflow\|session-workflow]] |
-| You run parallel agents | [[bare-worktree-setup]] |
+| You maintain the book repo | [STATE](../STATE.md), dashboard, session-NN branches, [session-workflow](../context/system/session-workflow.md) |
+| You run parallel agents | [bare-worktree-setup](../05-build/execution-tools/bare-worktree-setup.md) |
 | Ch. 02 in earnest | arc42, threat model, full ADR set |
 | Ch. 05 | Track A Docker stack |
 
-Maintainer orientation: [[maintainers|For book maintainers]].
+Maintainer orientation: [For book maintainers](maintainers.md).
 
 ### Path A — success check
 
@@ -122,7 +122,7 @@ You are set up when all three are true:
 
 1. Obsidian opens the vault and links work.
 2. `python scripts/validate_md.py --all` exits 0 on your clone.
-3. You know your next file: [[01-understand/user-roles|Ch. 01 — user roles]].
+3. You know your next file: [Ch. 01 — user roles](../01-understand/user-roles.md).
 
 ---
 
@@ -156,18 +156,18 @@ git checkout -b session-01/first-feature
 python scripts/task_context.py tasks/your-first-task.md
 ```
 
-Execution ritual: [[05-build/execution-tools/track-b-checklist|Track B checklist]].
+Execution ritual: [Track B checklist](../05-build/execution-tools/track-b-checklist.md).
 
 ### What to defer (Path B)
 
 | Defer until… | Topic |
 | :----------- | :---- |
-| Second parallel agent | Bare repo + worktrees ([[06-learn/boilerplate/reader-skeleton/setup/README\|skeleton git setup]]) |
+| Second parallel agent | Bare repo + worktrees ([skeleton git setup](../06-learn/boilerplate/reader-skeleton/setup/README.md)) |
 | Ch. 02 complete | All four architecture files, arc42, threat model |
 | Observability | Langfuse bridges, Path C hooks |
 | HTML views | `_views/` dashboard — optional status UI |
 
-Full fork reference: [[06-learn/boilerplate/reader-skeleton/README|reader-skeleton README]].
+Full fork reference: [reader-skeleton README](../06-learn/boilerplate/reader-skeleton/README.md).
 
 ### Path B — success check
 
@@ -194,7 +194,7 @@ with a clear done state. You do not need the full 47-session apparatus on day on
 | 5 | Run validator if you changed markdown in the harness repo |
 | 6 | Commit on your **host shell** — not the agent sandbox if your host profile says so |
 
-**Path A first session:** Complete [[01-understand/user-roles|user-roles]] exercises
+**Path A first session:** Complete [user-roles](../01-understand/user-roles.md) exercises
 for *your* hypothetical product — or study the book's filled examples if you are
 still learning the shape.
 
@@ -225,12 +225,12 @@ ten more process docs.
 
 | After day one | Link |
 | :------------ | :--- |
-| Philosophy | [[manifesto]] |
-| Chapter journey | [[README\|Ch. 00 — Start Here]] |
-| Plan your product | [[03-plan/PROJECT-PLAN\|PROJECT-PLAN]] |
-| Configure agents | [[04-your-agents/README\|Ch. 04]] |
-| Build | [[05-build/README\|Ch. 05]] |
-| Known book compromises | [[06-learn/DEBT-LEDGER\|DEBT-LEDGER]] |
+| Philosophy | [manifesto](manifesto.md) |
+| Chapter journey | [Ch. 00 — Start Here](README.md) |
+| Plan your product | [PROJECT-PLAN](../03-plan/PROJECT-PLAN.md) |
+| Configure agents | [Ch. 04](../04-your-agents/README.md) |
+| Build | [Ch. 05](../05-build/README.md) |
+| Known book compromises | [DEBT-LEDGER](../06-learn/DEBT-LEDGER.md) |
 
 **Stuck?** Re-read [Step 1](#step-1--choose-your-path). Most day-one confusion
 is picking both Path A and Path B at once.

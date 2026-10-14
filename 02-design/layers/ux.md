@@ -14,14 +14,14 @@ tags: [design, layer, ux]
 > The UX layer decides what using your software feels like: how fast it
 > responds, who can physically operate it, how choices are presented, and —
 > new since the classics were written — how AI behavior is communicated.
-> It is designed per [[../01-understand/user-roles|user role]]: the roles and
+> It is designed per [user role](../../01-understand/user-roles.md): the roles and
 > their contexts ("on a phone, mid-commute") are this layer's real inputs.
 >
 > One framing carries the whole file: **every UX heuristic resolves a named
 > trade-off** — speed vs. depth, consistency vs. novelty, density vs.
 > discoverability (`ux-heuristics-seed → cross-cutting`). The tables below
 > state the trade-off and the failure condition, per
-> [[ADR-005-failure-condition-convention|ADR-005]]; numbers are floors and
+> [ADR-005](../decisions/ADR-005-failure-condition-convention.md); numbers are floors and
 > thresholds you can test against, not vibes.
 
 ## Why it matters
@@ -57,7 +57,7 @@ tags: [design, layer, ux]
 > financial, medical, or irreversible operations
 > (`ux-heuristics-seed → 3.5`). And **consistency level as a UX choice** —
 > users must see their own write (strong for "my profile"), but feeds can
-> be eventual; pick per surface, decide in the [[data]] layer
+> be eventual; pick per surface, decide in the [data](data.md) layer
 > (`system-design-seed → consistency patterns`).
 
 ## Decision 2 — Accessibility, decided now

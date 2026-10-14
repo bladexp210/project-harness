@@ -14,7 +14,7 @@ tags: [playground, l4, commit]
 | :---- | :---- |
 | **Task ID** | `t_02_draft_commit_blocks` |
 | **Task name** | Draft commit blocks |
-| **Parent** | `wf_commit_process` (L3 · [[L3-commit-process]]) |
+| **Parent** | `wf_commit_process` (L3 · [L3-commit-process](L3-commit-process.md)) |
 | **Executor** | `exe_agent_cursor` · `agent:cursor` |
 | **Supervisor** | `human:Alex` (accepts blocks before review) |
 
@@ -29,7 +29,7 @@ Handoffs **from executors only**.
 
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
-| Go signal from validation | signal | task handoff | `exe_agent_cursor` ← [[01-validate-batch]] |
+| Go signal from validation | signal | task handoff | `exe_agent_cursor` ← [01-validate-batch](01-validate-batch.md) |
 | `git status -sb` output | shell | terminal stdout | `exe_agent_cursor` (read-only) |
 | `git diff` output | shell | terminal stdout | `exe_agent_cursor` (read-only) |
 | Recent commit subjects | shell | `git log` stdout | `exe_agent_cursor` (read-only) |
@@ -46,7 +46,7 @@ Handoffs **to executors only**.
 | PS `git add <paths>` lines | shell | chat transcript | `human:Alex` |
 | PS `git commit -m "type(scope): subject" -m "Body."` | shell | chat transcript | `human:Alex` |
 | One block per atomic commit | shell | chat transcript | `human:Alex` |
-| Batch summary (what + why per commit) | signal | chat transcript | `human:Alex` → [[03-human-review-diff]] |
+| Batch summary (what + why per commit) | signal | chat transcript | `human:Alex` → [03-human-review-diff](03-human-review-diff.md) |
 
 ---
 
@@ -68,7 +68,7 @@ not tools.
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | [[session-workflow]] — one logical batch; atomic commits |
+| Policy | [session-workflow](../../../context/system/session-workflow.md) — one logical batch; atomic commits |
 | Policy | D-001 — agent does **not** run `git commit` unless Alex asks |
 | Gherkin | see below |
 

@@ -15,8 +15,8 @@ tags: [icom, mermaid, dynamic, reference]
 > **Orchestrator** (L1–L3). Static structure (C4 Container, ER) stays **linked
 > inset** — not drawn as ICOM+ unless the question is *what function runs here?*
 >
-> **v0.4:** Irreversible-gate Hoare fields — [[icom-plus-irreversible-gates]].
-> **REAL** Track B example: [[_playground/l4-models/commit-process/01-validate-batch|commit-process]].
+> **v0.4:** Irreversible-gate Hoare fields — [icom-plus-irreversible-gates](icom-plus-irreversible-gates.md).
+> **REAL** Track B example: [commit-process](../../_playground/l4-models/commit-process/01-validate-batch.md).
 > **FICTITIOUS** where marked below.
 
 ---
@@ -62,7 +62,7 @@ Orchestrator (L1–L3 coordination) · Executor (L4 sitting only).
 **Where:** path · chat · DB name · RAM · ref name
 
 Irreversible-gate **Preconditions** / **Postconditions:** required — see
-[[icom-plus-irreversible-gates]].
+[icom-plus-irreversible-gates](icom-plus-irreversible-gates.md).
 
 ### ID prefixes
 
@@ -109,7 +109,7 @@ Repo scripts are **inputs/canon**, not Tools.
 
 9. **Title** (prose above diagram): state the **question**, not the notation.
 10. **≤15 nodes** per diagram (L3 budget from research seed).
-11. **Color = role only** — use [[#Color map (roles)|color map]] `classDef`s; embed
+11. **Color = role only** — use [color map](icom-plus-convention.md#color-map-roles) `classDef`s; embed
     a one-line legend under every colored diagram.
 
 ---
@@ -166,8 +166,8 @@ Apply: `nodeId:::roleExecAgent` or `class t01,t02 roleExecAgent`.
 
 | Set | File | Content |
 | :-- | :--- | :------ |
-| A–E | [[icom-plus-examples]] | Fictitious L1–L4 + Kanban |
-| F–G | [[icom-plus-examples-trackb]] | REAL `wf_commit_process` + `wf_session_close` |
+| A–E | [icom-plus-examples](icom-plus-examples.md) | Fictitious L1–L4 + Kanban |
+| F–G | [icom-plus-examples-trackb](icom-plus-examples-trackb.md) | REAL `wf_commit_process` + `wf_session_close` |
 
 ---
 ## Fractal rule summary
@@ -182,7 +182,7 @@ flowchart LR
 - **L1–L3:** Orchestrator coordinates; **L4:** Executor runs one sitting.
 - **Structured orchestration (Dijkstra):** multi-agent work splits across task
   files with explicit Outputs → Inputs handoff — no ad-hoc agent chains in prose.
-  One Executor per task sitting; see [[04-your-agents/README|Ch. 04]].
+  One Executor per task sitting; see [Ch. 04](../../04-your-agents/README.md).
 - **Same** I/C/Ctl/O/Tools shape at every level; **different** granularity.
 - **Level** in the node title — never omit.
 - **Parent** in prose table — never orphan L4 without L3 parent on same page or link.
@@ -201,6 +201,6 @@ flowchart LR
 
 | updated_at | Change |
 | :--------- | :----- |
-| 2026-06-28T23:45:00 | v0.4 — Hoare gates; detail in [[icom-plus-irreversible-gates]] |
+| 2026-06-28T23:45:00 | v0.4 — Hoare gates; detail in [icom-plus-irreversible-gates](icom-plus-irreversible-gates.md) |
 | 2026-06-15T17:00:00 | v0.3 — color map, Example G, Orchestrator/Executor split |
 | 2026-06-12T20:00:00 | v0.1 — promoted from `_playground/` |

@@ -30,5 +30,5 @@ Copy into chapter READMEs under `## What lives here`. **Do not** use
 | [[your-folder/README\|your-folder/]] | One-line description |
 ```
 
-Rule: [[book-architecture]] § Wiki-links inside Markdown tables.
+Rule: [book-architecture](../context/system/book-architecture.md) § Wiki-links inside Markdown tables.
 Enforced by `validate_md.py` on every commit.

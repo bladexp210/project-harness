@@ -15,9 +15,9 @@ executes.
 
 | Folder | Holds | Example |
 | :---- | :---- | :---- |
-| `reader-skeleton/` | Empty product repo template (`context/` + `setup/`) | [[reader-skeleton/README\|reader-skeleton]] — fork to start your app repo |
-| `specs/` | Document patterns (tasks, checklists, handoffs) | [[harness-task-spec-example]] |
-| `tasks/` | Filled task skeletons — start from [[new-task]] | *(reader adds after first promotion)* |
+| `reader-skeleton/` | Empty product repo template (`context/` + `setup/`) | [reader-skeleton](reader-skeleton/README.md) — fork to start your app repo |
+| `specs/` | Document patterns (tasks, checklists, handoffs) | [harness-task-spec-example](specs/harness-task-spec-example.md) |
+| `tasks/` | Filled task skeletons — start from [new-task](../../_templates/new-task.md) | *(reader adds after first promotion)* |
 | `code/` | Runnable implementation snippets | *(reader product code — see README there)* |
 
 ## Harness-meta examples (this repo)
@@ -25,8 +25,8 @@ executes.
 These two files are **worked examples** for the book harness — not reader
 product code. Copy and adapt when authoring harness tasks or session closes:
 
-1. [[harness-task-spec-example]] — document-only task with Gherkin closure
-2. [[harness-session-close-checklist]] — STATE + dashboard handoff checklist
+1. [harness-task-spec-example](specs/harness-task-spec-example.md) — document-only task with Gherkin closure
+2. [harness-session-close-checklist](specs/harness-session-close-checklist.md) — STATE + dashboard handoff checklist
 
 ## Promotion loop
 

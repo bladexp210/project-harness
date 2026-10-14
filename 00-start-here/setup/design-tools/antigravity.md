@@ -11,16 +11,16 @@ tags: [setup, design, antigravity]
 Antigravity is an **agent-first IDE** that emphasizes parallel agents and
 fast iteration in an editor shell. Documented here as a design-phase
 alternative; it can also serve as a Track B execution surface (see
-[[track-b-checklist]]).
+[track-b-checklist](../../../05-build/execution-tools/track-b-checklist.md)).
 
 > [!NOTE] Stub
 > Full Antigravity setup scaffold is deferred. This page records the **key
-> differentiator** vs. the primary tool ([[cowork]]) so you can choose
+> differentiator** vs. the primary tool ([cowork](cowork.md)) so you can choose
 > honestly.
 
 ## Key differentiator vs. Cowork
 
-| Aspect | Antigravity | [[cowork\|Cowork]] (primary) |
+| Aspect | Antigravity | [Cowork](cowork.md) (primary) |
 | :----- | :---------- | :--------------------------- |
 | Model | Agent-first IDE, parallel agents | Desktop Cowork, folder-scoped memory |
 | Best when | You want multiple agents in one IDE | You want the book's default desktop design path |
@@ -28,9 +28,9 @@ alternative; it can also serve as a Track B execution surface (see
 
 ## Where to go next
 
-- **Primary path:** [[cowork]]
-- **Design tools index:** [[README]]
-- **Track B checklist:** [[track-b-checklist]]
+- **Primary path:** [cowork](cowork.md)
+- **Design tools index:** [README](README.md)
+- **Track B checklist:** [track-b-checklist](../../../05-build/execution-tools/track-b-checklist.md)
 
 ## Connector stub (fictional)
 

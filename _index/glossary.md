@@ -7,7 +7,7 @@ tags: [glossary, vocabulary, index]
 # Glossary
 
 Quick reference for qualified vocabulary, decisions, budgets, and debt IDs.
-See [[ADR-004-lifecycle-vocabulary]] for the full lifecycle rationale.
+See [ADR-004-lifecycle-vocabulary](../02-design/decisions/ADR-004-lifecycle-vocabulary.md) for the full lifecycle rationale.
 
 ## Qualified lifecycles (ADR-004)
 
@@ -27,16 +27,16 @@ Removal verbs (ADR-003): **prune** (never built) · **retire** (shipped feature)
 
 | ID | Title | Status |
 | :---- | :---- | :---- |
-| [[ADR-001-chapter-folder-naming]] | Chapter folder naming | accepted |
-| [[ADR-002-modeling-conventions]] | Modeling — Mermaid + ICOM/Gherkin | accepted |
-| [[ADR-003-removal-vocabulary]] | Removal vocabulary — prune/retire/sunset | accepted |
-| [[ADR-004-lifecycle-vocabulary]] | Five lifecycles, never bare | accepted |
-| [[ADR-005-failure-condition-convention]] | Failure-condition convention | accepted |
-| [[ADR-006-teaching-block-convention]] | Teaching-block convention | accepted |
+| [ADR-001-chapter-folder-naming](../02-design/decisions/ADR-001-chapter-folder-naming.md) | Chapter folder naming | accepted |
+| [ADR-002-modeling-conventions](../02-design/decisions/ADR-002-modeling-conventions.md) | Modeling — Mermaid + ICOM/Gherkin | accepted |
+| [ADR-003-removal-vocabulary](../02-design/decisions/ADR-003-removal-vocabulary.md) | Removal vocabulary — prune/retire/sunset | accepted |
+| [ADR-004-lifecycle-vocabulary](../02-design/decisions/ADR-004-lifecycle-vocabulary.md) | Five lifecycles, never bare | accepted |
+| [ADR-005-failure-condition-convention](../02-design/decisions/ADR-005-failure-condition-convention.md) | Failure-condition convention | accepted |
+| [ADR-006-teaching-block-convention](../02-design/decisions/ADR-006-teaching-block-convention.md) | Teaching-block convention | accepted |
 
 ## Budget table
 
-From [[global|constraints/global]] — machine-enforced by `validate_md.py` (≤5% over = WARN, >5% = FAIL):
+From [constraints/global](../03-plan/constraints/global.md) — machine-enforced by `validate_md.py` (≤5% over = WARN, >5% = FAIL):
 
 | Artifact | Limit |
 | :---- | :---- |

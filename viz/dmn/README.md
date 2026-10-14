@@ -12,10 +12,10 @@ gateways at L3/L4.
 
 | File | Artifact | Level | Status |
 | :---- | :------- | :---- | :----- |
-| [[decision-table]] | Decision table | L3/L4 | stub |
+| [decision-table](decision-table.md) | Decision table | L3/L4 | stub |
 
 ## Where to go next
 
-- **viz index:** [[../README]]
-- **Combination matrix:** [[diagram-taxonomy-levels#Combination matrix]]
-- **BPMN pairing:** [[../bpmn/process-subset]]
+- **viz index:** [../](../README.md)
+- **Combination matrix:** [diagram-taxonomy-levels](../../context/system/diagram-taxonomy-levels.md#combination-matrix)
+- **BPMN pairing:** [process-subset](../bpmn/process-subset.md)

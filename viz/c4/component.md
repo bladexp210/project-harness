@@ -12,7 +12,7 @@ pack container?
 
 > [!NOTE] REAL — harness-meta
 > Zooms into **`04-your-agents/`** only. Other containers (spine, meta,
-> scripts) stay at [[container]] unless you need their internals too.
+> scripts) stay at [container](container.md) unless you need their internals too.
 
 ## Diagram
 
@@ -47,7 +47,7 @@ flowchart LR
 | Agent definitions | Role yaml (`dev-agent`, etc.) | Agent personas, tool policies |
 | Task specs | ICOM+ `tasks/*.md` with `context_load` | Work units with acceptance criteria |
 | Golden tasks | Regression fixtures for evaluator | Snapshot / contract tests |
-| Context loader | `task_context.py` + [[context-loader]] rules | Prompt assembly, RAG retrieval |
+| Context loader | `task_context.py` + [context-loader](../../04-your-agents/context-loader.md) rules | Prompt assembly, RAG retrieval |
 | Evaluator path | `scripts/test_golden_tasks.py` + fog-word lint | Quality gates on agent output |
 | Not shown here | Cross-container calls to `scripts/` or Track A | Your API clients — draw at L2 |
 
@@ -66,13 +66,13 @@ flowchart LR
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| Container not yet drawn | [[container]] |
-| One task's runtime flow | [[../icom/task-box]] or [[../uml/sequence]] |
-| Session-level behaviour | [[dynamic]] or [[../bpmn/process-subset]] |
+| Container not yet drawn | [container](container.md) |
+| One task's runtime flow | [task-box](../icom/task-box.md) or [sequence](../uml/sequence.md) |
+| Session-level behaviour | [dynamic](dynamic.md) or [process-subset](../bpmn/process-subset.md) |
 
 ## Where to go next
 
-- **Container (parent):** [[container]]
-- **C4 section index:** [[README]]
+- **Container (parent):** [container](container.md)
+- **C4 section index:** [README](README.md)
 - **Real L4 task example:** `04-your-agents/tasks/02-track-a-golden-path.md`
 - **FICTITIOUS teaching mockup:** `_playground/mockups/c4-component.md`

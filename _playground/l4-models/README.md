@@ -27,10 +27,10 @@ not merged into process level names.
 
 | Folder | Capability | Process | Workflow |
 | :----- | :--------- | :------ | :------- |
-| [[commit-process/README\|commit-process/]] | `app_book_harness` | `proc_session_build` | `wf_commit_process` |
-| [[session-close/README\|session-close/]] | `app_book_harness` | `proc_session_close` | `wf_session_close` |
+| [commit-process/](commit-process/README.md) | `app_book_harness` | `proc_session_build` | `wf_commit_process` |
+| [session-close/](session-close/README.md) | `app_book_harness` | `proc_session_close` | `wf_session_close` |
 
-Convention detail: [[context/system/icom-plus-convention|ICOM+ v0.3]] ·
-[[context/system/diagram-taxonomy|Diagram taxonomy v0.3]] ·
-[[context/system/icom-plus-convention#Color map (roles)|role colors]] ·
-box schema in [[commit-process/README|commit-process/README]].
+Convention detail: [ICOM+ v0.3](../../context/system/icom-plus-convention.md) ·
+[Diagram taxonomy v0.3](../../context/system/diagram-taxonomy.md) ·
+[role colors](../../context/system/icom-plus-convention.md#color-map-roles) ·
+box schema in [commit-process/README](commit-process/README.md).

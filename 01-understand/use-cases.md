@@ -15,7 +15,7 @@ tags: [understand, use-cases]
 > "Shopper completes a purchase," not "implement checkout API." Each use case
 > gets two ratings — **frequency** (how often it happens) and **importance**
 > (how bad it is when it fails) — and those two numbers, not anyone's
-> enthusiasm, decide build order in [[03-plan|Plan]].
+> enthusiasm, decide build order in [Plan](../03-plan/).
 
 ## Why it matters
 
@@ -28,7 +28,7 @@ tags: [understand, use-cases]
 ## How to fill it in
 
 > [!TEACH] Teach
-> For each role in [[user-roles]], list what they need to do. Rate frequency
+> For each role in [user-roles](user-roles.md), list what they need to do. Rate frequency
 > as Daily / Weekly / Rarely and importance as Critical / High / Medium / Low.
 > Priority is derived, not assigned — see the scoring below.
 
@@ -69,18 +69,18 @@ tags: [understand, use-cases]
 >
 > - **Operational use cases** — checking system health, restoring a backup,
 >   investigating "why was I charged twice?". These belong to the Operator
->   role; [[07-ship-operate|Ship & Operate]] depends on them being here.
+>   role; [Ship & Operate](../07-ship-operate/README.md) depends on them being here.
 > - **Offboarding use cases** (the user lifecycle's ending — see
->   [[ADR-004-lifecycle-vocabulary]]) — "export all my data," "delete my
+>   [ADR-004-lifecycle-vocabulary](../02-design/decisions/ADR-004-lifecycle-vocabulary.md)) — "export all my data," "delete my
 >   account and everything about me." Rare by definition, often Critical by
 >   law, and owed to users from day one — not only at the end: product
->   [[08-sunset|sunset]] is mass offboarding, so pricing these in now is
+>   [sunset](../08-sunset/README.md) is mass offboarding, so pricing these in now is
 >   what makes it cheap later.
 >
 > One category is deliberately deferred, not forgotten: every use case has
 > an **abuse case** — how a hostile actor would use the same capability.
 > You don't score those here (damage, not frequency × importance, rates
-> them); you write them in the [[threat-model|Ch. 02 threat model]], working
+> them); you write them in the [Ch. 02 threat model](../02-design/threat-model.md), working
 > from this table. Finish the table knowing it has that second reader.
 
 > [!NOTE] Ask your AI agent
@@ -112,7 +112,7 @@ add despite equal scores: shoppers outnumber owners 1000:1."]
 > [!TEACH] Teach
 > When the table is sorted and the top five rows would survive you reading
 > them to a skeptical co-founder, carry the order into
-> [[03-plan|PROJECT-PLAN]].
+> [PROJECT-PLAN](../03-plan/).
 
 ---
 

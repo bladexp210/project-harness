@@ -14,7 +14,7 @@ tags: [playground, l4, commit]
 | :---- | :---- |
 | **Task ID** | `t_03_human_review_diff` |
 | **Task name** | Review diff |
-| **Parent** | `wf_commit_process` (L3 · [[L3-commit-process]]) |
+| **Parent** | `wf_commit_process` (L3 · [L3-commit-process](L3-commit-process.md)) |
 | **Executor** | `exe_human_alex` · `human:Alex` |
 | **Supervisor** | `human:Alex` (accept/reject gate before irreversible commit) |
 
@@ -29,10 +29,10 @@ Handoffs **from executors only**.
 
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
-| PS commit blocks + batch summary | shell | chat transcript | `exe_agent_cursor` ← [[02-draft-commit-blocks]] |
+| PS commit blocks + batch summary | shell | chat transcript | `exe_agent_cursor` ← [02-draft-commit-blocks](02-draft-commit-blocks.md) |
 | Working tree diff | file | IDE / `git diff` | `exe_human_alex` |
-| Validator pass evidence | shell | chat transcript | `exe_agent_cursor` ← [[01-validate-batch]] |
-| Scope + atomic-commit rules | file | [[global]] | `exe_human_alex` (inherited) |
+| Validator pass evidence | shell | chat transcript | `exe_agent_cursor` ← [01-validate-batch](01-validate-batch.md) |
+| Scope + atomic-commit rules | file | [global](../../../03-plan/constraints/global.md) | `exe_human_alex` (inherited) |
 
 ---
 
@@ -42,9 +42,9 @@ Handoffs **to executors only**.
 
 | Artifact | Form | Where | To |
 | :------- | :--- | :---- | :--- |
-| **Approve** — OK to commit | signal | chat | `exe_human_alex` → [[04-human-git-commit]] |
-| **Reject** — line-level feedback | signal | chat | `exe_agent_cursor` → [[01-validate-batch]] |
-| **Split** — smaller commits requested | signal | chat | `exe_agent_cursor` → [[02-draft-commit-blocks]] |
+| **Approve** — OK to commit | signal | chat | `exe_human_alex` → [04-human-git-commit](04-human-git-commit.md) |
+| **Reject** — line-level feedback | signal | chat | `exe_agent_cursor` → [01-validate-batch](01-validate-batch.md) |
+| **Split** — smaller commits requested | signal | chat | `exe_agent_cursor` → [02-draft-commit-blocks](02-draft-commit-blocks.md) |
 
 ---
 
@@ -63,7 +63,7 @@ External only — not developed in this repo.
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | [[global]] — no secrets, scope, atomic commits; no agent `git commit` |
+| Policy | [global](../../../03-plan/constraints/global.md) — no secrets, scope, atomic commits; no agent `git commit` |
 | Policy | D-001 — human owns protected git path |
 | Gherkin | see below |
 

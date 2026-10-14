@@ -10,7 +10,7 @@ tags: [icom, examples, reference]
 # ICOM+ examples A–E
 
 > [!NOTE] Fictitious teaching examples (except task-01 in Example A)
-> Convention rules: [[icom-plus-convention]]. Track B REAL: [[icom-plus-examples-trackb]].
+> Convention rules: [icom-plus-convention](icom-plus-convention.md). Track B REAL: [icom-plus-examples-trackb](icom-plus-examples-trackb.md).
 
 ---
 
@@ -46,7 +46,7 @@ flowchart TB
 | Parent | `fb_L2_build-ready` |
 | Function | Close design-phase gate (Gate B) |
 | Inputs | `02-design/layers/data.md`, `application.md`, `ux.md`, `communication.md`; `02-design/threat-model.md`; `01-understand/use-cases.md` |
-| Controls | `research/lifecycle-playbook-seed.md` Gate B; [[ADR-005-failure-condition-convention]]; no implementation until gate pass |
+| Controls | `research/lifecycle-playbook-seed.md` Gate B; [ADR-005-failure-condition-convention](../../02-design/decisions/ADR-005-failure-condition-convention.md); no implementation until gate pass |
 | Outputs | Gate pass/fail with evidence; updated `03-plan/PROJECT-PLAN.md` exit checklist; authorization to queue Ch. 05 tasks |
 | Mechanisms | Five-agent yaml roster; `scripts/validate_md.py --all`; dashboard L2 chapter table |
 | Executor | `human:Alex` orchestrates; `agent:red-team-agent` owns threat-model lane |
@@ -60,9 +60,9 @@ flowchart TB
 | Parent | `fb_L3_gate` |
 | Function | Threat-model pre-mortem review |
 | Inputs | `02-design/threat-model.md`; `02-design/decisions/ADR-005-failure-condition-convention.md`; `research/red-team-seed.md`; `research/lifecycle-playbook-seed.md` |
-| Controls | [[global]]; **Scope — modify:** `02-design/threat-model.md` (review-log only); read-only: use-cases, PROJECT-PLAN, red-team-agent.yaml |
+| Controls | [global](../../03-plan/constraints/global.md); **Scope — modify:** `02-design/threat-model.md` (review-log only); read-only: use-cases, PROJECT-PLAN, red-team-agent.yaml |
 | Outputs | `## Review log` dated entry; Gate B pass/fail per item; escalation if must-have control missing |
-| Mechanisms | `python scripts/task_context.py 04-your-agents/tasks/01-threat-model-premortem.md`; [[openhands]] |
+| Mechanisms | `python scripts/task_context.py 04-your-agents/tasks/01-threat-model-premortem.md`; [openhands](../../05-build/execution-tools/openhands.md) |
 | Executor | `agent:red-team-agent` (model: `frontier-llm`) |
 | Canon | `04-your-agents/tasks/01-threat-model-premortem.md` |
 
@@ -132,7 +132,7 @@ flowchart TB
 ## Example D — L4 mechanism trace (same task, sequence view)
 
 ICOM+ box shows **what**; sequence shows **order** inside one sitting (allowed
-inset per [[research/model-visualization-seed|model-visualization-seed]]).
+inset per [model-visualization-seed](../../research/model-visualization-seed.md)).
 
 **Question:** What happens in one Task 01 sitting?
 

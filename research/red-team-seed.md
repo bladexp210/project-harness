@@ -46,7 +46,7 @@ skill-erosion now has primary literature (CSET + GitClear, `canon → 3.3`).**
   29.5% Python / 24.2% JS weaknesses in real repos; 2025 multi-LLM study:
   *no* model implemented CSRF, security headers, CORS, or MFA unprompted.
   Quadruple-sources the AI execution discipline in
-  [[global|constraints/global]]. `canon → 3.2`
+  [constraints/global](../03-plan/constraints/global.md). `canon → 3.2`
 - **Skill-erosion counter-practices justified** — CSET automation-bias
   analysis (Tesla/aviation/medical: verification effort decays with
   reliability), GitClear refactoring decline (25% → <10%) + 8× duplicate

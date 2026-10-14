@@ -43,7 +43,7 @@ flowchart LR
 
 1. Read `context_load_default` from assigned agent yaml.
 2. Append `context_load` from task frontmatter (deduped, agent first).
-3. For each path: read file → strip per [[ADR-006-teaching-block-convention|ADR-006]] → join with `\n\n---\n\n`.
+3. For each path: read file → strip per [ADR-006](../../../02-design/decisions/ADR-006-teaching-block-convention.md) → join with `\n\n---\n\n`.
 4. Exempt from strip: ADRs, `00-start-here/`, `context/system/sessions/`.
 
 ```powershell

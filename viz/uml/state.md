@@ -64,7 +64,7 @@ stateDiagram-v2
 | Title = question | Session state machine |
 | Labels ≤ 5 words | Yes |
 | Embedded legend | Above |
-| Matches session-workflow | [[session-workflow#Structured flow (state and evidence)]] |
+| Matches session-workflow | [session-workflow](../../context/system/session-workflow.md#structured-flow-state-and-evidence) |
 
 ---
 
@@ -111,7 +111,7 @@ stateDiagram-v2
 | Title = question | Task 02 state machine |
 | Labels ≤ 5 words | Yes |
 | Embedded legend | Above |
-| Pairs with BPMN B | [[../bpmn/process-subset]] Variant B |
+| Pairs with BPMN B | [process-subset](../bpmn/process-subset.md) Variant B |
 
 ---
 
@@ -119,13 +119,13 @@ stateDiagram-v2
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| Ordered messages | [[sequence]] |
-| Process with lanes | [[../bpmn/process-subset]] |
-| C4 numbered collab | [[../c4/dynamic]] |
-| Gateway decision table | [[../dmn/decision-table]] |
+| Ordered messages | [sequence](sequence.md) |
+| Process with lanes | [process-subset](../bpmn/process-subset.md) |
+| C4 numbered collab | [dynamic](../c4/dynamic.md) |
+| Gateway decision table | [decision-table](../dmn/decision-table.md) |
 
 ## Where to go next
 
-- **UML section index:** [[README]]
+- **UML section index:** [README](README.md)
 - **Task 02 canon:** `04-your-agents/tasks/02-track-a-golden-path.md`
-- **Session workflow states:** [[session-workflow]]
+- **Session workflow states:** [session-workflow](../../context/system/session-workflow.md)

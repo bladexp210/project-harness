@@ -7,7 +7,7 @@ tags: [research, modeling, visualization, sessions]
 
 # Research brief — which models, when, and how to combine
 
-Companion to [[perplexity-prompts]] **Prompt 4** and playground
+Companion to [perplexity-prompts](perplexity-prompts.md) **Prompt 4** and playground
 `_playground/diagram-taxonomy.md` v0.2. This brief scopes the Perplexity
 deep-research run; the report distills into `research/model-visualization-seed.md`.
 
@@ -86,5 +86,5 @@ Research should map notation → use case, not notation → notation:
 
 ## Red-team line (append to Prompt 4)
 
-See [[perplexity-prompts#Red-team note]] — append the critic paragraph to
+See [perplexity-prompts](perplexity-prompts.md#red-team-note) — append the critic paragraph to
 Prompt 4 before running.

@@ -22,7 +22,7 @@ artifact in the same file. An independent critical analysis
 (`_inbox/2026-06-11 1617 project-harness_critical_analysis.md`) named the cost:
 a builder agent loading `02-design/layers/ux.md` for a task must wade through
 WCAG and Fitts's-Law prose to reach a five-row table, inflating context and
-directly contradicting [[Agents.md|Agents]]' "load only what your task needs."
+directly contradicting [Agents](../../Agents.md)' "load only what your task needs."
 The tension was real and undecided; this ADR resolves it without splitting the
 vault.
 
@@ -61,7 +61,7 @@ It resolves the bloat contradiction at its source — agents drop instruction,
 keep artifact — while preserving "the folder you are standing in *is* the
 method": one tree, no duplication, no sync burden. Callouts keep instruction
 *visible and versioned* rather than hidden in HTML comments, honoring the
-[[manifesto]]'s legibility-over-hidden-cleverness stance. It reuses the
+[manifesto](../../00-start-here/manifesto.md)'s legibility-over-hidden-cleverness stance. It reuses the
 dominant existing pattern (`[!LEARN]` / `[!TIP]`), so most dual-purpose files
 are already half-compliant. The strip rule is mechanical, so the Ch. 04 loader
 and a future lint can both act on it without parsing meaning.

@@ -23,12 +23,12 @@ without implementing the cache.
 
 ## Inputs
 
-- [[ADR-005-failure-condition-convention]] (failure-condition convention)
+- [ADR-005-failure-condition-convention](../../02-design/decisions/ADR-005-failure-condition-convention.md) (failure-condition convention)
 - Red-team defaults (`threat-model.md`, `red-team-seed.md`, `lifecycle-playbook-seed.md`)
 
 ## Controls
 
-Inherited constraints: [[global|constraints]].
+Inherited constraints: [constraints](../../03-plan/constraints/global.md).
 
 **Scope — modify:** none (fixture — pre-mortem notes only)
 

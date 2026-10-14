@@ -14,11 +14,11 @@ tags: [playground, l4, session, close]
 | :---- | :---- |
 | **Task ID** | `t_03_draft_dashboard` |
 | **Task name** | Draft dashboard |
-| **Parent** | `wf_session_close` (L3 · [[L3-wf-session-close]]) |
+| **Parent** | `wf_session_close` (L3 · [L3-wf-session-close](L3-wf-session-close.md)) |
 | **Executor** | `exe_agent_cursor` · `agent:cursor` |
 | **Supervisor** | `human:Alex` |
 
-**Maps to:** [[session-workflow]] close checklist **C. Dashboard**.
+**Maps to:** [session-workflow](../../../context/system/session-workflow.md) close checklist **C. Dashboard**.
 
 **C4 link:** writes **module** `m_book_repo` paths under `_index/dashboard/`.
 
@@ -28,10 +28,10 @@ tags: [playground, l4, session, close]
 
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
-| Go signal from STATE draft | signal | task handoff | `exe_agent_cursor` ← [[02-draft-state]] |
+| Go signal from STATE draft | signal | task handoff | `exe_agent_cursor` ← [02-draft-state](02-draft-state.md) |
 | Draft `STATE.md` (threads, session #) | file | repo root | `exe_agent_cursor` |
 | Current dashboard L1–L3 | file | `_index/dashboard/` | `exe_agent_cursor` (canon) |
-| Validator count from task 01 | shell | chat | `exe_agent_cursor` ← [[01-final-validate]] |
+| Validator count from task 01 | shell | chat | `exe_agent_cursor` ← [01-final-validate](01-final-validate.md) |
 
 ## Output
 
@@ -41,7 +41,7 @@ tags: [playground, l4, session, close]
 | Updated `02-containers.md` | file | `_index/dashboard/` | `human:Alex` |
 | Updated `03-components.md` | file | `_index/dashboard/` | `human:Alex` |
 | History row per file (same timestamp) | file | each dashboard History table | `human:Alex` |
-| Go for bootstrap draft | signal | task handoff | `exe_agent_cursor` → [[04-draft-bootstrap]] |
+| Go for bootstrap draft | signal | task handoff | `exe_agent_cursor` → [04-draft-bootstrap](04-draft-bootstrap.md) |
 
 ## Tools
 
@@ -53,7 +53,7 @@ tags: [playground, l4, session, close]
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | [[session-workflow]] C — all three zoom files in one pass |
+| Policy | [session-workflow](../../../context/system/session-workflow.md) C — all three zoom files in one pass |
 | Policy | History max 10 rows; archive older to `dashboard-history-archive.md` |
 | Gherkin | see below |
 

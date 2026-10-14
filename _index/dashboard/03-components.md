@@ -22,9 +22,9 @@ Nearest zoom: what is active **now**, next actions, human gates.
 
 ## Next three actions
 
-1. **Handoff:** Share [[engineering-handoff-checklist]] with engineering day-1.
-2. **Fork (optional):** Copy [[boilerplate/reader-skeleton|reader-skeleton]] when starting a product repo.
-3. **New arc (optional):** Plan next sessions from [[03-plan/PROJECT-PLAN|PROJECT-PLAN]].
+1. **Handoff:** Share [engineering-handoff-checklist](../../06-learn/engineering-handoff-checklist.md) with engineering day-1.
+2. **Fork (optional):** Copy [reader-skeleton](../../06-learn/boilerplate/reader-skeleton/README.md) when starting a product repo.
+3. **New arc (optional):** Plan next sessions from [PROJECT-PLAN](../../03-plan/PROJECT-PLAN.md).
 
 ## Pending human decisions
 

@@ -9,7 +9,7 @@ tags: [review, html-gate, human-in-the-loop]
 # Review gates
 
 Single-file **HTML review surfaces** for human–agent gates. Not canon — Markdown
-in `context/system/sessions/` and [[STATE]] stay the source of truth.
+in `context/system/sessions/` and [STATE](../STATE.md) stay the source of truth.
 
 ## Pattern (S40.5 → S41 pilot)
 
@@ -36,7 +36,7 @@ Legacy path `review/*.html` redirects to `_views/gates/` where applicable.
 | `_views/gates/proceed.html` | Session plan scope (Proceed) | Session open / plan chat |
 | `_views/gates/validate.html` | Work diff + handoff docs (Validate) | Session close artifact |
 | `_views/gates/merge.html` | Merge approval (validator + git D-001) | Session close artifact |
-| `_views/gates/inbox-triage.html` | `_inbox/` promote / strip / archive / defer | [[session-41-inbox-triage]] |
+| `_views/gates/inbox-triage.html` | `_inbox/` promote / strip / archive / defer | [session-41-inbox-triage](../context/system/sessions/session-41-inbox-triage.md) |
 | `review/inbox-triage-board.html` | Legacy redirect → `_views/gates/inbox-triage.html` | — |
 
 ## Rules

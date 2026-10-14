@@ -28,7 +28,7 @@ shaping — before handing bounded build work to an execution tool (Ch. 05).
 > [!TIP] Fast Track
 > Install Cowork → grant access to your product repo (or this harness for
 > learning) → open Ch. 01 → use the agent for discovery questions in each
-> template section. Pair with git session branches per [[session-workflow]].
+> template section. Pair with git session branches per [session-workflow](../../../context/system/session-workflow.md).
 > You own the outcome.
 
 ## Role in the harness
@@ -43,14 +43,14 @@ shaping — before handing bounded build work to an execution tool (Ch. 05).
 
 | vs. | Cowork advantage |
 | :-- | :--------------- |
-| [[cursor]] | Desktop-first project memory; less tied to a single IDE workspace |
-| [[antigravity]] | Mature desktop workflow; Cowork is the book's default design path |
+| [cursor](cursor.md) | Desktop-first project memory; less tied to a single IDE workspace |
+| [antigravity](antigravity.md) | Mature desktop workflow; Cowork is the book's default design path |
 
 ## Where to go next
 
-- **Design tools index:** [[README]]
-- **Execution tools:** [[../execution-tools/README|execution-tools]]
-- **Notation:** [[diagram-taxonomy]] · [[icom-plus-convention]]
+- **Design tools index:** [README](README.md)
+- **Execution tools:** [execution-tools](../execution-tools/README.md)
+- **Notation:** [diagram-taxonomy](../../../_playground/diagram-taxonomy.md) · [icom-plus-convention](../../../_playground/icom-plus-convention.md)
 
 ## Connector stub (fictional)
 

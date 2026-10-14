@@ -14,11 +14,11 @@ tags: [playground, l4, session, close]
 | :---- | :---- |
 | **Task ID** | `t_01_final_validate` |
 | **Task name** | Final validate |
-| **Parent** | `wf_session_close` (L3 · [[L3-wf-session-close]]) |
+| **Parent** | `wf_session_close` (L3 · [L3-wf-session-close](L3-wf-session-close.md)) |
 | **Executor** | `exe_agent_cursor` · `agent:cursor` |
 | **Supervisor** | `human:Alex` |
 
-**Maps to:** [[session-workflow]] close checklist **A. Verify**.
+**Maps to:** [session-workflow](../../../context/system/session-workflow.md) close checklist **A. Verify**.
 
 ---
 
@@ -35,7 +35,7 @@ tags: [playground, l4, session, close]
 | :------- | :--- | :---- | :--- |
 | `validate_md: N checked, 0 failed` | shell | chat | `human:Alex` |
 | Unit test pass logs | shell | chat | `human:Alex` |
-| Go / no-go for close draft | signal | task handoff | `exe_agent_cursor` → [[02-draft-state]] |
+| Go / no-go for close draft | signal | task handoff | `exe_agent_cursor` → [02-draft-state](02-draft-state.md) |
 
 ## Tools
 
@@ -48,7 +48,7 @@ tags: [playground, l4, session, close]
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | [[session-workflow]] A — 0 failures before close draft |
+| Policy | [session-workflow](../../../context/system/session-workflow.md) A — 0 failures before close draft |
 
 ## Measures
 

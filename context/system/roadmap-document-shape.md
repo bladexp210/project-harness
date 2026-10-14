@@ -9,8 +9,8 @@ tags: [roadmap, planning, handoff, workflow]
 # Roadmap document shape
 
 Mandatory structure for approved multi-session plans. Complements
-[[session-workflow]] and examples [[session-roadmap-s19-s23]],
-[[session-roadmap-s40-plus]], [[spine-sitrep-s26]].
+[session-workflow](session-workflow.md) and examples [session-roadmap-s19-s23](sessions/session-roadmap-s19-s23.md),
+[session-roadmap-s40-plus](sessions/session-roadmap-s40-plus.md), [spine-sitrep-s26](sessions/spine-sitrep-s26.md).
 
 ## When this applies
 
@@ -51,9 +51,9 @@ add **Status at review** when the arc is already complete (see S19–S23, S26 si
 
 | Document | Final session | Target snapshot |
 | :------- | :------------ | :-------------- |
-| [[session-roadmap-s19-s23]] | S23 | Achieved 2026-06-23 |
-| [[spine-sitrep-s26]] | S30 | Achieved 2026-06-28 |
-| [[session-roadmap-s40-plus]] | S47 | Pending — compare at S47 close |
+| [session-roadmap-s19-s23](sessions/session-roadmap-s19-s23.md) | S23 | Achieved 2026-06-23 |
+| [spine-sitrep-s26](sessions/spine-sitrep-s26.md) | S30 | Achieved 2026-06-28 |
+| [session-roadmap-s40-plus](sessions/session-roadmap-s40-plus.md) | S47 | Pending — compare at S47 close |
 
 ## History
 

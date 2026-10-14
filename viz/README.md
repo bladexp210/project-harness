@@ -8,7 +8,7 @@ tags: [viz, notation, diagrams]
 # Visual notation — index
 
 `viz/` holds **rendering stubs** for each diagram type in the book's core
-catalog. [[diagram-taxonomy]] answers *which diagram at which level*; this
+catalog. [diagram-taxonomy](../_playground/diagram-taxonomy.md) answers *which diagram at which level*; this
 folder answers *how to render it* (Mermaid first; HTML explorers later).
 
 > [!NOTE] Stubs in S31 · fills in S36
@@ -22,15 +22,15 @@ folder answers *how to render it* (Mermaid first; HTML explorers later).
 
 | Family | Book level | Section | Default types |
 | :----- | :--------- | :------ | :------------ |
-| **C4** | L1–L3 static (+ Dynamic supplementary) | [[c4/README]] | Context, Container, Component, Dynamic, Deployment |
-| **BPMN 2.0** | L3 dynamic (subset) | [[bpmn/README]] | Process (core subset) |
-| **ICOM+** | L4 dynamic | [[icom/README]] | Task box |
-| **UML 2** | L3/L4 boundary | [[uml/README]] | Sequence, State |
-| **DMN** | L3/L4 at gateways | [[dmn/README]] | Decision table |
+| **C4** | L1–L3 static (+ Dynamic supplementary) | [c4/](c4/README.md) | Context, Container, Component, Dynamic, Deployment |
+| **BPMN 2.0** | L3 dynamic (subset) | [bpmn/](bpmn/README.md) | Process (core subset) |
+| **ICOM+** | L4 dynamic | [icom/](icom/README.md) | Task box |
+| **UML 2** | L3/L4 boundary | [uml/](uml/README.md) | Sequence, State |
+| **DMN** | L3/L4 at gateways | [dmn/](dmn/README.md) | Decision table |
 
 ## Rules (all families)
 
-From [[diagram-taxonomy]] ESL row and [[icom-plus-convention]] color map:
+From [diagram-taxonomy](../_playground/diagram-taxonomy.md) ESL row and [icom-plus-convention](../_playground/icom-plus-convention.md) color map:
 
 | Rule | Enforce |
 | :---- | :------ |
@@ -41,7 +41,7 @@ From [[diagram-taxonomy]] ESL row and [[icom-plus-convention]] color map:
 | Node budget | L1 ≤ 7 · L2 ≤ 12 · L3 ≤ 15 |
 
 **Two stacks:** do not merge C4 static structure with BPMN process flow on
-one canvas. Link in prose instead ([[diagram-taxonomy#Two stacks (do not merge)]]).
+one canvas. Link in prose instead ([diagram-taxonomy](../_playground/diagram-taxonomy.md#two-stacks-do-not-merge)).
 
 ## Promotion from playground
 
@@ -51,9 +51,9 @@ such as `viz/icom/task-01.html`.
 
 ## Where to go next
 
-- **Taxonomy (which diagram):** [[diagram-taxonomy]]
-- **Worked C4 Context (harness):** [[c4/context]]
-- **ICOM+ grammar:** [[icom-plus-convention]]
+- **Taxonomy (which diagram):** [diagram-taxonomy](../_playground/diagram-taxonomy.md)
+- **Worked C4 Context (harness):** [context](c4/context.md)
+- **ICOM+ grammar:** [icom-plus-convention](../_playground/icom-plus-convention.md)
 - **Design phase tools:** `00-start-here/setup/design-tools/README`
 - **Ch. 02 design:** `02-design/README`
 - **arc42 documentation template:** `02-design/arc42/README`

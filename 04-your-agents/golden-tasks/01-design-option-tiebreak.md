@@ -23,18 +23,18 @@ Parallel voters split on two options for a read-heavy catalog API:
 | A | Redis cache-aside on product reads |
 | B | In-process LRU; no external cache |
 
-k margin **not** cleared. Evaluator runs as tiebreaker per [[evaluator]].
+k margin **not** cleared. Evaluator runs as tiebreaker per [evaluator](../evaluator.md).
 
 ## Inputs
 
-- [[evaluator]] (bias mitigations + tiebreak flow)
+- [evaluator](../evaluator.md) (bias mitigations + tiebreak flow)
 - Criteria below (artifact — not teaching prose)
 
 ## Controls
 
-Apply all four bias mitigations from [[evaluator]] before scoring.
+Apply all four bias mitigations from [evaluator](../evaluator.md) before scoring.
 
-Inherited constraints: [[global|constraints]].
+Inherited constraints: [constraints](../../03-plan/constraints/global.md).
 
 ## ICOM
 

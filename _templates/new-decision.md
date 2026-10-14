@@ -29,7 +29,7 @@ is the fallback? This feeds the criticality axis / k threshold.]
 ## Why
 
 [The positive case. Tie it to the project's constraints in
-[[global]] and the priorities in [[use-cases]] where relevant.]
+[global](../03-plan/constraints/global.md) and the priorities in [use-cases](../01-understand/use-cases.md) where relevant.]
 
 ## Alternatives considered (red-teamed)
 
@@ -52,7 +52,7 @@ if the AI's suggestion was adopted or no AI was consulted.]
 *If this decision fails a year from now, why?*
 
 Run by the **red-team agent** before status moves to accepted — see
-[[agent-team]]. The red-team agent assumes the decision has already failed
+[agent-team](../context/system/agent-team.md). The red-team agent assumes the decision has already failed
 and works backward to the cause; the human accepts the decision only after
 each failure path has a mitigation or an explicit "accepted risk" note.
 

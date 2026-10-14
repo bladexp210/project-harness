@@ -20,7 +20,7 @@ this file: map stable **concerns** to the product names you run today.
 
 > [!TIP] Fast Track
 > Copy this file to your repo root or `setup/`. Fill the **Your product** column
-> for each row. Link adapter lines in [[project|constraints/project]] § Tool
+> for each row. Link adapter lines in [constraints/project](../03-plan/constraints/project.md) § Tool
 > adapters. Re-read when you change IDE, CLI agent, or MCP stack.
 
 ## How to use
@@ -82,10 +82,10 @@ List extensions you require on a fresh machine. Update when the vendor renames.
 
 | Topic | Path |
 | :---- | :--- |
-| VS Code hub pattern | [[vscode-hub]] |
-| Track B checklist | [[track-b-checklist]] |
-| Execution track decision | [[ADR-007-dual-execution-tracks]] |
-| Hub barbell ADR | [[ADR-010-vscode-hub-barbell]] |
-| Host profile ADR | [[ADR-011-host-profile-seam]] |
-| Host profile (this harness) | [[host\|constraints/host]] |
-| This harness instance | [[project|constraints/project]] |
+| VS Code hub pattern | [vscode-hub](../05-build/execution-tools/vscode-hub.md) |
+| Track B checklist | [track-b-checklist](../05-build/execution-tools/track-b-checklist.md) |
+| Execution track decision | [ADR-007-dual-execution-tracks](../02-design/decisions/ADR-007-dual-execution-tracks.md) |
+| Hub barbell ADR | [ADR-010-vscode-hub-barbell](../02-design/decisions/ADR-010-vscode-hub-barbell.md) |
+| Host profile ADR | [ADR-011-host-profile-seam](../02-design/decisions/ADR-011-host-profile-seam.md) |
+| Host profile (this harness) | [constraints/host](../03-plan/constraints/host.md) |
+| This harness instance | [constraints/project](../03-plan/constraints/project.md) |

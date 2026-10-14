@@ -16,16 +16,16 @@ tags: [design, layer, data]
 > the data gets out again. It is the first layer you design because it is the
 > hardest to change — code can be rewritten in an afternoon; a data model with
 > a year of production records migrates slowly and dangerously. In ADR terms
-> ([[ADR-005-failure-condition-convention|ADR-005]] discipline applies
+> ([ADR-005](../decisions/ADR-005-failure-condition-convention.md) discipline applies
 > throughout): most data decisions sit at the irreversible end, so they earn
 > real design effort here.
 
 ## Why it matters
 
 > [!TEACH] Teach
-> Every other layer leans on this one. The [[application]] layer's boundaries
-> tend to follow the data's natural seams; the [[communication]] layer moves
-> this data between parts; the [[ux]] layer's speed is mostly a question of
+> Every other layer leans on this one. The [application](application.md) layer's boundaries
+> tend to follow the data's natural seams; the [communication](communication.md) layer moves
+> this data between parts; the [ux](ux.md) layer's speed is mostly a question of
 > how fast the right data can be found. Get the data model wrong and you will
 > feel it everywhere — usually as slowness first, then as features that are
 > strangely expensive to build.
@@ -72,7 +72,7 @@ tags: [design, layer, data]
 > reversible migrations are also what make the final move to archive routine
 > (`sunset-eol-seed → design-for-sunset`). **Failure condition:** none worth
 > naming — a throwaway prototype you will delete within weeks is the only
-> honest exemption, and [[01-understand|Ch. 01]] kill criteria define
+> honest exemption, and [Ch. 01](../../01-understand/) kill criteria define
 > "throwaway" *before* it grows users.
 
 ## Decision 3 — When it slows down, in what order do you reach for fixes?
@@ -164,7 +164,7 @@ flowchart LR
 > - **Export as a feature.** Self-service export (JSON/CSV + schema docs +
 >   checksums), tested continuously like any feature. A silently broken
 >   export pipeline is catastrophic at shutdown — and at every user
->   offboarding before it ([[ADR-003-removal-vocabulary|ADR-003]] vocabulary).
+>   offboarding before it ([ADR-003](../decisions/ADR-003-removal-vocabulary.md) vocabulary).
 > - **Lock-out is worse than lock-in.** Costly migration is survivable;
 >   losing access to your own data is not. Open data models — a plain
 >   `SELECT *` should be useful without proprietary decoding — and standard
@@ -176,7 +176,7 @@ flowchart LR
 ## The classification constraint
 
 > [!TEACH] Teach
-> Your [[01-understand|Ch. 01]] discovery produced (or should produce — go
+> Your [Ch. 01](../../01-understand/) discovery produced (or should produce — go
 > back if not) a **data classification matrix** and **compliance obligation
 > map** (`lifecycle-playbook-seed → discovery artifacts`). They live in
 > Ch. 01 because they come from understanding users, but they *bind* this
@@ -195,8 +195,8 @@ flowchart LR
 > [!NOTE] Liskov test
 > Entity names and ID fields are **contracts**, not merely columns — a consumer
 > should use them correctly from the type and invariant alone, without tribal
-> knowledge of hidden representation. See question 2 in [[02-design/README|Ch.
-> 02]] five-paper checklist.
+> knowledge of hidden representation. See question 2 in [Ch.
+> 02](../README.md) five-paper checklist.
 
 ---
 
@@ -224,6 +224,6 @@ erDiagram
 
 ### Classification hooks
 
-- Data classification matrix: [[../01-understand/use-cases|link or inline]]
+- Data classification matrix: [link or inline](../../01-understand/use-cases.md)
 - Crown jewels (feeds the threat model): [list the 1–3 entities whose loss
   or leak ends the project]

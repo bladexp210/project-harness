@@ -18,7 +18,7 @@ Models compress meaning for both readers: humans parse a diagram faster than
 prose, and AI agents parse structured text cheaper than prose (fewer tokens,
 less ambiguity). But "use models" is not a convention — without one, every
 chapter would invent its own notation. Two questions are being forced now,
-before [[02-design|Ch. 02]] layer files and Ch. 03 task templates are
+before [Ch. 02](../README.md) layer files and Ch. 03 task templates are
 written: (1) which diagram notations the book uses, and (2) how a *task* is
 modeled — its inputs, transformation, outputs, and success criteria.
 Candidate notations analyzed: C4, UML, BPMN 2.0, DMN, IDEF0, Gherkin, Petri
@@ -48,9 +48,9 @@ wrong zoom level — split it C4-style (context → container → component).
 
 - **Inputs** — context files and artifacts the task consumes (the Layer-3
   context list)
-- **Controls** — what governs the transformation: [[global|constraints]],
+- **Controls** — what governs the transformation: [constraints](../../03-plan/constraints/global.md),
   budgets, and the acceptance criteria below
-- **Mechanisms** — which agent ([[agent-team]]) and execution tool run it
+- **Mechanisms** — which agent ([agent-team](../../context/system/agent-team.md)) and execution tool run it
 - **Outputs** — the artifacts the task must produce
 
 Acceptance criteria are written in **Gherkin** (`Given / When / Then`), so
@@ -77,13 +77,13 @@ implements three classic design filters without new ceremony:
 For **irreversible-gate tasks** (human Supervisor for merge, deploy, or
 schema migration), Controls must include an explicit **Preconditions** table
 and Mechanisms an explicit **Postconditions** table — see
-[[icom-plus-irreversible-gates]]. Ch. 05 requires postcondition evidence:
+[icom-plus-irreversible-gates](../../context/system/icom-plus-irreversible-gates.md). Ch. 05 requires postcondition evidence:
 each `Then` quoted with proof in the closing commit or post-mortem.
 
 ## Why
 
 One rendering chain, zero plugins, every model diffable in git and readable
-raw — the same durability argument as [[manifesto]]. The question→dialect
+raw — the same durability argument as [manifesto](../../00-start-here/manifesto.md). The question→dialect
 table keeps notation choice mechanical for agents writing chapters. The ICOM
 frame is not new structure: Inputs/Controls/Mechanisms/Outputs map one-to-one
 onto what the system already does (Layer-3 context, constraints + budgets,
@@ -121,7 +121,7 @@ and needs no tooling to be useful as a checklist.
    quote each `Then` clause with evidence in the closing commit or
    post-mortem; a missing quote blocks task closure.
 2. **Diagrams drift from reality** as the system evolves → mitigation: a
-   stale diagram is a [[DEBT-LEDGER]] entry like any other debt; the 20-node
+   stale diagram is a [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md) entry like any other debt; the 20-node
    budget keeps redraw cost trivial.
 3. **Mermaid C4 stabilizes or the chain gains PlantUML** → the convention
    names *questions*, not dialects; a superseding ADR can remap one row of

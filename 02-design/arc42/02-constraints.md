@@ -20,9 +20,9 @@ whole system?
 
 | Layer | File | Scope |
 | :---- | :--- | :---- |
-| Global (inherited) | [[global]] | Every reader inherits — repo discipline, budgets, AI execution |
-| Host (reader machine) | [[host\|constraints/host]] | OS, shell, copy-paste dialect, D-001 instance |
-| Project (this harness) | [[03-plan/constraints/project]] | Tool choices, git layout, Track A/B, harness-specific scope |
+| Global (inherited) | [global](../../03-plan/constraints/global.md) | Every reader inherits — repo discipline, budgets, AI execution |
+| Host (reader machine) | [constraints/host](../../03-plan/constraints/host.md) | OS, shell, copy-paste dialect, D-001 instance |
+| Project (this harness) | [project](../../03-plan/constraints/project.md) | Tool choices, git layout, Track A/B, harness-specific scope |
 
 Open the full files before changing behavior — §2 is the arc42 index.
 
@@ -30,11 +30,11 @@ Open the full files before changing behavior — §2 is the arc42 index.
 
 | Constraint | In this harness | Source |
 | :--------- | :-------------- | :----- |
-| Session ritual | Branch `session-NN/<topic>`; Plan → Proceed → Execute; close draft before merge | [[session-workflow]], `project.md` |
-| Git writes on host shell | Human runs commit, merge, push (D-001) per [[host\|constraints/host]] | `host.md`, [[Agents.md\|Agents]] |
+| Session ritual | Branch `session-NN/<topic>`; Plan → Proceed → Execute; close draft before merge | [session-workflow](../../context/system/session-workflow.md), `project.md` |
+| Git writes on host shell | Human runs commit, merge, push (D-001) per [constraints/host](../../03-plan/constraints/host.md) | `host.md`, [Agents](../../Agents.md) |
 | Protected `main` | Merge only after human validates work diff + handoff docs | `project.md` |
-| Atomic commits | One logical change per commit; Conventional Commits | [[global]] |
-| Significant decisions → ADR | Red-team challenge before final; index in §9 | [[global]], [[09-architectural-decisions]] |
+| Atomic commits | One logical change per commit; Conventional Commits | [global](../../03-plan/constraints/global.md) |
+| Significant decisions → ADR | Red-team challenge before final; index in §9 | [global](../../03-plan/constraints/global.md), [09-architectural-decisions](09-architectural-decisions.md) |
 | Meta-work scope | STATE, dashboard, `context/system/` on session branches — not arbitrary build tasks | `project.md` |
 
 ## Technical
@@ -42,26 +42,26 @@ Open the full files before changing behavior — §2 is the arc42 index.
 | Constraint | In this harness | Source |
 | :--------- | :-------------- | :----- |
 | Docs-only product | Book-as-folder-structure; no reader app code in this repo | `project.md` |
-| Track B authoring | Cursor IDE agent + `AGENTS.md` load table today | `project.md`, [[ADR-007-dual-execution-tracks]] |
-| Track A build target | OpenHands + LiteLLM compose when Docker ready | `project.md`, [[track-a-setup]] |
-| Deterministic context | Tasks name `context_load` paths — no vector search | [[context-loader]], `project.md` |
-| Validator on every commit | `validate_md.py` + pre-commit; frontmatter required | [[global]] |
-| Diagram budgets | ≤ 20 Mermaid nodes ([[ADR-002-modeling-conventions]]); separate Container vs Deployment canvases | [[diagram-taxonomy]], `viz/` |
-| No secrets in repo | gitleaks on commit; `.env` never committed | [[global]] |
+| Track B authoring | Cursor IDE agent + `AGENTS.md` load table today | `project.md`, [ADR-007-dual-execution-tracks](../decisions/ADR-007-dual-execution-tracks.md) |
+| Track A build target | OpenHands + LiteLLM compose when Docker ready | `project.md`, [track-a-setup](../../05-build/execution-tools/track-a-setup.md) |
+| Deterministic context | Tasks name `context_load` paths — no vector search | [context-loader](../../04-your-agents/context-loader.md), `project.md` |
+| Validator on every commit | `validate_md.py` + pre-commit; frontmatter required | [global](../../03-plan/constraints/global.md) |
+| Diagram budgets | ≤ 20 Mermaid nodes ([ADR-002-modeling-conventions](../decisions/ADR-002-modeling-conventions.md)); separate Container vs Deployment canvases | [diagram-taxonomy](../../_playground/diagram-taxonomy.md), `viz/` |
+| No secrets in repo | gitleaks on commit; `.env` never committed | [global](../../03-plan/constraints/global.md) |
 
 ## Conventions
 
 | Constraint | In this harness | Source |
 | :--------- | :-------------- | :----- |
-| Chapter folders | `NN-short-title/` kebab-case ([[ADR-001-chapter-folder-naming]]) | ADR-001 |
-| Teaching vs artifact zones | ADR-006 delimiters; fog-word lint on artifact zones | [[ADR-006-teaching-block-convention]] |
-| Reader-facing gates | Plain language; numbered scope lists ([[ADR-008-reader-facing-language-and-visuals]]) | ADR-008 |
-| Removal vocabulary | prune · retire · sunset ([[ADR-003-removal-vocabulary]]) | ADR-003 |
-| Failure conditions | Every pattern names when not to apply ([[ADR-005-failure-condition-convention]]) | ADR-005 |
+| Chapter folders | `NN-short-title/` kebab-case ([ADR-001-chapter-folder-naming](../decisions/ADR-001-chapter-folder-naming.md)) | ADR-001 |
+| Teaching vs artifact zones | ADR-006 delimiters; fog-word lint on artifact zones | [ADR-006-teaching-block-convention](../decisions/ADR-006-teaching-block-convention.md) |
+| Reader-facing gates | Plain language; numbered scope lists ([ADR-008-reader-facing-language-and-visuals](../decisions/ADR-008-reader-facing-language-and-visuals.md)) | ADR-008 |
+| Removal vocabulary | prune · retire · sunset ([ADR-003-removal-vocabulary](../decisions/ADR-003-removal-vocabulary.md)) | ADR-003 |
+| Failure conditions | Every pattern names when not to apply ([ADR-005-failure-condition-convention](../decisions/ADR-005-failure-condition-convention.md)) | ADR-005 |
 
 ## Budgets (split triggers)
 
-Inherited from [[global]] — machine-checked by `validate_md.py`:
+Inherited from [global](../../03-plan/constraints/global.md) — machine-checked by `validate_md.py`:
 
 | Artifact | Budget | Over-budget action |
 | :------- | :----- | :----------------- |
@@ -94,8 +94,8 @@ repo*:
 
 ## Where to go next
 
-- **Global guardrails:** [[global]]
-- **Host profile:** [[host|constraints/host]]
-- **Harness project file:** [[03-plan/constraints/project]]
-- **Solution strategy (§4):** [[04-solution-strategy]]
-- **Section index:** [[README]]
+- **Global guardrails:** [global](../../03-plan/constraints/global.md)
+- **Host profile:** [constraints/host](../../03-plan/constraints/host.md)
+- **Harness project file:** [project](../../03-plan/constraints/project.md)
+- **Solution strategy (§4):** [04-solution-strategy](04-solution-strategy.md)
+- **Section index:** [README](README.md)

@@ -55,10 +55,10 @@ flowchart TB
 | 02 | Design | done | 4 layers, threat-model, ADR-001–008, **arc42/**, five-paper checklist | — | — |
 | 03 | Plan | done | PROJECT-PLAN, **golden-task-examples**, global + **host** + **project** constraints, new-task + **ICOM+ tables** | — | — |
 | 04 | Your Agents | partial | 5× yaml, evaluator, golden-tasks, `context/` tree, tasks 01–04 **done**, orchestration rule | — | — |
-| 05 | Build | partial | [[vscode-hub]], [[path-c-hook-contract]] + temporal layer, openhands, [[track-a-setup]], `track-a/` compose (+ **Docker patterns S47**) + **Langfuse**, track-b-checklist, tooling-manifest, bare-worktree-setup, quote-Then gate, tasks 01–02 **done** | — | — |
-| 06 | Learn | partial | DEBT-LEDGER, boilerplate/ + **reader-skeleton/** + **[[engineering-handoff-checklist]]**, post-mortems/ (+ **RCA picker S47**), `_templates/post-mortem.md` | reader code boilerplate | — |
-| 07 | Ship & Operate | partial | README skeleton, [[runbook/README\|runbook/]] (+ **Docker hygiene S47**), `_templates/runbook.md`, harness example | reader product runbooks | — |
-| 08 | Sunset | partial | README (+ **EOL decision tree S47**), [[decommission/README\|decommission/]], `_templates/decommission-record.md`, harness + fictional examples | reader product records | — |
+| 05 | Build | partial | [vscode-hub](../../05-build/execution-tools/vscode-hub.md), [path-c-hook-contract](../../05-build/execution-tools/path-c-hook-contract.md) + temporal layer, openhands, [track-a-setup](../../05-build/execution-tools/track-a-setup.md), `track-a/` compose (+ **Docker patterns S47**) + **Langfuse**, track-b-checklist, tooling-manifest, bare-worktree-setup, quote-Then gate, tasks 01–02 **done** | — | — |
+| 06 | Learn | partial | DEBT-LEDGER, boilerplate/ + **reader-skeleton/** + **[engineering-handoff-checklist](../../06-learn/engineering-handoff-checklist.md)**, post-mortems/ (+ **RCA picker S47**), `_templates/post-mortem.md` | reader code boilerplate | — |
+| 07 | Ship & Operate | partial | README skeleton, [runbook/](README.md) (+ **Docker hygiene S47**), `_templates/runbook.md`, harness example | reader product runbooks | — |
+| 08 | Sunset | partial | README (+ **EOL decision tree S47**), [decommission/](README.md), `_templates/decommission-record.md`, harness + fictional examples | reader product records | — |
 
 ## System containers (meta)
 

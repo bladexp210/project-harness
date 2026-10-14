@@ -15,12 +15,12 @@ tags: [decision, vocabulary]
 The book's spine is "the lifecycle" (ideation → sunset), but at least four
 other things in its pages also live and die: users, features, data, and
 tasks. The word "lifecycle" unqualified is already ambiguous in our own
-files — [[use-cases]] says "end-of-life use cases" for *export my data /
+files — [use-cases](../../01-understand/use-cases.md) says "end-of-life use cases" for *export my data /
 delete my account*, which is a **user** leaving a healthy product, not the
 **product** ending. The 02-design session is about to write the data layer
 (data lifecycle) and ux layer (user lifecycle states); the vocabulary must
 be fixed first, while renaming is still cheap. Companion to
-[[ADR-003-removal-vocabulary]].
+[ADR-003-removal-vocabulary](ADR-003-removal-vocabulary.md).
 
 ## Decision
 
@@ -37,7 +37,7 @@ always qualified with its subject:
 
 Reserved endings (each lifecycle ends with its own verb, per the table):
 **offboard** is the user-side ending — "end-of-life" is reserved for the
-product. [[use-cases]] wording changes from "end-of-life use cases" to
+product. [use-cases](../../01-understand/use-cases.md) wording changes from "end-of-life use cases" to
 "offboarding use cases".
 
 The connecting insight (book text should state it once, in Ch. 08):

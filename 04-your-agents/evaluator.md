@@ -10,7 +10,7 @@ tags: [agents, evaluator, k-voting]
 
 The evaluator scores design or implementation **options** against criteria you
 supply. It runs when parallel k-voting fails to clear the margin — not as a
-default gate on every decision. Full roster context: [[agent-team]].
+default gate on every decision. Full roster context: [agent-team](../context/system/agent-team.md).
 
 Contract file: `agents/evaluator.yaml` (≤ 60 lines).
 
@@ -52,7 +52,7 @@ sequenceDiagram
 ```
 
 Langfuse experiment wiring is optional until execution tooling is active — see
-[[overview]] dimension 8.
+[overview](../context/system/overview.md) dimension 8.
 
 ## Golden-task suite
 
@@ -62,13 +62,13 @@ harness wiring.
 
 | # | Agent | File |
 | :-- | :---- | :---- |
-| 01 | evaluator | [[golden-tasks/01-design-option-tiebreak]] |
-| 02 | dev | [[golden-tasks/02-dev-bounded-patch]] |
-| 03 | tester | [[golden-tasks/03-tester-edge-case-repro]] |
-| 04 | security-tester | [[golden-tasks/04-security-injection-probe]] |
-| 05 | red-team | [[golden-tasks/05-redteam-premortem-gate]] |
+| 01 | evaluator | [01-design-option-tiebreak](golden-tasks/01-design-option-tiebreak.md) |
+| 02 | dev | [02-dev-bounded-patch](golden-tasks/02-dev-bounded-patch.md) |
+| 03 | tester | [03-tester-edge-case-repro](golden-tasks/03-tester-edge-case-repro.md) |
+| 04 | security-tester | [04-security-injection-probe](golden-tasks/04-security-injection-probe.md) |
+| 05 | red-team | [05-redteam-premortem-gate](golden-tasks/05-redteam-premortem-gate.md) |
 
-Ch. 03 walkthrough: [[golden-task-examples|03-plan/golden-task-examples]].
+Ch. 03 walkthrough: [03-plan/golden-task-examples](../03-plan/golden-task-examples.md).
 
 Run context assembly (any row):
 

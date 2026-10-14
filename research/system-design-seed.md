@@ -10,7 +10,7 @@ tags: [research, seed, provenance]
 Distilled 2026-06-10 from 8 of the KDnuggets top-10 repos (the two
 interview-handbook repos skipped as out of scope) by three parallel research
 agents. Everything reworded; provenance is `repo → section`. Use under
-[[ADR-002-modeling-conventions]] when pulling into chapters. Companion:
+[ADR-002-modeling-conventions](../02-design/decisions/ADR-002-modeling-conventions.md) when pulling into chapters. Companion:
 [[company-framework-seed]].
 
 ## License matrix — read before citing anything

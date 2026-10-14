@@ -14,11 +14,11 @@ tags: [playground, l4, session, close]
 | :---- | :---- |
 | **Task ID** | `t_04_draft_bootstrap` |
 | **Task name** | Draft next bootstrap |
-| **Parent** | `wf_session_close` (L3 · [[L3-wf-session-close]]) |
+| **Parent** | `wf_session_close` (L3 · [L3-wf-session-close](L3-wf-session-close.md)) |
 | **Executor** | `exe_agent_cursor` · `agent:cursor` |
 | **Supervisor** | `human:Alex` |
 
-**Maps to:** [[session-workflow]] close checklist **D. Next-session bootstrap**
+**Maps to:** [session-workflow](../../../context/system/session-workflow.md) close checklist **D. Next-session bootstrap**
 + merge PS blocks for task 06.
 
 ---
@@ -27,10 +27,10 @@ tags: [playground, l4, session, close]
 
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
-| Go signal from dashboard draft | signal | task handoff | `exe_agent_cursor` ← [[03-draft-dashboard]] |
+| Go signal from dashboard draft | signal | task handoff | `exe_agent_cursor` ← [03-draft-dashboard](03-draft-dashboard.md) |
 | Draft `STATE.md` (threads, defer list) | file | repo root | `exe_agent_cursor` |
 | Session branch name | git ref | chat · `STATE.md` | `human:Alex` |
-| Final validate evidence | shell | chat | `exe_agent_cursor` ← [[01-final-validate]] |
+| Final validate evidence | shell | chat | `exe_agent_cursor` ← [01-final-validate](01-final-validate.md) |
 
 ## Output
 
@@ -41,7 +41,7 @@ tags: [playground, l4, session, close]
 | PS `git merge session-NN/topic` line | shell | chat | `human:Alex` |
 | PS `git branch -d session-NN/topic` line | shell | chat | `human:Alex` |
 | Optional `git push` line | shell | chat | `human:Alex` |
-| Close pack summary | signal | chat | `human:Alex` → [[05-human-review-close]] |
+| Close pack summary | signal | chat | `human:Alex` → [05-human-review-close](05-human-review-close.md) |
 
 ## Tools
 
@@ -53,7 +53,7 @@ tags: [playground, l4, session, close]
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | [[session-workflow]] D — bootstrap overwrites each close |
+| Policy | [session-workflow](../../../context/system/session-workflow.md) D — bootstrap overwrites each close |
 | Policy | D-001 — PS blocks for human; agent does not merge |
 | Policy | No force-push to `main` unless explicit |
 | Gherkin | see below |

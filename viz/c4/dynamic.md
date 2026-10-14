@@ -11,7 +11,7 @@ tags: [viz, c4, dynamic, L2, L3, harness]
 closes a session and merges to `main`?
 
 > [!NOTE] REAL — harness-meta
-> Numbered runtime collaboration on **static C4 elements** from [[container]].
+> Numbered runtime collaboration on **static C4 elements** from [container](container.md).
 > Track B session operations — not product L1–L4 behaviour.
 
 ## Diagram
@@ -38,7 +38,7 @@ flowchart LR
 | Symbol | Role |
 | :----- | :---- |
 | Numbered arrow | Order of collaboration for this scenario |
-| Box | Same containers as [[container]] — not new elements |
+| Box | Same containers as [container](container.md) — not new elements |
 | Person | Human gate (D-001 git on Windows) |
 
 ## Field guide
@@ -52,7 +52,7 @@ flowchart LR
 | 5 | Zero failures required before merge offered | Green build gate |
 | 6 | Human runs git commit + merge (D-001) | Deploy or merge to trunk |
 | 7 | Session prose may land in chapter or session-docs | Release notes |
-| Not shown here | BPMN gateways — see [[../bpmn/process-subset]] | Full workflow notation |
+| Not shown here | BPMN gateways — see [process-subset](../bpmn/process-subset.md) | Full workflow notation |
 
 ## ESL checklist (this file)
 
@@ -61,7 +61,7 @@ flowchart LR
 | Title = question | Session close collaboration |
 | Labels ≤ 5 words | Yes |
 | Embedded legend | Table above |
-| Uses existing C4 elements | Yes — from [[container]] |
+| Uses existing C4 elements | Yes — from [container](container.md) |
 | Supplementary only | Does not replace static Container |
 | Node budget | 5 containers + 1 actor |
 
@@ -69,14 +69,14 @@ flowchart LR
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| Structure not drawn yet | [[container]] |
-| Full gateway logic needed | [[../bpmn/process-subset]] Variant A |
-| Message-level timing | [[../uml/sequence]] Variant A |
-| Irreversible gate rules | [[../dmn/decision-table]] Variant A |
+| Structure not drawn yet | [container](container.md) |
+| Full gateway logic needed | [process-subset](../bpmn/process-subset.md) Variant A |
+| Message-level timing | [sequence](../uml/sequence.md) Variant A |
+| Irreversible gate rules | [decision-table](../dmn/decision-table.md) Variant A |
 
 ## Where to go next
 
-- **Static containers:** [[container]]
-- **Session procedure:** [[session-workflow]]
-- **C4 section index:** [[README]]
-- **UML sequence alternative:** [[../uml/sequence]]
+- **Static containers:** [container](container.md)
+- **Session procedure:** [session-workflow](../../context/system/session-workflow.md)
+- **C4 section index:** [README](README.md)
+- **UML sequence alternative:** [sequence](../uml/sequence.md)

@@ -7,7 +7,7 @@ tags: [system, overview, dimensions]
 
 # The System Being Documented
 
-This file is the concise reference for AI agents writing any chapter of the book. For full architectural detail see [[session-docs]].
+This file is the concise reference for AI agents writing any chapter of the book. For full architectural detail see [session-docs](session-docs.md).
 
 ---
 
@@ -68,4 +68,4 @@ Every technically demanding section offers:
 - **Scaffold path** (default): what, why, step-by-step, what's happening underneath  
 - **Fast track**: brief + command + "You own the outcome"
 
-See [[book-architecture]] for Obsidian callout implementation.  
+See [book-architecture](book-architecture.md) for Obsidian callout implementation.  

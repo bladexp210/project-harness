@@ -22,12 +22,12 @@ row and names detection gap.
 
 ## Inputs
 
-- [[threat-model]] §4 AI-specific threats (artifact table)
+- [threat-model](../../02-design/threat-model.md) §4 AI-specific threats (artifact table)
 - Security-tester defaults (`research/red-team-seed.md`)
 
 ## Controls
 
-Inherited constraints: [[global|constraints]].
+Inherited constraints: [constraints](../../03-plan/constraints/global.md).
 
 **Scope — modify:** none (fixture — finding report)
 

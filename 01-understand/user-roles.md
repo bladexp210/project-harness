@@ -13,9 +13,9 @@ tags: [understand, roles]
 A user role is a *reason* someone uses your software, not a job title. One
 person can hold several roles (a shop owner who also answers support email),
 and one role can be held by thousands of people. Everything downstream hangs
-on this file: [[use-cases]] are written per role, the
-[[02-design|UX layer]] is designed per role, and the
-[[03-plan|decomposition tree]] is ordered by what the most important roles
+on this file: [use-cases](use-cases.md) are written per role, the
+[UX layer](../02-design/README.md) is designed per role, and the
+[decomposition tree](../03-plan/) is ordered by what the most important roles
 need most often.
 
 ## Why it matters
@@ -23,7 +23,7 @@ need most often.
 Skipping this step is how products grow features nobody asked for. When a
 role is written down, every later decision can be tested against it: "which
 role needs this, and how badly?" If the answer is "none, but it would be
-cool" — that branch gets pruned in [[03-plan|Plan]], with the reasoning
+cool" — that branch gets pruned in [Plan](../03-plan/), with the reasoning
 recorded.
 
 ## How to fill it in
@@ -34,8 +34,8 @@ roles is typical. If you have more than eight, some are probably the same
 role wearing different clothes; merge them.
 
 Don't forget the roles the product creates for *you*: someone will operate
-this thing ([[07-ship-operate|Ship & Operate]]) and someone will answer for
-it when it winds down ([[08-sunset|Sunset]]). Usually that's the reader —
+this thing ([Ship & Operate](../07-ship-operate/README.md)) and someone will answer for
+it when it winds down ([Sunset](../08-sunset/README.md)). Usually that's the reader —
 write yourself in.
 
 > [!NOTE] Ask your AI agent
@@ -81,7 +81,7 @@ empathy where interviews exist.
 ### Role: Operator *(usually you — keep unless truly serverless)*
 
 - **Who they are:** [whoever deploys, monitors, and fixes the system —
-  see [[07-ship-operate|Ship & Operate]]]
+  see [Ship & Operate](../07-ship-operate/README.md)]
 - **Primary goals:** [e.g., "Know the system is healthy without checking
   manually; recover from failure in minutes, not days."]
 - **Context & constraints:**
@@ -89,4 +89,4 @@ empathy where interviews exist.
 ---
 
 When every role has goals you could read aloud to a real person in that role
-without embarrassment, move on to [[use-cases]].
+without embarrassment, move on to [use-cases](use-cases.md).

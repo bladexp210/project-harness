@@ -9,7 +9,7 @@ tags: [plan, decomposition, living]
 # The plan
 
 > [!TEACH] Teach
-> This chapter turns the four layers you designed in [[02-design|Design]] into a
+> This chapter turns the four layers you designed in [Design](../02-design/README.md) into a
 > list of tasks small enough to finish in one sitting, ordered so each one can
 > start only when the work it depends on is done. The file you are reading is
 > both the lesson and the artifact: the bottom of this page is your project's
@@ -19,16 +19,16 @@ tags: [plan, decomposition, living]
 > A plan here is not a schedule. It is a **dependency graph of bounded
 > tasks**. Each task names what it consumes, what governs it, who runs it, and
 > what it must produce — then states, in testable terms, what "done" means.
-> You build the graph by walking the [[02-design|layer designs]] and asking,
+> You build the graph by walking the [layer designs](../02-design/README.md) and asking,
 > for each decision: what is the smallest change that makes this real and can
 > be reverted on its own? That change is a task.
 
 > [!TIP] Fast Track
 > Decompose each layer into atomic tasks (≤ one sitting, ≤ 100-line TASK.md).
-> One task = one [[new-task|ICOM/Gherkin file]] in `tasks/`. Order by
+> One task = one [ICOM/Gherkin file](../_templates/new-task.md) in `tasks/`. Order by
 > dependency, prune aggressively, cite the ADR on every pruned branch. The
 > table at the bottom is the source of truth. For regression fixtures per core
-> agent role, see [[golden-task-examples]].
+> agent role, see [golden-task-examples](golden-task-examples.md).
 
 ## What makes a task a task
 
@@ -37,17 +37,17 @@ tags: [plan, decomposition, living]
 > earns its place only if all four hold:
 >
 > - **Bounded** — finishable in one sitting; its TASK.md stays under the
->   100-line budget in [[global|constraints]]. If it won't fit, decompose the
+>   100-line budget in [constraints](constraints/global.md). If it won't fit, decompose the
 >   task, not the file.
 > - **Atomic** — one logical change, revertible in isolation (the same rule the
 >   commit discipline enforces).
 > - **Testable** — its success is observable and written as Gherkin `Then`
->   clauses *before* the work starts, per [[ADR-002-modeling-conventions|ADR-002]].
+>   clauses *before* the work starts, per [ADR-002](../02-design/decisions/ADR-002-modeling-conventions.md).
 > - **Scoped** — it lists the exact files it may modify. A task that needs to
 >   touch a Layer 1 or Layer 2 context file is no longer task-level — escalate.
 >
 > Every task file is an **ICOM frame** — Inputs, Controls, Mechanisms, Outputs —
-> with Gherkin acceptance criteria. Use [[new-task]] as the template; it
+> with Gherkin acceptance criteria. Use [new-task](../_templates/new-task.md) as the template; it
 > pre-fills structure and placeholders — you fill Inputs/Outputs tables,
 > scope lists, and the acceptance block.
 
@@ -113,17 +113,17 @@ tasks when you fork the method; keep one row per scoped task file.
 
 ## Before you leave this chapter
 
-The plan is ready to execute — and [[05-build|Build]] should not start —
+The plan is ready to execute — and [Build](../05-build/README.md) should not start —
 when every box is checked:
 
 - [ ] Every task in the table has an ICOM/Gherkin file in `tasks/`.
 - [ ] Acceptance criteria are written as `Then` clauses, not intentions.
 - [ ] The dependency order has no cycles; every task can name what unblocks it.
-- [ ] Abuse cases and non-goals from [[01-understand|Understand]] are reflected
-      in the tasks that touch them; the [[threat-model]] has been reviewed.
+- [ ] Abuse cases and non-goals from [Understand](../01-understand/) are reflected
+      in the tasks that touch them; the [threat-model](../02-design/threat-model.md) has been reviewed.
 - [ ] Pruned branches cite their ADR.
-- [ ] Tasks use [[new-task|ICOM+ template]] — Inputs/Outputs artifact·form·where tables; Controls scope + inherited constraints; Mechanisms Executor/Supervisor (S29).
-- [ ] Core agent roles have golden-task regression fixtures — see [[golden-task-examples]] and `04-your-agents/golden-tasks/`.
+- [ ] Tasks use [ICOM+ template](../_templates/new-task.md) — Inputs/Outputs artifact·form·where tables; Controls scope + inherited constraints; Mechanisms Executor/Supervisor (S29).
+- [ ] Core agent roles have golden-task regression fixtures — see [golden-task-examples](golden-task-examples.md) and `04-your-agents/golden-tasks/`.
 
 > [!TEACH] Teach
 > This is the gate between planning and building: requirements testable, threats

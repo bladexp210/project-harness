@@ -7,6 +7,6 @@ updated_at: 2026-06-15T20:00:00
 
 # Promoted — read canon
 
-> [!NOTE] Canon lives at [[context/system/icom-plus-convention.md]]
+> [!NOTE] Canon lives at [icom-plus-convention](../context/system/icom-plus-convention.md)
 > Playground stub only. Edit **canon**; copy back here only when re-experimenting.
 

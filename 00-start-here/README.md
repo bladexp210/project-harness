@@ -10,7 +10,7 @@ updated: 2026-07-03
 # Go beyond vibe coding — reach the top 1% of AI-assisted software development
 
 > [!TIP] New here?
-> Start with [[getting-started|Getting started]] — clone, tools, Path A or B,
+> Start with [Getting started](getting-started.md) — clone, tools, Path A or B,
 > and a day-one checklist. Return here for philosophy and the chapter journey.
 
 > [!NOTE] An honest word on "top 1%"
@@ -33,7 +33,7 @@ the folder you are standing in **is** the method, and by the last chapter it
 contains your shipped product.
 
 It was written using the methodology it teaches. You can check: the
-[[DEBT-LEDGER]] lists this project's own known compromises, and
+[DEBT-LEDGER](../06-learn/DEBT-LEDGER.md) lists this project's own known compromises, and
 `02-design/decisions/` holds the decisions, including the rejected options.
 
 ## Who it is for
@@ -72,16 +72,16 @@ flowchart LR
     G -. boilerplate feeds back .-> D
 ```
 
-You define who the software is for ([[01-understand|Understand]]), design its
-four layers ([[02-design|Design]]), break it into tasks no bigger than one
-sitting ([[03-plan|Plan]]), configure an AI agent team to execute them
-([[04-your-agents|Your agents]]), build ([[05-build|Build]]), and then feed
-what you learned back into the system ([[06-learn|Learn]]) — so the next
+You define who the software is for ([Understand](../01-understand/)), design its
+four layers ([Design](../02-design/README.md)), break it into tasks no bigger than one
+sitting ([Plan](../03-plan/)), configure an AI agent team to execute them
+([Your agents](../04-your-agents/README.md)), build ([Build](../05-build/README.md)), and then feed
+what you learned back into the system ([Learn](../06-learn/README.md)) — so the next
 feature, and the next project, starts further ahead.
 
 ## Setup
 
-**First time:** [[getting-started|Getting started]] — prerequisites, default
+**First time:** [Getting started](getting-started.md) — prerequisites, default
 stack, Path A (learn) vs Path B (build your product), day-one checklist, success
 checks.
 
@@ -89,11 +89,11 @@ checks.
 
 | Phase | Folder | Index |
 | :---- | :----- | :---- |
-| Design (Ch. 01–04) | `setup/design-tools/` | [[setup/design-tools/README\|Design tools]] |
-| Build (Ch. 05+) | `setup/execution-tools/` | [[setup/execution-tools/README\|Execution tools]] |
+| Design (Ch. 01–04) | `setup/design-tools/` | [Design tools](setup/design-tools/README.md) |
+| Build (Ch. 05+) | `setup/execution-tools/` | [Execution tools](setup/execution-tools/README.md) |
 
-Read [[manifesto]] before deep work — one page, and it is the contract the rest
+Read [manifesto](manifesto.md) before deep work — one page, and it is the contract the rest
 of the book keeps.
 
-**Maintaining this book repo:** [[maintainers|For book maintainers]] (STATE,
+**Maintaining this book repo:** [For book maintainers](maintainers.md) (STATE,
 session workflow, dashboard — not day-one reading).

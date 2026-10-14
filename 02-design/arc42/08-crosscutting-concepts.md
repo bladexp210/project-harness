@@ -19,19 +19,19 @@ tags: [arc42, design, harness]
 
 | Concept | Applies across | Deep reference |
 | :------ | :------------- | :------------- |
-| Observability | Execution tools, Track A stack, Track B hooks | [[ADR-009-observability-paths-abc]], [[track-a-setup]] |
-| Agent context loading | Agent pack, Context tree, tasks | [[context/README]], [[Agents.md\|Agents]] |
-| Reader-facing prose | All chapters, session gates | [[ADR-008-reader-facing-language-and-visuals]] |
-| Failure conditions | Tasks, ADRs, teaching patterns | [[ADR-005-failure-condition-convention]] |
+| Observability | Execution tools, Track A stack, Track B hooks | [ADR-009-observability-paths-abc](../decisions/ADR-009-observability-paths-abc.md), [track-a-setup](../../05-build/execution-tools/track-a-setup.md) |
+| Agent context loading | Agent pack, Context tree, tasks | [context/](../../context/README.md), [Agents](../../Agents.md) |
+| Reader-facing prose | All chapters, session gates | [ADR-008-reader-facing-language-and-visuals](../decisions/ADR-008-reader-facing-language-and-visuals.md) |
+| Failure conditions | Tasks, ADRs, teaching patterns | [ADR-005-failure-condition-convention](../decisions/ADR-005-failure-condition-convention.md) |
 
 ## Observability
 
 **What:** Three **Langfuse integration paths** (A / B / C) plus mandatory
 **process trace** (STATE, dashboard, git, session gates). Path A is live in
 Track A compose; Path B is documented only; Path C is live via
-[[../../05-build/execution-tools/path-c-hook-contract|hook contract]].
+[hook contract](../../05-build/execution-tools/path-c-hook-contract.md).
 
-Full decision: [[../decisions/ADR-009-observability-paths-abc|ADR-009]].
+Full decision: [ADR-009](../decisions/ADR-009-observability-paths-abc.md).
 
 ### Path comparison
 
@@ -46,13 +46,13 @@ Full decision: [[../decisions/ADR-009-observability-paths-abc|ADR-009]].
 
 | Rule | Detail |
 | :---- | :----- |
-| Path A source | LiteLLM proxy callbacks — [[track-a-setup]] |
-| Path C source | `.cursor/hooks.json` + `scripts/langfuse_trace_bridge.py` — [[path-c-hook-contract]] |
+| Path A source | LiteLLM proxy callbacks — [track-a-setup](../../05-build/execution-tools/track-a-setup.md) |
+| Path C source | `.cursor/hooks.json` + `scripts/langfuse_trace_bridge.py` — [path-c-hook-contract](../../05-build/execution-tools/path-c-hook-contract.md) |
 | Temporal layer | Session log (`logs/sessions/<id>.md`, gitignored) + canon freshness banner — S45 |
 | Langfuse UI | `:3001` when compose is up (§7 deployment) |
-| Process trace | [[STATE]], [[session-workflow]], D-001 git — always |
+| Process trace | [STATE](../../STATE.md), [session-workflow](../../context/system/session-workflow.md), D-001 git — always |
 | Anti-patterns | Langfuse-only or STATE-only — see ADR-009 |
-| Runtime view | [[viz/uml/sequence]] Variant B (Path A task) |
+| Runtime view | [sequence](../../viz/uml/sequence.md) Variant B (Path A task) |
 
 Do not duplicate ADR-009 prose here — link for decision criteria and failure
 conditions.
@@ -68,23 +68,23 @@ Implements Parnas information hiding across three layers.
 | 2 — Architecture | `context/architecture/<domain>/` | Task touches that domain |
 | 3 — Implementation | `context/implementation/<feature>/` | Narrow task slice |
 
-Loader rules: [[context-loader]] · `scripts/task_context.py` · load table in
-[[Agents.md|Agents]]. Structural view: [[viz/c4/component]] (Context loader
+Loader rules: [context-loader](../../04-your-agents/context-loader.md) · `scripts/task_context.py` · load table in
+[Agents](../../Agents.md). Structural view: [component](../../viz/c4/component.md) (Context loader
 component).
 
 ## Reader-facing prose
 
 **What:** Plain-language human gates, tables over fog, wiki-link conventions,
-and artifact zones separated from teaching callouts ([[ADR-006-teaching-block-convention|ADR-006]]
+and artifact zones separated from teaching callouts ([ADR-006](../decisions/ADR-006-teaching-block-convention.md)
 evaluator enforces zones).
 
 | Rule | Example in harness |
 | :---- | :----------------- |
-| Open/close gates with numbered scope | Session plan shape in [[Agents.md\|Agents]] |
+| Open/close gates with numbered scope | Session plan shape in [Agents](../../Agents.md) |
 | Define terms once | Harness Gap vs Canon Gap in dashboard |
 | Low decode cost | arc42 sections link `viz/` — no screenshot dumps |
 
-Full decision: [[ADR-008-reader-facing-language-and-visuals]]
+Full decision: [ADR-008-reader-facing-language-and-visuals](../decisions/ADR-008-reader-facing-language-and-visuals.md)
 
 ## Failure conditions
 
@@ -95,10 +95,10 @@ silent misfit when the reader forks the harness.
 | :--------------- | :------ |
 | ADR-005 | Failure-condition blocks in layer teaching |
 | ICOM+ Controls | Mechanism selection gates on tasks |
-| DMN tables | [[viz/dmn/decision-table]] Variant A/B outcomes |
+| DMN tables | [decision-table](../../viz/dmn/decision-table.md) Variant A/B outcomes |
 | Viz pairing tables | "Not shown here" rows in `viz/c4/*` |
 
-Full convention: [[ADR-005-failure-condition-convention]]
+Full convention: [ADR-005-failure-condition-convention](../decisions/ADR-005-failure-condition-convention.md)
 
 ## ESL checklist (this section)
 
@@ -111,6 +111,6 @@ Full convention: [[ADR-005-failure-condition-convention]]
 
 ## Where to go next
 
-- **Four layers:** [[../layers/data]], [[../layers/application]], [[../layers/ux]], [[../layers/communication]]
-- **Decisions (§9):** [[09-architectural-decisions]]
-- **Section index:** [[README]]
+- **Four layers:** [data](../layers/data.md), [application](../layers/application.md), [ux](../layers/ux.md), [communication](../layers/communication.md)
+- **Decisions (§9):** [09-architectural-decisions](09-architectural-decisions.md)
+- **Section index:** [README](README.md)

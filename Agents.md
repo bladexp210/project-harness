@@ -24,7 +24,7 @@ You are a co-author under human direction.
 4. Write for two simultaneous readers: the human following the guide, and future AI agents reading files as operational context  
 5. Use Obsidian conventions throughout — `[[wiki-links]]`, callouts, frontmatter, Mermaid  
 6. Apply the dual path to all technical content: scaffold path + fast track  
-7. Write and speak for low decode cost — see [How to communicate](#how-to-communicate) and [[ADR-008-reader-facing-language-and-visuals|ADR-008]]
+7. Write and speak for low decode cost — see [How to communicate](#how-to-communicate) and [ADR-008](02-design/decisions/ADR-008-reader-facing-language-and-visuals.md)
 
 Never make decisions that belong to the reader. Scaffold the space where their decisions go.
 
@@ -36,7 +36,7 @@ Never make decisions that belong to the reader. Scaffold the space where their d
 (read STATE bootstrap, lay out the session plan, stop). No branch, no file
 edits, no git write actions until the human says **proceed** (or equivalent).
 
-Full procedure: [[session-workflow]] § Session open.
+Full procedure: [session-workflow](context/system/session-workflow.md) § Session open.
 
 ### Session plan shape (Phase 1 — every start)
 
@@ -53,7 +53,7 @@ drafts STATE boot line + L3 active row, then **Build** begins.
 
 # How to communicate
 
-Rules for **chat with the human** and **reader-facing prose**. Full decision: [[ADR-008-reader-facing-language-and-visuals|ADR-008]].
+Rules for **chat with the human** and **reader-facing prose**. Full decision: [ADR-008](02-design/decisions/ADR-008-reader-facing-language-and-visuals.md).
 
 | Do | Don't |
 | :--- | :---- |
@@ -67,7 +67,7 @@ Rules for **chat with the human** and **reader-facing prose**. Full decision: [[
 | **Name gaps in plain English** — Harness Gap (Type A), Canon Gap (Type B) | Bare "Type A," "Gate B," "L2" without explanation in handoff prose |
 | Short sentences, active voice, "you" + imperative verbs | Passive hedging, nested clauses, industry fog ("leverage," "synergy") |
 | State file paths literally when pointing to artifacts | Vague "see the canon home" |
-| **Supply git blocks in the host copy-paste language** for the human (D-001 — see [[host\|constraints/host]]) | Run commit, merge, or push yourself |
+| **Supply git blocks in the host copy-paste language** for the human (D-001 — see [constraints/host](03-plan/constraints/host.md)) | Run commit, merge, or push yourself |
 
 **Section shape** (chapter teaching content): purpose (1 sentence) → visual/table → numbered steps → exceptions.
 
@@ -79,12 +79,12 @@ Rules for **chat with the human** and **reader-facing prose**. Full decision: [[
 | 2 | Before evidence | **Questions you need to be able to answer at the end** |
 | 3 | Review | Evidence table: question → where to look → pass when |
 | 4 | Decide | Decision rule in plain English (`Approve if all three are yes`) |
-| 5 | **Human runs** | Host-shell `git` blocks per [[host\|constraints/host]] — close batch commit, then merge (D-001) |
+| 5 | **Human runs** | Host-shell `git` blocks per [constraints/host](03-plan/constraints/host.md) — close batch commit, then merge (D-001) |
 | 6 | **Close** | **Scope confirmation** — past tense; same numbered lists (`You signed off that…` / `did not sign off that…`) |
 
 At **session close**, the human also validates **STATE.md**, dashboard L1–L3,
 and the **Next session bootstrap** block before merge — same gate as the work
-diff. See [[session-workflow]]. **Timestamps:** read host local time before
+diff. See [session-workflow](context/system/session-workflow.md). **Timestamps:** read host local time before
 writing; use `YYYY-MM-DD HH:mm` in History tables and `updated` frontmatter.
 
 **Chat:** Mirror the human's term if they use shorthand; otherwise prefer plain words. Offer a table when the human is choosing between paths.
@@ -117,17 +117,17 @@ writing; use `YYYY-MM-DD HH:mm` in History tables and `updated` frontmatter.
 
 | Task | Context files to load |
 | :---- | :---- |
-| Writing any chapter | [[overview]] · [[ADR-008-reader-facing-language-and-visuals\|ADR-008]] |
-| Reader-facing prose / teaching tone | [[ADR-008-reader-facing-language-and-visuals\|ADR-008]] · [[manifesto]] |
-| Agent team / agents/*.yaml work | [[agent-team]] |
-| Obsidian conventions / templates / structure | [[book-architecture]] |
-| Diagram / notation / ICOM+ / taxonomy | [[diagram-taxonomy]] · [[icom-plus-convention]] |
-| Session history / architectural decisions | [[session-docs]] |
-| Session open (Plan → Proceed → Execute) | [[session-workflow]] § Session open + [[STATE]] Next session bootstrap + [[host\|constraints/host]] |
-| Session close | [[session-workflow]] + [[STATE]] + `_index/dashboard/01-context.md` + [[host\|constraints/host]] |
-| Track B / shell blocks | [[host\|constraints/host]] + [[project\|constraints/project]] + [[track-b-checklist]] |
+| Writing any chapter | [overview](context/system/overview.md) · [ADR-008](02-design/decisions/ADR-008-reader-facing-language-and-visuals.md) |
+| Reader-facing prose / teaching tone | [ADR-008](02-design/decisions/ADR-008-reader-facing-language-and-visuals.md) · [manifesto](00-start-here/manifesto.md) |
+| Agent team / agents/*.yaml work | [agent-team](context/system/agent-team.md) |
+| Obsidian conventions / templates / structure | [book-architecture](context/system/book-architecture.md) |
+| Diagram / notation / ICOM+ / taxonomy | [diagram-taxonomy](_playground/diagram-taxonomy.md) · [icom-plus-convention](_playground/icom-plus-convention.md) |
+| Session history / architectural decisions | [session-docs](context/system/session-docs.md) |
+| Session open (Plan → Proceed → Execute) | [session-workflow](context/system/session-workflow.md) § Session open + [STATE](STATE.md) Next session bootstrap + [constraints/host](03-plan/constraints/host.md) |
+| Session close | [session-workflow](context/system/session-workflow.md) + [STATE](STATE.md) + `_index/dashboard/01-context.md` + [constraints/host](03-plan/constraints/host.md) |
+| Track B / shell blocks | [constraints/host](03-plan/constraints/host.md) + [constraints/project](03-plan/constraints/project.md) + [track-b-checklist](05-build/execution-tools/track-b-checklist.md) |
 | Playground experiments | `_playground/README.md` only when working on mockups — **never** load `_playground/` into agent context unless the human names a path |
-| Writing Ch. 02 layer designs | [[overview]] + relevant layer file |
+| Writing Ch. 02 layer designs | [overview](context/system/overview.md) + relevant layer file |
 
 Never load all files. Load only what the current task requires. **`_playground/` is not canon** — experiments promote into chapter paths when approved.
 

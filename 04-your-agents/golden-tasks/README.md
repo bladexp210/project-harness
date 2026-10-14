@@ -20,9 +20,9 @@ stripping.
 | 04 | security-tester | Threat-model §4 injection + red-team seed in context |
 | 05 | red-team | Pre-mortem Gate B + ADR-005 failure conditions in context |
 
-Teaching walkthrough (Ch. 03): [[golden-task-examples|03-plan/golden-task-examples]].
+Teaching walkthrough (Ch. 03): [03-plan/golden-task-examples](../../03-plan/golden-task-examples.md).
 
 Add a row when a new core role needs a regression fixture. Keep each file
-≤ 100 lines ([[global|constraints]]).
+≤ 100 lines ([constraints](../../03-plan/constraints/global.md)).
 
 Tests: `python scripts/test_golden_tasks.py`.

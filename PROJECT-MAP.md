@@ -13,7 +13,7 @@ AI-assisted software development. Each numbered chapter folder (`00`–`08`)
 teaches the method and scaffolds reader decisions. Supporting folders hold
 operational state, validators, views, and research.
 
-> **Start here:** [[README|README.md]] · [[00-start-here/getting-started|Getting started]] · [[Agents.md|Agents.md]] · [[STATE|STATE.md]]
+> **Start here:** [README.md](README.md) · [Getting started](00-start-here/getting-started.md) · [Agents.md](Agents.md) · [STATE.md](STATE.md)
 
 ---
 
@@ -224,7 +224,7 @@ Legacy naming: `s1.md`, `s1.meta.json`.
 
 ## Agent context tree (`context/`)
 
-Three-layer information hiding for agent tasks. See [[context/README|context/README.md]].
+Three-layer information hiding for agent tasks. See [context/README.md](context/README.md).
 
 ```text
 context/
@@ -348,4 +348,4 @@ The following are intentionally omitted or summarized:
 
 ---
 
-*Generated for navigation. For chapter teaching content, follow the spine in order starting at [[00-start-here/README|Ch. 00]].*
+*Generated for navigation. For chapter teaching content, follow the spine in order starting at [Ch. 00](00-start-here/README.md).*

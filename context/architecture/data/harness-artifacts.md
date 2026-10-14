@@ -53,13 +53,13 @@ erDiagram
 
 - **Single source of task order:** `03-plan/PROJECT-PLAN.md` table — not duplicate lists in chat.
 - **Handoff trio:** `STATE.md` + dashboard L1–L3 + next bootstrap must agree before merge.
-- **Teaching vs artifact:** dual-purpose chapter files use `[!LEARN]` / `[!TIP]` / `[!TEACH]`; the [[context-loader]] strips them for agent prompts ([[ADR-006-teaching-block-convention|ADR-006]]).
+- **Teaching vs artifact:** dual-purpose chapter files use `[!LEARN]` / `[!TIP]` / `[!TEACH]`; the [context-loader](../../../04-your-agents/context-loader.md) strips them for agent prompts ([ADR-006](../../../02-design/decisions/ADR-006-teaching-block-convention.md)).
 - **No secrets in canon:** API keys live in `.env` (gitignored); `constraints/project.md` holds *names* of models and endpoints only.
 
 ## Harness vs reader product
 
 | This repo (harness-meta) | Reader product fork |
 | :---- | :---- |
-| Markdown files as data | Tables, files, blobs per your [[02-design/layers/data\|data layer design]] |
+| Markdown files as data | Tables, files, blobs per your [data layer design](../../../02-design/layers/data.md) |
 | STATE / dashboard as runtime truth | Your DB + observability store |
 | `context/` tree as agent context | Your `context/architecture/` from Ch. 02 |

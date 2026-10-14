@@ -10,7 +10,7 @@ updated: YYYY-MM-DD
 # Host profile — reader machine
 
 **Barbell seam (reader-owned).** The book owns OS-agnostic rules in
-[[global|constraints/global]]. **You** own this file: the machine, shell, and
+[constraints/global](../03-plan/constraints/global.md). **You** own this file: the machine, shell, and
 copy-paste dialect agents must use when talking to **your** environment.
 
 > [!LEARN] Learn It
@@ -31,7 +31,7 @@ copy-paste dialect agents must use when talking to **your** environment.
 | 1 | Fill the table below — verify against your actual terminal (`$PSVersionTable`, `uname -a`, etc.) |
 | 2 | Set **copy-paste block language** — agents fence commands in that language only |
 | 3 | Document **git write policy** — which shell runs commit/merge (D-001) |
-| 4 | Link from [[project|constraints/project]] — host before project identity |
+| 4 | Link from [constraints/project](../03-plan/constraints/project.md) — host before project identity |
 | 5 | Add to agent `context_load` for session work and shell-heavy tasks |
 
 IDE-injected OS hints (Cursor `user_info`) **confirm** this file; they do not
@@ -97,8 +97,8 @@ Agents mirror this style — not the book author's.
 
 | Topic | Path |
 | :---- | :--- |
-| Global constraints | [[global|constraints/global]] |
-| Project identity + tools | [[project|constraints/project]] |
-| Tooling manifest | [[tooling-manifest|_templates/tooling-manifest.md]] |
-| D-001 / git handoff | [[handoff-and-git]] |
-| Host profile ADR | [[ADR-011-host-profile-seam]] |
+| Global constraints | [constraints/global](../03-plan/constraints/global.md) |
+| Project identity + tools | [constraints/project](../03-plan/constraints/project.md) |
+| Tooling manifest | [_templates/tooling-manifest.md](tooling-manifest.md) |
+| D-001 / git handoff | [handoff-and-git](../context/architecture/communication/handoff-and-git.md) |
+| Host profile ADR | [ADR-011-host-profile-seam](../02-design/decisions/ADR-011-host-profile-seam.md) |

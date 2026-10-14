@@ -8,7 +8,7 @@ tags: [execution, track-b, observability, hooks, langfuse]
 
 # Path C hook contract — Langfuse trace bridge
 
-Book-owned **core** for Track B observability ([[ADR-009-observability-paths-abc|ADR-009]]).
+Book-owned **core** for Track B observability ([ADR-009](../../02-design/decisions/ADR-009-observability-paths-abc.md)).
 Cursor/VS Code hooks call `scripts/langfuse_trace_bridge.py`; the bridge emits
 spans to self-hosted Langfuse (track-a compose on `:3001`). Complements
 **process trace** (STATE, git, session gates) — never replaces it.
@@ -131,7 +131,7 @@ Reader owns scrub policy for compliance; ADR-009 documents the duty.
 
 ## Smoke test
 
-1. Start track-a compose — [[track-a-setup]] step 4 (`langfuse-web` on `:3001`).
+1. Start track-a compose — [track-a-setup](track-a-setup.md) step 4 (`langfuse-web` on `:3001`).
 2. Confirm `.env` has `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY`.
 3. Restart Cursor (reload hooks).
 4. Start a new agent chat (fires `sessionStart`).
@@ -152,8 +152,8 @@ same `.cursor/hooks.json` path. Update **your** tooling manifest — not this fi
 
 ## Reference
 
-- Decision: [[ADR-009-observability-paths-abc]]
-- Hub: [[vscode-hub]]
-- Track B checklist: [[track-b-checklist]]
-- Path A compose: [[track-a-setup]]
-- Temporal layer: [[session-roadmap-s40-plus]] (S45)
+- Decision: [ADR-009-observability-paths-abc](../../02-design/decisions/ADR-009-observability-paths-abc.md)
+- Hub: [vscode-hub](vscode-hub.md)
+- Track B checklist: [track-b-checklist](track-b-checklist.md)
+- Path A compose: [track-a-setup](track-a-setup.md)
+- Temporal layer: [session-roadmap-s40-plus](../../context/system/sessions/session-roadmap-s40-plus.md) (S45)

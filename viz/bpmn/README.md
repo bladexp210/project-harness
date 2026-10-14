@@ -12,14 +12,14 @@ Default in this book is a **core subset**, not full BPMN 2.0 spec.
 
 | File | Diagram | Level | Status |
 | :---- | :------ | :---- | :----- |
-| [[process-subset]] | Process (core subset) | L3 | stub |
+| [process-subset](process-subset.md) | Process (core subset) | L3 | stub |
 
 **Appendix only:** choreography · conversation · full spec symbols.
 
-Pair DMN decision tables at gateways — see [[../dmn/README]].
+Pair DMN decision tables at gateways — see [dmn/](../dmn/README.md).
 
 ## Where to go next
 
-- **viz index:** [[../README]]
-- **Taxonomy BPMN row:** [[diagram-taxonomy#BPMN2 core subset (default)]]
+- **viz index:** [../](../README.md)
+- **Taxonomy BPMN row:** [diagram-taxonomy](../../_playground/diagram-taxonomy.md#bpmn2-core-subset-default)
 - **Playground explorer (not canon):** `_inbox/diagram-explorers/bpmn_2_0_interactive_explorer.tsx`

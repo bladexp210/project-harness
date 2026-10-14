@@ -16,12 +16,12 @@ tags:
 
 ## Context
 
-[[ADR-007-dual-execution-tracks|ADR-007]] named Track A (OpenHands) and Track B
+[ADR-007](ADR-007-dual-execution-tracks.md) named Track A (OpenHands) and Track B
 (IDE/CLI agents) but left Track B as a **generic checklist** plus ad hoc
-adapter lines in [[project|constraints/project]]. Vendor churn (Cursor rules,
+adapter lines in [constraints/project](../../03-plan/constraints/project.md). Vendor churn (Cursor rules,
 Copilot instructions, MCP hosts) risks **book rewrites** every quarter.
 
-[[session-roadmap-s40-plus]] S43 scoped a **VS Code hub** refactor: solid
+[session-roadmap-s40-plus](../../context/system/sessions/session-roadmap-s40-plus.md) S43 scoped a **VS Code hub** refactor: solid
 book-owned core vs reader-owned tooling seam. Path C observability (S44) and
 temporal hooks (S45) assume a stable shell contract.
 
@@ -36,8 +36,8 @@ Adopt the **barbell execution pattern** for Track B:
 
 | Artifact | Role |
 | :------- | :--- |
-| [[session-workflow]] | Plan → Proceed → Execute → Close |
-| [[STATE]] + `_index/dashboard/` | Handoff snapshot |
+| [session-workflow](../../context/system/session-workflow.md) | Plan → Proceed → Execute → Close |
+| [STATE](../../STATE.md) + `_index/dashboard/` | Handoff snapshot |
 | `scripts/validate_md.py` | Markdown gate |
 | ICOM+ task frames + `task_context.py` | Bounded agent inputs (ADR-006) |
 | Hook contract + temporal schema | Path C / S45 — specified in core, wired later |
@@ -47,14 +47,14 @@ Adopt the **barbell execution pattern** for Track B:
 | Artifact | Role |
 | :------- | :--- |
 | `_templates/tooling-manifest.md` | Stable concern rows; reader fills product names |
-| [[project\|constraints/project]] § Tool adapters | One-line map from checklist §7 to local config |
+| [constraints/project](../../03-plan/constraints/project.md) § Tool adapters | One-line map from checklist §7 to local config |
 
 Human approves filled manifest at **Proceed** when major tools change.
 
 ### Shell (reader-owned — default for POC)
 
 **VS Code** (or VS Code–compatible IDE) + extensions + **CLI agents in integrated
-terminal**. Documented in [[vscode-hub]]. Cursor, Claude Code, Codex, OpenCode
+terminal**. Documented in [vscode-hub](../../05-build/execution-tools/vscode-hub.md). Cursor, Claude Code, Codex, OpenCode
 are **adapter rows** — not separate canon chapters.
 
 ### Design tools demotion
@@ -65,11 +65,11 @@ VS Code pattern per this ADR.
 
 **Reversibility & blast radius:** Revert is doc + template delete; no runtime
 wire. Wrong seam → stale extension names in reader manifest only; core harness
-unaffected. Fallback: generic [[track-b-checklist]] without manifest.
+unaffected. Fallback: generic [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) without manifest.
 
 ## Why
 
-- Matches [[manifesto]] barbell — boring core, experimental edge isolated.
+- Matches [manifesto](../../00-start-here/manifesto.md) barbell — boring core, experimental edge isolated.
 - Anti-pattern from roadmap: per-vendor book chapters violate barbell and churn.
 - `reader-skeleton` fork gets same template — teachability for engineering handoff.
 - Path C hooks (S44) target one shell contract instead of N IDE guides.
@@ -106,7 +106,7 @@ none — human approved barbell split at S43 Proceed.
 
 ## Reference
 
-- Hub doc: [[vscode-hub]]
-- Template: [[tooling-manifest|_templates/tooling-manifest.md]]
-- Roadmap: [[session-roadmap-s40-plus]] § VS Code hub
-- Prior execution ADR: [[ADR-007-dual-execution-tracks]]
+- Hub doc: [vscode-hub](../../05-build/execution-tools/vscode-hub.md)
+- Template: [_templates/tooling-manifest.md](../../_templates/tooling-manifest.md)
+- Roadmap: [session-roadmap-s40-plus](../../context/system/sessions/session-roadmap-s40-plus.md) § VS Code hub
+- Prior execution ADR: [ADR-007-dual-execution-tracks](ADR-007-dual-execution-tracks.md)

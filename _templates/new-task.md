@@ -14,7 +14,7 @@ context_load:
 > [!TEACH] Teach
 > One sentence: what this task makes real, and why it is the smallest revertible
 > change that does so. Keep this file under the 100-line budget in
-> [[global|constraints]] — if it won't fit, decompose the task.
+> [constraints](../03-plan/constraints/global.md) — if it won't fit, decompose the task.
 
 ## Inputs (ICOM+)
 
@@ -27,7 +27,7 @@ Layer-3 context list — **artifact · form · where · from executor.** An agen
 
 ## Controls (ICOM+)
 
-**Inherited:** [[global\|constraints]] (repo, scope, AI-execution, budgets) + [[project\|constraints/project]].
+**Inherited:** [constraints](../03-plan/constraints/global.md) (repo, scope, AI-execution, budgets) + [constraints/project](../03-plan/constraints/project.md).
 
 **Scope — modify** (agent touches only these):
 
@@ -51,7 +51,7 @@ Layer-3 context list — **artifact · form · where · from executor.** An agen
 
 **Supervisor:** [who accepts output — `human` for irreversible gates; default: project owner]
 
-**Tool:** [external execution tool only — e.g. OpenHands, IDE; repo scripts are inputs/canon per [[icom-plus-convention]]]
+**Tool:** [external execution tool only — e.g. OpenHands, IDE; repo scripts are inputs/canon per [icom-plus-convention](../_playground/icom-plus-convention.md)]
 
 **Postconditions** *(required for irreversible-gate tasks — same triggers as Preconditions above; optional otherwise)*:
 
@@ -64,7 +64,7 @@ Layer-3 context list — **artifact · form · where · from executor.** An agen
 > [!WARNING] Unstructured orchestration
 > Do not describe ad-hoc multi-agent chains in prose. If work spans agents,
 > split into tasks with explicit Outputs → Inputs handoff. One Executor per
-> task sitting ([[icom-plus-convention]] v0.4).
+> task sitting ([icom-plus-convention](../_playground/icom-plus-convention.md) v0.4).
 
 ## Outputs (ICOM+)
 
@@ -77,7 +77,7 @@ Artifacts this task must produce — **artifact · form · where · to executor.
 
 ## Acceptance criteria (Gherkin)
 
-Written before work starts. Task specification *is* test suite: agent quotes each `Then` clause as evidence in commit or post-mortem ([[ADR-002-modeling-conventions\|ADR-002]]). Missing quote blocks closure.
+Written before work starts. Task specification *is* test suite: agent quotes each `Then` clause as evidence in commit or post-mortem ([ADR-002](../02-design/decisions/ADR-002-modeling-conventions.md)). Missing quote blocks closure.
 
 ```gherkin
 Scenario: [what completion looks like]

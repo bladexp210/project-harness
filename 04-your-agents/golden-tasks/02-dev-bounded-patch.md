@@ -18,16 +18,16 @@ dev agent defaults (`global`, `new-task`, `agent-team`) merge with task
 ## Scenario
 
 Harness task asks the dev agent to append one row to the **Models and endpoints**
-table in [[project|constraints/project]] — no code, no Layer 1/2 context edits.
+table in [constraints/project](../../03-plan/constraints/project.md) — no code, no Layer 1/2 context edits.
 
 ## Inputs
 
-- [[project|constraints/project]] (Models table — artifact section)
+- [constraints/project](../../03-plan/constraints/project.md) (Models table — artifact section)
 - Dev agent defaults via `agents/dev-agent.yaml`
 
 ## Controls
 
-Inherited constraints: [[global|constraints]].
+Inherited constraints: [constraints](../../03-plan/constraints/global.md).
 
 **Scope — modify:** `03-plan/constraints/project.md` (Models table row only)
 

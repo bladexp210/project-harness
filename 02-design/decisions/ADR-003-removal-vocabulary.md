@@ -15,7 +15,7 @@ tags: [decision, vocabulary]
 The `lifecycle-playbook-seed` added *operational pruning* (removing shipped
 features, providers, data flows) to Ch. 07 — but the book already uses
 "pruning" for killing un-built decomposition-tree branches
-(`[PRUNED: reason]` in PROJECT-PLAN.md, [[global|constraints]], ADR-001).
+(`[PRUNED: reason]` in PROJECT-PLAN.md, [constraints](../../03-plan/constraints/global.md), ADR-001).
 One word for two different acts confuses exactly the two readers this book
 serves: a human skimming, and an agent loading context. Three removal acts
 exist at three product-lifecycle moments; each needs its own verb before Ch. 02

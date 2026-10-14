@@ -8,14 +8,14 @@ tags: [execution, git, worktree, isolation]
 
 # Bare repo + worktrees — shared git layout
 
-Set up one git layout that both **Track A** ([[openhands]]) and **Track B**
-([[track-b-checklist]]) use. A **bare hub** holds objects; **worktrees** give
+Set up one git layout that both **Track A** ([openhands](openhands.md)) and **Track B**
+([track-b-checklist](track-b-checklist.md)) use. A **bare hub** holds objects; **worktrees** give
 each session or agent its own checkout, branch, and index.
 
 > [!LEARN] Learn It
 > **Why bare + worktrees:** git isolates blast radius at Layer 2 in the
-> [[overview]] stack. Docker (Track A) isolates process at Layer 3. They stack —
-> worktrees are not Track B-only. See [[ADR-007-dual-execution-tracks]].
+> [overview](../../context/system/overview.md) stack. Docker (Track A) isolates process at Layer 3. They stack —
+> worktrees are not Track B-only. See [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md).
 
 > [!TIP] Fast Track
 > Not ready for bare yet? Use a **single clone** on `session-NN/<topic>` — valid
@@ -104,11 +104,11 @@ Use this when bare setup feels heavy. Same session discipline applies.
 | 4 | Plan upgrade to bare + worktrees before parallel agents |
 
 The ramp is **documented**, not the ideal end state — see pre-mortem in
-[[ADR-007-dual-execution-tracks]].
+[ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md).
 
 ## Session worktree workflow
 
-Every session uses one branch in one worktree per [[session-workflow]]:
+Every session uses one branch in one worktree per [session-workflow](../../context/system/session-workflow.md):
 
 | Phase | Git action |
 | :---- | :----------- |
@@ -127,7 +127,7 @@ Never commit session work directly to `main` without the close ritual.
 | Parallel agents | One container per worktree; each mounts a different path |
 | Git writes | Human runs on Windows host (D-001) — not inside the container |
 
-See [[openhands]] for Docker setup and prompt assembly.
+See [openhands](openhands.md) for Docker setup and prompt assembly.
 
 ## Track B — IDE workspace
 
@@ -137,7 +137,7 @@ See [[openhands]] for Docker setup and prompt assembly.
 | Branch | `session-NN/<topic>` checked out in that worktree |
 | Git writes | Windows PowerShell only (D-001) |
 
-See [[track-b-checklist]] §1 — workspace steps unchanged; this doc supplies
+See [track-b-checklist](track-b-checklist.md) §1 — workspace steps unchanged; this doc supplies
 the target layout they reference.
 
 ## Common mistakes
@@ -159,8 +159,8 @@ the target layout they reference.
 
 ## Reference
 
-- Decision: [[ADR-007-dual-execution-tracks]] — git layout section
-- Track A: [[openhands]]
-- Track B: [[track-b-checklist]]
-- Session ritual: [[session-workflow]]
-- Blast-radius stack: [[overview]]
+- Decision: [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md) — git layout section
+- Track A: [openhands](openhands.md)
+- Track B: [track-b-checklist](track-b-checklist.md)
+- Session ritual: [session-workflow](../../context/system/session-workflow.md)
+- Blast-radius stack: [overview](../../context/system/overview.md)

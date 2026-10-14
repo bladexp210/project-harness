@@ -24,18 +24,18 @@ harness: session workflow, validator, agent pack, context tree, and Track A/B
 execution guides.
 
 **Slogan:** Go beyond vibe coding to reach top 1% AI-assisted software project
-development ([[00-start-here/manifesto|manifesto]]).
+development ([manifesto](../../00-start-here/manifesto.md)).
 
 **Primary outcomes:**
 
 | Outcome | Evidence in harness |
 | :------ | :------------------ |
 | Reader learns the method by doing | Chapter spine + golden tasks |
-| Reader runs real sessions with agents | [[session-workflow]], [[Agents.md\|Agents]] |
-| Reader forks to their own product repo | [[06-learn/boilerplate/reader-skeleton\|reader-skeleton]] |
+| Reader runs real sessions with agents | [session-workflow](../../context/system/session-workflow.md), [Agents](../../Agents.md) |
+| Reader forks to their own product repo | [reader-skeleton](../../06-learn/boilerplate/reader-skeleton/README.md) |
 | Canon stays verifiable | `validate_md.py`, golden-task evaluator |
 
-Full role and use-case methodology: [[01-understand/user-roles|Ch. 01user roles]] · [[01-understand/use-cases|Ch. 01 use cases]].
+Full role and use-case methodology: [Ch. 01user roles](../../01-understand/user-roles.md) · [Ch. 01 use cases](../../01-understand/use-cases.md).
 
 ## Stakeholders (this harness)
 
@@ -46,13 +46,13 @@ Full role and use-case methodology: [[01-understand/user-roles|Ch. 01user roles]
 | AI agent | Track B authoring today; Track A for build tasks when stack is live | Load only task-listed context; never commit unless asked |
 | Operator | Same person as co-author for this repo | Validator green; session branch merged cleanly |
 
-Context diagram actors: [[03-context-and-scope]] · [[viz/c4/context]].
+Context diagram actors: [03-context-and-scope](03-context-and-scope.md) · [context](../../viz/c4/context.md).
 
 ## Use cases and priorities
 
 Harness-meta use cases rated with the **same frequency × importance matrix**
 as Ch. 01 (`priority = freq × importance`, max 12). Full teaching template:
-[[01-understand/use-cases]].
+[use-cases](../../01-understand/use-cases.md).
 
 | Role | Use case | Frequency | Importance | Priority |
 | :---- | :------- | :-------- | :--------- | :------- |
@@ -67,7 +67,7 @@ as Ch. 01 (`priority = freq × importance`, max 12). Full teaching template:
 
 **Tie-break note:** Daily × Critical rows share priority 12 — session
 workflow order (Plan → Proceed → Execute → Close) sequences them; see
-[[session-workflow]].
+[session-workflow](../../context/system/session-workflow.md).
 
 ## Quality goals (derived from priorities)
 
@@ -94,7 +94,7 @@ runbooks, diagram-explorer HTML, bulk `_inbox/` promotion.
 
 ## Where to go next
 
-- **Ch. 01 templates:** [[01-understand/user-roles]], [[01-understand/use-cases]]
-- **Constraints (§2):** [[02-constraints]]
-- **Context boundary (§3):** [[03-context-and-scope]]
-- **Section index:** [[README]]
+- **Ch. 01 templates:** [user-roles](../../01-understand/user-roles.md), [use-cases](../../01-understand/use-cases.md)
+- **Constraints (§2):** [02-constraints](02-constraints.md)
+- **Context boundary (§3):** [03-context-and-scope](03-context-and-scope.md)
+- **Section index:** [README](README.md)

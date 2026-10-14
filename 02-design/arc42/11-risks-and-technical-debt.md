@@ -12,8 +12,8 @@ tags: [arc42, design, harness]
 mitigation plan?
 
 > [!NOTE] REAL — harness-meta
-> Living register for **this repo**. The Ch. 02 [[../threat-model|threat
-> model]] remains a **teaching template** and Gate B scaffold for the
+> Living register for **this repo**. The Ch. 02 [threat
+> model](../threat-model.md) remains a **teaching template** and Gate B scaffold for the
 > reader's product — pre-mortem gaps G1–G5 are **accepted harness-meta
 > risks** here, not blockers for book work. Your fork replaces rows; keep
 > §11 current when layers or ADRs change.
@@ -31,7 +31,7 @@ Sourced from threat-model pre-mortem (2026-06-17, task 01) — status
 | R4 | **No abuse cases in threat-model table** (G2) | Low | Med | Harness use cases are meta-work; abuse analog = silent STATE overwrite — covered by R1 | accepted |
 | R5 | **Empty threat-table row** (G3) | Low | Med | §11 is the harness living register; threat-model template stays for reader Gate B | accepted |
 | R6 | **Gate B SLOs undefined for meta-work** (G4) | Low | Low | Harness SLO = validator green + handoff accurate; reader defines product SLOs in PROJECT-PLAN | accepted |
-| R7 | **AI controls not fully traced to validator** (G5) | Med | Med | gitleaks pre-commit; no-secrets-in-prompts rule; dependency provenance in [[global]]; partial — full trace deferred | accepted |
+| R7 | **AI controls not fully traced to validator** (G5) | Med | Med | gitleaks pre-commit; no-secrets-in-prompts rule; dependency provenance in [global](../../03-plan/constraints/global.md); partial — full trace deferred | accepted |
 | R8 | **Track A secrets in compose** — `.env` leaked or committed | Low | High | `.env` gitignored; gitleaks; Track A docs warn; human rotates keys | accepted |
 | R9 | **Sandbox git corruption** (D-001) | Low | High | All git on Windows; NUL-byte validator check | accepted |
 
@@ -49,7 +49,7 @@ the threat-model template.
 
 ## Technical debt register
 
-Active entries from [[06-learn/DEBT-LEDGER|DEBT-LEDGER]] — full trigger
+Active entries from [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md) — full trigger
 contracts stay in Ch. 06; §11 indexes open items only.
 
 | ID | Debt (one line) | Paydown trigger | Status |
@@ -59,7 +59,7 @@ contracts stay in Ch. 06; §11 indexes open items only.
 | D-004 | STATE.md manual session close | Two closes without update → automate reminder | active |
 | D-005 | NC-ND cache specifics need vendor re-verify | External publication of Ch. 02 data layer | active |
 
-**Resolved (reference only):** D-003 link resolution (S9), D-006 budget enforcement (S8), D-007 Layer-1 budget 200 (S8). See [[../../_index/glossary#Debt IDs|glossary debt table]].
+**Resolved (reference only):** D-003 link resolution (S9), D-006 budget enforcement (S8), D-007 Layer-1 budget 200 (S8). See [glossary debt table](../../_index/glossary.md#debt-ids).
 
 ## Open threads
 
@@ -76,8 +76,8 @@ When a thread opens, add a row here and link from STATE **Open threads**.
 | :------ | :----- | :---- |
 | Layer file or ADR changes security posture | Re-read threat-model failure condition; update §11 if harness risk shifts | red-team agent + human |
 | Session close with new debt | Append DEBT-LEDGER + one row here | Agent close draft |
-| Track A stack change | Review R8; update [[track-a-setup]] | Operator |
-| S40 roadmap approved | Reconcile defer list vs new threads | **Done** — [[session-roadmap-s40-plus]] |
+| Track A stack change | Review R8; update [track-a-setup](../../05-build/execution-tools/track-a-setup.md) | Operator |
+| S40 roadmap approved | Reconcile defer list vs new threads | **Done** — [session-roadmap-s40-plus](../../context/system/sessions/session-roadmap-s40-plus.md) |
 
 Last §11 review: **2026-06-30** (S39 harness fill — G1–G5 accepted).
 
@@ -92,7 +92,7 @@ Last §11 review: **2026-06-30** (S39 harness fill — G1–G5 accepted).
 
 ## Where to go next
 
-- **Threat model (Ch. 02 Gate B template):** [[../threat-model]]
-- **Debt ledger (full contracts):** [[06-learn/DEBT-LEDGER]]
-- **Quality scenarios (§10):** [[10-quality-requirements]]
-- **Section index:** [[README]]
+- **Threat model (Ch. 02 Gate B template):** [threat-model](../threat-model.md)
+- **Debt ledger (full contracts):** [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md)
+- **Quality scenarios (§10):** [10-quality-requirements](10-quality-requirements.md)
+- **Section index:** [README](README.md)

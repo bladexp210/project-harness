@@ -13,7 +13,7 @@ gate) after pre-mortem.
 
 ## Context
 
-The four [[02-design|Ch. 02]] layer files are about to be written, and each
+The four [Ch. 02](../README.md) layer files are about to be written, and each
 will recommend patterns: modular monolith, Postgres-first, cache strategies,
 latency budgets. The red-team seed (`research/red-team-seed.md`) shows what
 happens to recommendations that travel without their limits: cargo-cult
@@ -36,7 +36,7 @@ using the Claim → Evidence → Failure Condition structure:
   recommendation is wrong, stated concretely enough that a reader can check
   their own project against it.
 
-In [[ADR-002-modeling-conventions|ADR-002]] decision tables, the failure
+In [ADR-002](ADR-002-modeling-conventions.md) decision tables, the failure
 condition surfaces as a **"when NOT to apply"** row/column. In prose, it is
 a closing sentence or callout per pattern — no new heading ceremony
 required. Binding on all four layer files, the threat-model artifact, and
@@ -53,10 +53,10 @@ book's operational form of axiomatic and strategic checks:
   tables") — not vague "depends on context."
 - **Hoare link:** a failure condition is the class of **violated
   postconditions** under which the recommendation fails; pair with
-  pre/post tables on irreversible-gate tasks ([[ADR-002-modeling-conventions|ADR-002]]
+  pre/post tables on irreversible-gate tasks ([ADR-002](ADR-002-modeling-conventions.md)
   Part 3).
 
-Use the five-question checklist in [[02-design|Ch. 02 README]] before
+Use the five-question checklist in [Ch. 02 README](../README.md) before
 locking layer decisions.
 
 **Reversibility & blast radius:** reversible by superseding ADR; existing
@@ -68,7 +68,7 @@ radius is authoring cost only — no tooling or pipeline depends on it.
 The convention is the book's own context-check protocol applied to itself:
 "under what conditions does the practice fail" becomes a required field
 instead of an exercise left to the reader. It directly serves the audience
-constraint in [[overview]] — novices cannot supply missing context
+constraint in [overview](../../context/system/overview.md) — novices cannot supply missing context
 themselves, so the guardrail must carry it. And it is cheap: one sentence
 or one table row per pattern, written while the evidence is already open.
 
@@ -107,7 +107,7 @@ Run by the red-team agent before acceptance.
    ("you have one team and < 10k daily users" — yes; "depends on context"
    — no). The validator can't check this, but review can: a failure
    condition a reader cannot test against their project is a
-   [[DEBT-LEDGER]] entry.
+   [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md) entry.
 2. **Convention applied asymmetrically** — patterns the author likes get
    weak failure conditions → mitigation: the red-team agent's review seat
    covers layer files; its brief includes challenging the failure
@@ -121,6 +121,6 @@ Run by the red-team agent before acceptance.
 
 Machine-checkable enforcement — a lint rule that flags a decision table
 missing a "when NOT to apply" row. Worth revisiting when the validator
-grows its next rule batch (pairs with the bare-[[ADR-004-lifecycle-vocabulary|lifecycle]] vocabulary lint in T7).
+grows its next rule batch (pairs with the bare-[lifecycle](ADR-004-lifecycle-vocabulary.md) vocabulary lint in T7).
 GRADE-style evidence grading, if a future chapter's claims get disputed on
 evidence quality.

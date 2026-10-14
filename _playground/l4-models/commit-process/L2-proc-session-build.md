@@ -11,7 +11,7 @@ tags: [playground, l2, session, process]
 
 **Question:** What happens during one session's build phase before close?
 
-**Parent capability:** `app_book_harness` · [[L1-cap-session-governance]]
+**Parent capability:** `app_book_harness` · [L1-cap-session-governance](L1-cap-session-governance.md)
 
 **Process ID:** `proc_session_build` · **C4 link:** **module** `m_book_repo`
 (C4 Container — diagram label unchanged).
@@ -24,13 +24,13 @@ tags: [playground, l2, session, process]
 | :---- | :---- |
 | **Process ID** | `proc_session_build` |
 | **Process name** | Run session build |
-| **Parent** | `app_book_harness` (L1 · [[L1-cap-session-governance]]) |
+| **Parent** | `app_book_harness` (L1 · [L1-cap-session-governance](L1-cap-session-governance.md)) |
 | **Manager** | `human:Alex` |
 | **Level** | L2 (process stack) |
 
 ### Orchestrator
 
-`human:Alex` + `exe_agent_cursor` — branch per [[session-workflow]]; agent
+`human:Alex` + `exe_agent_cursor` — branch per [session-workflow](../../../context/system/session-workflow.md); agent
 edits; human owns gates and git author path (D-001).
 
 ### Input
@@ -63,7 +63,7 @@ edits; human owns gates and git author path (D-001).
 
 | Workflow ID | Name | File |
 | :------------ | :--- | :--- |
-| `wf_commit_process` | Commit one logical batch | [[L3-commit-process]] |
+| `wf_commit_process` | Commit one logical batch | [L3-commit-process](L3-commit-process.md) |
 
 ```mermaid
 flowchart TB
@@ -79,4 +79,4 @@ flowchart TB
 ```
 
 One session build may run `wf_commit_process` **many times** (one per logical
-batch). Then [[../session-close/L2-proc-session-close|proc_session_close]].
+batch). Then [proc_session_close](../session-close/L2-proc-session-close.md).

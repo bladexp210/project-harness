@@ -13,7 +13,7 @@ tags: [design, layer, application]
 > [!TEACH] Teach
 > The application layer decides how your software's logic is shaped: one
 > deployable or many, what the internal boundaries are, how it scales, what
-> compute it runs on, and who it trusts. Where the [[data]] layer's decisions
+> compute it runs on, and who it trusts. Where the [data](data.md) layer's decisions
 > are mostly irreversible, this layer's range is wider — some choices here
 > are one-line config reverts, others (your identity provider, your service
 > split) are one-way doors. The reversibility field in each ADR tells you
@@ -25,7 +25,7 @@ tags: [design, layer, application]
 > This is the layer where cargo-culting does the most damage, because its
 > famous patterns come from companies whose problems you do not have. The
 > discipline of this chapter — every recommendation with its failure
-> condition ([[ADR-005-failure-condition-convention|ADR-005]]) — exists
+> condition ([ADR-005](../decisions/ADR-005-failure-condition-convention.md)) — exists
 > substantially for this file.
 
 ## Decision 1 — One deployable or many?
@@ -66,7 +66,7 @@ tags: [design, layer, application]
 > Module boundaries exist to **hide design decisions likely to change** —
 > storage engine, auth provider, pricing rules — not merely to group visible
 > steps. Adjacent modules depend on interfaces, not each other's internals.
-> See question 1 in [[02-design/README|Ch. 02]] five-paper checklist.
+> See question 1 in [Ch. 02](../README.md) five-paper checklist.
 
 ## Decision 2 — What vocabulary for the inside?
 
@@ -110,7 +110,7 @@ tags: [design, layer, application]
 > number. Failover shape: active-passive is simpler (standby capacity idles;
 > hot vs cold standby sets your recovery time), active-active buys
 > throughput at the price of routing complexity; either way the failover
-> window can lose unreplicated writes — that loss window is a [[data]]
+> window can lose unreplicated writes — that loss window is a [data](data.md)
 > layer replication decision, made there.
 >
 > A reverse proxy is useful even with one server (TLS, compression, a
@@ -154,7 +154,7 @@ tags: [design, layer, application]
 > adapters over the same shared logic
 > (`company-framework-seed → unified AI-ready application`). Your Ch. 04
 > agent team becomes a first-class client instead of a screen-scraper, and
-> the [[communication]] layer stays honest because the API *is* the product.
+> the [communication](communication.md) layer stays honest because the API *is* the product.
 > **Failure condition:** a pure end-user tool with no automation story and
 > no agent access planned — then the extra surface is speculative
 > generality; skip it and note the seam.

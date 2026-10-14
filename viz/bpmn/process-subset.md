@@ -141,7 +141,7 @@ flowchart TB
 | Labels ≤ 5 words | Yes |
 | Embedded legend | Above |
 | L3 node budget ≤ 15 | 7 nodes |
-| Pairs with ICOM | [[task-box]] |
+| Pairs with ICOM | [task-box](../icom/task-box.md) |
 
 ---
 
@@ -149,13 +149,13 @@ flowchart TB
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| Static modules | [[../c4/container]] |
-| DMN at gateway | [[../dmn/decision-table]] |
-| Message-level detail | [[../uml/sequence]] |
-| L3 taxonomy | [[diagram-taxonomy-levels#L3 — Component / workflow]] |
+| Static modules | [container](../c4/container.md) |
+| DMN at gateway | [decision-table](../dmn/decision-table.md) |
+| Message-level detail | [sequence](../uml/sequence.md) |
+| L3 taxonomy | [diagram-taxonomy-levels](../../context/system/diagram-taxonomy-levels.md#l3-component-workflow) |
 
 ## Where to go next
 
-- **BPMN section index:** [[README]]
-- **Session procedure:** [[session-workflow]]
+- **BPMN section index:** [README](README.md)
+- **Session procedure:** [session-workflow](../../context/system/session-workflow.md)
 - **Task 02 canon:** `04-your-agents/tasks/02-track-a-golden-path.md`

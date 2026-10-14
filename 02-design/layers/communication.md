@@ -14,7 +14,7 @@ tags: [design, layer, communication]
 > The communication layer decides how the pieces of your system exchange
 > information: which calls are synchronous, which go through queues, what
 > shape your API takes, how updates reach users in real time, and how your
-> software talks to AI providers. It comes after [[data]] and [[application]]
+> software talks to AI providers. It comes after [data](data.md) and [application](application.md)
 > because both constrain it — what moves is data, and what talks is modules.
 
 ## Why it matters
@@ -51,7 +51,7 @@ tags: [design, layer, communication]
 > And one prohibition with its own section in the source material: **never
 > use the database as a message queue** — lock contention and polling load
 > degrade both jobs (`system-design-seed → MQ antipattern`). The exemption
-> that proves the rule: the transactional outbox ([[data]] layer) uses a
+> that proves the rule: the transactional outbox ([data](data.md) layer) uses a
 > table as a *staging post* for a real delivery mechanism, not as the queue.
 
 ## Decision 2 — What shape is the API?
@@ -66,7 +66,7 @@ tags: [design, layer, communication]
 > `system-design-seed → REST/RPC/GraphQL`
 >
 > Default for the book's audience: REST outside, RPC or plain function calls
-> inside the monolith. The [[application]] layer's unified human+agent
+> inside the monolith. The [application](application.md) layer's unified human+agent
 > codebase makes this API the agent surface too — design it once, honestly.
 
 ## Decision 3 — How do updates reach users?
@@ -89,7 +89,7 @@ tags: [design, layer, communication]
 > and must deploy together have all of microservices' costs and none of
 > its benefits (`red-team-seed → communication ammunition`). The check is
 > mechanical: can you deploy one service alone, and does a peer being down
-> degrade you gracefully? Two "no"s and the boundaries in [[application]]
+> degrade you gracefully? Two "no"s and the boundaries in [application](application.md)
 > were drawn in the wrong place — fix them there; no communication
 > machinery repairs a wrong boundary.
 
@@ -109,7 +109,7 @@ tags: [design, layer, communication]
 >
 > - **One gateway, no direct calls.** Every LLM call goes through a single
 >   routing point (the system this book runs on uses LiteLLM — see
->   [[overview]] dimension 1); swapping providers is then config, not
+>   [overview](../../context/system/overview.md) dimension 1); swapping providers is then config, not
 >   refactor. **Failure condition:** a single-provider prototype you will
 >   measure and throw away — a gateway there is ceremony.
 > - **Start with the most capable model, prove correctness, then optimize
@@ -126,7 +126,7 @@ tags: [design, layer, communication]
 > it defaults to "I stopped" (`company-framework-seed → handoff gate`). Every
 > recurring handoff gets a **completeness gate**: a checklist, an owner, and
 > a sign-off. This book practices it on itself: STATE.md is the session
-> handoff, and the Gherkin block in each task ([[ADR-002-modeling-conventions|ADR-002]])
+> handoff, and the Gherkin block in each task ([ADR-002](../decisions/ADR-002-modeling-conventions.md))
 > is the agent's completion gate.
 
 > [!NOTE] Ask your AI agent

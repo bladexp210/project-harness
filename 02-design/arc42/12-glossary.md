@@ -13,7 +13,7 @@ tags: [arc42, design, vocabulary, harness]
 > [!NOTE] REAL — harness-meta
 > Terms for **this repo**. Define once; link from prose with
 > `[[12-glossary#term|term]]`. Canonical ADR and index definitions live in
-> `02-design/decisions/` and [[../../_index/glossary|_index/glossary.md]] —
+> `02-design/decisions/` and [_index/glossary.md](../../_index/glossary.md) —
 > **link, do not duplicate** long rationale here.
 
 ## How to use this section
@@ -24,16 +24,16 @@ tags: [arc42, design, vocabulary, harness]
 | ADR terms → link to ADR | prune/retire/sunset, ADR-004 five kinds, failure conditions — full text in decisions/ |
 | Product terms below the harness table | Your fork adds rows; keep harness rows as examples |
 
-Full qualified-vocabulary table and budget limits: [[../../_index/glossary|_index/glossary.md]].
+Full qualified-vocabulary table and budget limits: [_index/glossary.md](../../_index/glossary.md).
 
 ## Harness and methodology terms
 
 | Term | Definition |
 | :---- | :--------- |
-| **Harness Gap (Type A)** | A book-repo slot that should hold reader-specific content but is still empty or stub-only in this repo. See dashboard [[../../_index/dashboard/02-containers\|L2 Containers]]. |
+| **Harness Gap (Type A)** | A book-repo slot that should hold reader-specific content but is still empty or stub-only in this repo. See dashboard [L2 Containers](../../_index/dashboard/02-containers.md). |
 | **Canon Gap (Type B)** | Methodology or teaching debt that affects every reader — not a missing product artifact. |
 | **Book-as-folder-structure** | This repo: chapters `00`–`08` teach the method and operate as the project harness. |
-| **Session workflow** | Plan → Proceed → Execute → Close draft → Validate → Merge. Canonical: [[session-workflow]]. |
+| **Session workflow** | Plan → Proceed → Execute → Close draft → Validate → Merge. Canonical: [session-workflow](../../context/system/session-workflow.md). |
 | **Human gate** | Explicit human approval before irreversible or scope-binding action — Proceed, validate, merge. |
 | **Close draft** | Agent updates STATE + dashboard L1–L3 + next bootstrap **before** merge is offered. |
 | **Bootstrap** | STATE **Next session bootstrap** block — branch, primary, load first, defer. |
@@ -45,7 +45,7 @@ Full qualified-vocabulary table and budget limits: [[../../_index/glossary|_inde
 
 | Term | Definition |
 | :---- | :--------- |
-| **Track A** | Ideal build path — OpenHands + LiteLLM compose on Docker; Langfuse observability. [[track-a-setup]] |
+| **Track A** | Ideal build path — OpenHands + LiteLLM compose on Docker; Langfuse observability. [track-a-setup](../../05-build/execution-tools/track-a-setup.md) |
 | **Track B** | Fallback authoring — IDE agent (Cursor) + `AGENTS.md` load table; human git (D-001). |
 
 ## Removal verbs (ADR-003) and ADR-004 vocabulary
@@ -54,32 +54,32 @@ Link for full rationale — do not redefine in prose.
 
 | Term | Canonical definition |
 | :---- | :------------------- |
-| **prune** | Remove from plan before build — [[../decisions/ADR-003-removal-vocabulary\|ADR-003]] |
-| **retire** | Turn off a shipped feature — [[../decisions/ADR-003-removal-vocabulary\|ADR-003]] |
-| **sunset** | End the product — [[../decisions/ADR-003-removal-vocabulary\|ADR-003]] |
-| **Product / user / feature / data / task lifecycle** | Five named kinds — always qualify the noun — [[../decisions/ADR-004-lifecycle-vocabulary\|ADR-004]] |
+| **prune** | Remove from plan before build — [ADR-003](../decisions/ADR-003-removal-vocabulary.md) |
+| **retire** | Turn off a shipped feature — [ADR-003](../decisions/ADR-003-removal-vocabulary.md) |
+| **sunset** | End the product — [ADR-003](../decisions/ADR-003-removal-vocabulary.md) |
+| **Product / user / feature / data / task lifecycle** | Five named kinds — always qualify the noun — [ADR-004](../decisions/ADR-004-lifecycle-vocabulary.md) |
 
 ## Design and documentation terms
 
 | Term | Definition |
 | :---- | :--------- |
 | **arc42** | 12-section architecture documentation template — this folder. Not a diagram notation. |
-| **ICOM+** | Task notation — Inputs, Outputs, Controls, Mechanisms. [[icom-plus-convention]] |
+| **ICOM+** | Task notation — Inputs, Outputs, Controls, Mechanisms. [icom-plus-convention](../../_playground/icom-plus-convention.md) |
 | **ADR** | Architecture Decision Record — `02-design/decisions/`; indexed in §9. |
-| **Failure condition** | Named circumstances when a recommended pattern is wrong — [[../decisions/ADR-005-failure-condition-convention\|ADR-005]]. |
-| **Teaching block** | Instruction delimited from artifact zones — [[../decisions/ADR-006-teaching-block-convention\|ADR-006]]. |
+| **Failure condition** | Named circumstances when a recommended pattern is wrong — [ADR-005](../decisions/ADR-005-failure-condition-convention.md). |
+| **Teaching block** | Instruction delimited from artifact zones — [ADR-006](../decisions/ADR-006-teaching-block-convention.md). |
 | **viz/** | Rendered diagram stubs and harness examples — C4, BPMN, UML, DMN, ICOM. |
 
 ## Debt IDs (active)
 
 | ID | One-line summary |
 | :---- | :---------------- |
-| D-001 | Git writes on host shell only — see `constraints/host.md` ([[ADR-011-host-profile-seam]]) |
+| D-001 | Git writes on host shell only — see `constraints/host.md` ([ADR-011-host-profile-seam](../decisions/ADR-011-host-profile-seam.md)) |
 | D-002 | Session-1 `###` promotion pending |
 | D-004 | STATE manual close — automate if two skips |
 | D-005 | NC-ND cache specifics — re-verify before external Ch. 02 publish |
 
-Resolved IDs and budget table: [[../../_index/glossary#Debt IDs|_index/glossary.md]].
+Resolved IDs and budget table: [_index/glossary.md](../../_index/glossary.md#debt-ids).
 
 ## Your product terms
 
@@ -100,6 +100,6 @@ Add rows below when you fork — keep harness rows above as reference examples.
 
 ## Where to go next
 
-- **Repo glossary index:** [[../../_index/glossary]]
-- **ADR vocabulary decisions:** [[09-architectural-decisions]]
-- **Section index:** [[README]]
+- **Repo glossary index:** [glossary](../../_index/glossary.md)
+- **ADR vocabulary decisions:** [09-architectural-decisions](09-architectural-decisions.md)
+- **Section index:** [README](README.md)

@@ -10,7 +10,7 @@ tags: [modeling, taxonomy, reference]
 # Diagram taxonomy — levels L3–L4 and reference
 
 > [!NOTE] Part 2 of 2
-> Foundations and L1–L2: [[diagram-taxonomy]].
+> Foundations and L1–L2: [diagram-taxonomy](diagram-taxonomy.md).
 
 ---
 
@@ -32,8 +32,8 @@ tags: [modeling, taxonomy, reference]
 | **ER** | Physical ER | Static | Tables; keys | Process | Migrations | API sequence |
 | **DMN** | Decision table | Decision | Gateway logic | Who acts | BPMN branch rules | Component diagram |
 
-*REAL L3 examples:* [[_playground/l4-models/commit-process/L3-commit-process|wf_commit_process]] ·
-[[_playground/l4-models/session-close/L3-wf-session-close|wf_session_close]].
+*REAL L3 examples:* [wf_commit_process](../../_playground/l4-models/commit-process/L3-commit-process.md) ·
+[wf_session_close](../../_playground/l4-models/session-close/L3-wf-session-close.md).
 
 *Dropped from core:* IDEF3 (use BPMN or UML Activity) · BPMN choreography/
 conversation (appendix).
@@ -42,7 +42,7 @@ conversation (appendix).
 
 ## L4 — Task
 
-*One sitting; `t_*`; Executor + Supervisor per [[icom-plus-convention|ICOM+]].*
+*One sitting; `t_*`; Executor + Supervisor per [ICOM+](icom-plus-convention.md).*
 
 | Model | Diagram / artifact | Family | Focus | Blind spots | Use for | Do not use for |
 | :---- | :----------------- | :----- | :---- | :---------- | :------ | :------------- |
@@ -149,7 +149,7 @@ pedagogical journey, not a C4 type.
 | Track B Kanban + process stack refs | Session dashboard Kanban UI |
 | ESL + color link to ICOM+ | viz/ stubs (S31); arc42 scaffold (S32) **done** |
 
-**Provenance:** [[research/model-visualization-seed|model-visualization-seed]]
+**Provenance:** [model-visualization-seed](../../research/model-visualization-seed.md)
 (Perplexity 2026-06-12) + ICOM+ v0.3 decisions (2026-06-15).
 
 **Mockups:** `_playground/mockups/README.md` — learning examples; some types now

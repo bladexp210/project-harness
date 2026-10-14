@@ -8,22 +8,22 @@ tags: [orientation, operations, runbook]
 
 # 07 — Ship & Operate
 
-Build from [[05-build|Ch. 05]] ships working software. Learn from
-[[06-learn|Ch. 06]] captures what failures taught. Operate is everything
+Build from [Ch. 05](../05-build/README.md) ships working software. Learn from
+[Ch. 06](../06-learn/README.md) captures what failures taught. Operate is everything
 between "the code works on my machine" and "users rely on it daily" — and
 the discipline to **retire** shipped parts when signals say so, without
 confusing that with design-time *pruning* (Ch. 03) or whole-product
-*sunset* (Ch. 08). See [[ADR-003-removal-vocabulary]].
+*sunset* (Ch. 08). See [ADR-003-removal-vocabulary](../02-design/decisions/ADR-003-removal-vocabulary.md).
 
 > [!LEARN] Learn It
 > Operating is not a one-time deploy. It is a **runbook-driven loop**:
 > deploy → observe → respond → recurring maintenance → review what to
-> retire. Incidents feed [[06-learn|Learn]] via post-mortems; successful
-> patterns promote to [[06-learn/boilerplate/README|boilerplate]].
+> retire. Incidents feed [Learn](../06-learn/README.md) via post-mortems; successful
+> patterns promote to [boilerplate](../06-learn/boilerplate/README.md).
 
 > [!TIP] Fast Track
 > Copy `_templates/runbook.md` → `07-ship-operate/runbook/` and fill one
-> service at a time. See [[runbook/README|runbook/]] and the harness-meta
+> service at a time. See [runbook/](runbook/README.md) and the harness-meta
 > example for this book's validator + Track A stack.
 
 ## Operate loop
@@ -44,14 +44,14 @@ flowchart LR
 
 | Path | Purpose |
 | :---- | :---- |
-| [[runbook/README\|runbook/]] | Living runbooks — one file per service or environment |
+| [runbook/](runbook/README.md) | Living runbooks — one file per service or environment |
 | `_templates/runbook.md` | Blank runbook template (repo root) |
-| [[runbook/example-harness-track-a-runbook\|example-harness-track-a-runbook]] | Harness-meta worked example (validator + Track A stack) |
-| [[publish/README\|publish/]] | Optional static site later — no live deploy in this public copy |
-| [[automation-portfolio-scorecard\|automation-portfolio-scorecard]] | Intake ROI ranking, portfolio health (active / degraded / retired), retirement triggers |
+| [example-harness-track-a-runbook](runbook/example-harness-track-a-runbook.md) | Harness-meta worked example (validator + Track A stack) |
+| [publish/](publish/README.md) | Optional static site later — no live deploy in this public copy |
+| [automation-portfolio-scorecard](automation-portfolio-scorecard.md) | Intake ROI ranking, portfolio health (active / degraded / retired), retirement triggers |
 
-Reader projects add operator roles to [[user-roles]] and operational use cases
-to [[use-cases]] — they compete for priority in [[03-plan/PROJECT-PLAN|Plan]]
+Reader projects add operator roles to [user-roles](../01-understand/user-roles.md) and operational use cases
+to [use-cases](../01-understand/use-cases.md) — they compete for priority in [Plan](../03-plan/PROJECT-PLAN.md)
 like any other work.
 
 ## 1 — Deploy
@@ -117,7 +117,7 @@ artifact-driven. If a cadence has no runbook line, it will rot.
 **Goal:** AI accelerates addition; governance must accelerate *removal* of
 what no longer earns its cost.
 
-Per [[ADR-003-removal-vocabulary]] — **retire** (not prune, not sunset):
+Per [ADR-003-removal-vocabulary](../02-design/decisions/ADR-003-removal-vocabulary.md) — **retire** (not prune, not sunset):
 
 | Phase | Action |
 | :---- | :----- |
@@ -127,7 +127,7 @@ Per [[ADR-003-removal-vocabulary]] — **retire** (not prune, not sunset):
 
 **Evolvability test:** can you remove a feature, replace a provider, or
 retire a data flow without existential risk? If no — design debt; log in
-[[DEBT-LEDGER]] or promote a constraint.
+[DEBT-LEDGER](../06-learn/DEBT-LEDGER.md) or promote a constraint.
 
 Quarterly review prompts: lowest-usage features, abandoned dependencies,
 single-provider concentration.
@@ -138,7 +138,7 @@ You leave this chapter when at least one runbook exists and covers deploy,
 health checks, one incident path, and one recurring task. Empty `runbook/`
 after shipping to production is a Canon Gap for your project.
 
-Harness readers: start from [[runbook/example-harness-track-a-runbook]].
+Harness readers: start from [example-harness-track-a-runbook](runbook/example-harness-track-a-runbook.md).
 
 ## Portfolio prioritization
 

@@ -20,14 +20,14 @@ wiring the learn loop. Document-only in S23 — no Track A/B run.
 
 ## Inputs
 
-- [[DEBT-LEDGER]] — debt register pattern to reference from post-mortems
-- [[session-workflow]] — session close checklist source
-- [[session-1-v2]] — boilerplate promotion loop (design intent)
-- [[05-build/README]] — build → learn handoff
+- [DEBT-LEDGER](../../06-learn/DEBT-LEDGER.md) — debt register pattern to reference from post-mortems
+- [session-workflow](../../context/system/session-workflow.md) — session close checklist source
+- [session-1-v2](../../context/system/sessions/session-1-v2.md) — boilerplate promotion loop (design intent)
+- [05-build/](../../05-build/README.md) — build → learn handoff
 
 ## Controls
 
-*Inherited — do not rewrite.* Governed by [[global|constraints]] and the
+*Inherited — do not rewrite.* Governed by [constraints](../../03-plan/constraints/global.md) and the
 acceptance criteria below.
 
 **Scope — modify:**
@@ -45,12 +45,12 @@ acceptance criteria below.
 
 ## Mechanisms
 
-Run by the **dev agent** ([[dev-agent]]).
+Run by the **dev agent** ([dev-agent](../agents/dev-agent.yaml)).
 
 | Track | Guide | S23 choice |
 | :---- | :---- | :---- |
-| **A** (ideal) | [[openhands]] | **Not run** — document-only session |
-| **B** (fallback) | [[track-b-checklist]] | **Not run** — canon authored directly |
+| **A** (ideal) | [openhands](../../05-build/execution-tools/openhands.md) | **Not run** — document-only session |
+| **B** (fallback) | [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) | **Not run** — canon authored directly |
 
 ## Outputs
 

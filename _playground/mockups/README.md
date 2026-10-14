@@ -9,7 +9,7 @@ tags: [playground, mockups]
 # Diagram mockups — learn by example
 
 > [!NOTE] All mockups use **FICTITIOUS** data (OrderLine shop + harness book).
-> Rendering here is illustrative only — see [[context/system/diagram-taxonomy|taxonomy v0.3]]
+> Rendering here is illustrative only — see [taxonomy v0.3](../../context/system/diagram-taxonomy.md)
 > for *which diagram at which level* (not how to render).
 
 Open files in Obsidian (Mermaid) or a browser (HTML).

@@ -8,7 +8,7 @@ tags: [execution, track-b, checklist]
 
 # Track B — generic execution checklist
 
-Use this when **Track B** applies per [[ADR-007-dual-execution-tracks]]: you
+Use this when **Track B** applies per [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md): you
 run tasks through an IDE or CLI agent (Cursor, Claude Code, Codex, OpenCode,
 Jules, Antigravity, or any successor product) instead of OpenHands.
 
@@ -17,7 +17,7 @@ files, @-mentions, MCP, project memory, whatever that product calls the same
 concerns.
 
 > [!LEARN] Learn It
-> Track A ([[openhands]]) is **ideal** — Docker sandbox + LiteLLM/OpenRouter.
+> Track A ([openhands](openhands.md)) is **ideal** — Docker sandbox + LiteLLM/OpenRouter.
 > Track B is **fallback** when setup confidence or subscription billing fits
 > better today. The harness does not change: same task files, same gates.
 
@@ -30,9 +30,9 @@ concerns.
 
 | Check                    | Pass when                                                                                                                       |
 | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| Track B is honest choice | [[ADR-007-dual-execution-tracks]] drivers say you are not ready for Track A yet, or you are doing harness meta-work on the ramp |
+| Track B is honest choice | [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md) drivers say you are not ready for Track A yet, or you are doing harness meta-work on the ramp |
 | Tool picked              | One IDE/CLI agent; you know where its **rules**, **context**, and **diff UI** live                                              |
-| Git layout               | Session branch checked out in a **worktree** — [[bare-worktree-setup]]                                                          |
+| Git layout               | Session branch checked out in a **worktree** — [bare-worktree-setup](bare-worktree-setup.md)                                                          |
 
 ## 1. Workspace — isolate git state
 
@@ -41,7 +41,7 @@ concerns.
 | 1.1 | Open the repo in **one worktree** on branch `session-NN/<topic>`                                            | Editing on `main` by accident            |
 | 1.2 | Confirm `git status` shows only expected files before the agent runs                                        | Stray changes from another session       |
 | 1.3 | List every path you will allow edits on **before** prompting (from task **Scope — modify**)                 | Scope creep into Layer 1/2 context files |
-| 1.4 | Prefer bare repo + worktrees when ready — [[bare-worktree-setup]]; a single clone is an acceptable **ramp** | Parallel checkouts of the same branch    |
+| 1.4 | Prefer bare repo + worktrees when ready — [bare-worktree-setup](bare-worktree-setup.md); a single clone is an acceptable **ramp** | Parallel checkouts of the same branch    |
 
 **Adapter hint:** point the IDE workspace root at the worktree directory, not
 the bare hub.
@@ -78,14 +78,14 @@ Review `.build-context/task-context.md` before sending.
 | 4.1 | Restate **Scope — modify** and **read-only** lists in the prompt     | Files changed outside scope |
 | 4.2 | Require Gherkin evidence: quote each `Then` with proof before "done" | False completion            |
 | 4.3 | Escalate if a change would touch Layer 1/2 context or need an ADR    | Silent architecture edits   |
-| 4.4 | One logical batch per review cycle (per [[session-workflow]])        | Mixed commits               |
+| 4.4 | One logical batch per review cycle (per [session-workflow](../../context/system/session-workflow.md))        | Mixed commits               |
 
 ## 5. Safety — gates the tool cannot override
 
 | # | Do | Secure against |
 | :-: | :--- | :------------- |
 | 5.1 | **Disable or avoid** IDE auto-commit / auto-push to `main` | Bypassing human review |
-| 5.2 | Run **all git write operations on the host shell** (D-001) — see [[host\|constraints/host]] | NUL-corrupted `.git` from sandbox terminals |
+| 5.2 | Run **all git write operations on the host shell** (D-001) — see [constraints/host](../../03-plan/constraints/host.md) | NUL-corrupted `.git` from sandbox terminals |
 | 5.3 | Never paste secrets into chat; confirm `.env` is gitignored | Credential leakage |
 | 5.4 | Do not use `--no-verify` unless you explicitly intend to skip hooks | Broken validator / gitleaks |
 | 5.5 | Keep agent terminal out of git when the IDE runs in a remote sandbox | D-001 violation |
@@ -109,7 +109,7 @@ git commit -m "type(scope): subject" -m "Body with why."
 
 The book stops at **concerns**. Fill `_templates/tooling-manifest.md` (copy to
 your repo) with product names, then mirror one-line adapters into
-`constraints/project.md`. See [[vscode-hub]] and [[ADR-010-vscode-hub-barbell]].
+`constraints/project.md`. See [vscode-hub](vscode-hub.md) and [ADR-010-vscode-hub-barbell](../../02-design/decisions/ADR-010-vscode-hub-barbell.md).
 
 | Concern (this checklist) | Typical product feature names |
 | :----------------------- | :---------------------------- |
@@ -119,7 +119,7 @@ your repo) with product names, then mirror one-line adapters into
 | Stripped context | Paste buffer, attached markdown, project docs |
 | Diff review | Source control panel, inline diff |
 | Model choice | Settings, subscription tier, API key |
-| Automation hooks | `.cursor/hooks.json` → `langfuse_trace_bridge` | [[path-c-hook-contract]] |
+| Automation hooks | `.cursor/hooks.json` → `langfuse_trace_bridge` | [path-c-hook-contract](path-c-hook-contract.md) |
 
 **Your job:** for each row in §1–§6, write one line in the manifest and in
 `constraints/project.md` that points your product at the harness artifact. When
@@ -147,16 +147,16 @@ You are the {role} for this project ({agent}.yaml).
 ## When to move to Track A
 
 Re-read ADR-007 decision drivers. When Docker + LiteLLM/OpenRouter is viable,
-run the next build task through [[openhands]] — same task file, same
+run the next build task through [openhands](openhands.md) — same task file, same
 `task_context.py`, different runtime.
 
 ## Reference
 
-- Hub pattern: [[vscode-hub]]
-- Host profile: [[host|constraints/host]]
-- Tooling manifest: [[tooling-manifest|_templates/tooling-manifest.md]]
-- Decisions: [[ADR-007-dual-execution-tracks]] · [[ADR-010-vscode-hub-barbell]]
-- Path C hooks: [[path-c-hook-contract]]
-- Track A guide: [[openhands]]
-- Git layout: [[bare-worktree-setup]]
-- ICOM+ Track B examples: [[icom-plus-examples-trackb]]
+- Hub pattern: [vscode-hub](vscode-hub.md)
+- Host profile: [constraints/host](../../03-plan/constraints/host.md)
+- Tooling manifest: [_templates/tooling-manifest.md](../../_templates/tooling-manifest.md)
+- Decisions: [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md) · [ADR-010-vscode-hub-barbell](../../02-design/decisions/ADR-010-vscode-hub-barbell.md)
+- Path C hooks: [path-c-hook-contract](path-c-hook-contract.md)
+- Track A guide: [openhands](openhands.md)
+- Git layout: [bare-worktree-setup](bare-worktree-setup.md)
+- ICOM+ Track B examples: [icom-plus-examples-trackb](../../context/system/icom-plus-examples-trackb.md)

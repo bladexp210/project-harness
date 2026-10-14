@@ -13,18 +13,18 @@ top-1% project plans the ending at the beginning, because graceful shutdown
 is cheap to design and expensive to retrofit. This chapter covers deciding
 *when* to **sunset** the whole product (not a feature — that is *retire* in
 Ch. 07; not an unbuilt branch — that is *prune* in Ch. 03). See
-[[ADR-003-removal-vocabulary]].
+[ADR-003-removal-vocabulary](../02-design/decisions/ADR-003-removal-vocabulary.md).
 
 > [!LEARN] Learn It
 > Sunset is a **checklist-driven arc**: decide → notify users → export and
 > migrate → decommission → archive → final post-mortem into
-> [[06-learn|Learn]]. The last artifact is a **decommission record** the
+> [Learn](../06-learn/README.md). The last artifact is a **decommission record** the
 > next project starts from.
 
 > [!TIP] Fast Track
 > Copy `_templates/decommission-record.md` →
 > `08-sunset/decommission/` when kill criteria fire. See
-> [[decommission/README|decommission/]] for harness-meta and fictional SaaS
+> [decommission/](decommission/README.md) for harness-meta and fictional SaaS
 > examples.
 
 ## Sunset arc
@@ -40,17 +40,17 @@ flowchart LR
     PM --> LEARN[06 Learn]
 ```
 
-Signals come from [[07-ship-operate|Ch. 07]] — cost, usage, margin, strategic
+Signals come from [Ch. 07](../07-ship-operate/README.md) — cost, usage, margin, strategic
 alignment — not gut feeling alone.
 
 ## What lives here
 
 | Path | Purpose | Notes |
 | :---- | :---- | :---- |
-| [[decommission/README\|decommission/]] | Folder index | Filled decommission records |
+| [decommission/](decommission/README.md) | Folder index | Filled decommission records |
 | `_templates/decommission-record.md` | Blank template (repo root) | |
-| [[decommission/example-harness-repo-sunset\|example-harness-repo-sunset]] | Worked example | Harness-meta |
-| [[decommission/example-fictional-saas-sunset\|example-fictional-saas-sunset]] | Worked example | Fictional SaaS |
+| [example-harness-repo-sunset](decommission/example-harness-repo-sunset.md) | Worked example | Harness-meta |
+| [example-fictional-saas-sunset](decommission/example-fictional-saas-sunset.md) | Worked example | Fictional SaaS |
 
 ## 1 — Decide when to sunset
 
@@ -58,9 +58,9 @@ alignment — not gut feeling alone.
 
 | Input             | Source                                                              |
 | :---------------- | :------------------------------------------------------------------ |
-| Usage and revenue | [[07-ship-operate\|Operate]] monitoring and cost review             |
-| Kill criteria     | Pre-registered at launch in [[use-cases]] or product brief          |
-| Strategic fit     | [[03-plan/PROJECT-PLAN\|Plan]] — does the product still earn a row? |
+| Usage and revenue | [Operate](../07-ship-operate/README.md) monitoring and cost review             |
+| Kill criteria     | Pre-registered at launch in [use-cases](../01-understand/use-cases.md) or product brief          |
+| Strategic fit     | [Plan](../03-plan/PROJECT-PLAN.md) — does the product still earn a row? |
 | Margin            | Full cost of support + infra, not headline revenue                  |
 
 **Reader discipline:** define kill thresholds *before* launch when possible.
@@ -125,12 +125,12 @@ uses this chapter.
 
 | Artifact | Reader action |
 | :---- | :---- |
-| Export formats | documented in [[02-design/layers/data\|data layer]] early — CSV, API bulk, vault zip |
+| Export formats | documented in [data layer](../02-design/layers/data.md) early — CSV, API bulk, vault zip |
 | Migration paths | link to replacement product or open-source fork if any |
 | Retention classes | what you delete vs archive vs legal hold |
 | Verification | sample restore or export audit before power-off |
 
-"Export all my data" is a **use case** — capture it in [[use-cases]] at
+"Export all my data" is a **use case** — capture it in [use-cases](../01-understand/use-cases.md) at
 design time, not the week before shutdown.
 
 ## 4 — Decommission
@@ -174,8 +174,8 @@ Within two weeks of final decommissioning (while memory is fresh):
 
 1. Copy `_templates/post-mortem.md` — product shutdown variant.
 2. Cover: what the product taught, what to reuse, what to never repeat.
-3. Promote patterns to [[06-learn/boilerplate/README|boilerplate]]; log debts
-   in [[DEBT-LEDGER]].
+3. Promote patterns to [boilerplate](../06-learn/boilerplate/README.md); log debts
+   in [DEBT-LEDGER](../06-learn/DEBT-LEDGER.md).
 
 Distinct from incident post-mortems — celebrate learning value alongside
 failures.
@@ -185,13 +185,13 @@ failures.
 You leave this chapter when a decommission record exists and Gate F is
 evidenced. The project's last artifact feeds the **next** project's Ch. 00.
 
-Harness readers: study [[decommission/example-harness-repo-sunset]] and
-[[decommission/example-fictional-saas-sunset]] before filling your own.
+Harness readers: study [example-harness-repo-sunset](decommission/example-harness-repo-sunset.md) and
+[example-fictional-saas-sunset](decommission/example-fictional-saas-sunset.md) before filling your own.
 
 ## What this means for earlier chapters
 
-Sunset obligations are priced in at [[01-understand/use-cases|Understand]]
-(must-have export paths), [[02-design|Design]] (data portability), and
-[[07-ship-operate|Operate]] (signals that trigger the decision). Cadences
+Sunset obligations are priced in at [Understand](../01-understand/use-cases.md)
+(must-have export paths), [Design](../02-design/README.md) (data portability), and
+[Operate](../07-ship-operate/README.md) (signals that trigger the decision). Cadences
 like quarterly portfolio review are **reader-facing suggestions** — this book
 stays artifact-driven.

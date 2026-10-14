@@ -17,11 +17,11 @@ tags:
 ## Context
 
 Track A shipped **Path A** observability at Session 27: LiteLLM success/failure
-callbacks → Langfuse in `track-a/` compose ([[track-a-setup]]). That captures
+callbacks → Langfuse in `track-a/` compose ([track-a-setup](../../05-build/execution-tools/track-a-setup.md)). That captures
 **model-level** traces (tokens, cost, latency, routing) but not IDE agent tool
 spans or harness **process** evidence (Proceed gates, merge, STATE freshness).
 
-The harness is authored on **Track B** (IDE agents) per [[ADR-007-dual-execution-tracks|ADR-007]].
+The harness is authored on **Track B** (IDE agents) per [ADR-007](ADR-007-dual-execution-tracks.md).
 Readers need a decision that names **three integration paths**, states which is
 live today, which is deferred, and what complements git-tracked handoff docs.
 
@@ -35,7 +35,7 @@ paste**:
 | PROJECT_EVALUATION_TRACK-A | Gap list (Path B unwired; doc fragmentation closed here) |
 
 Path A is **implemented**. Path B (OpenHands OTEL) and Path C (IDE hooks) were
-brainstormed in [[session-roadmap-s40-plus]] before arc42 §8 listed Path A only.
+brainstormed in [session-roadmap-s40-plus](../../context/system/sessions/session-roadmap-s40-plus.md) before arc42 §8 listed Path A only.
 
 ## Decision
 
@@ -61,8 +61,8 @@ agents cannot infer from model traces alone:
 
 | Artifact | Captures |
 | :------- | :------- |
-| [[STATE]] + `_index/dashboard/` | Session phase, milestones, bootstrap |
-| [[session-workflow]] gates | Proceed, validate, merge preconditions |
+| [STATE](../../STATE.md) + `_index/dashboard/` | Session phase, milestones, bootstrap |
+| [session-workflow](../../context/system/session-workflow.md) gates | Proceed, validate, merge preconditions |
 | Conventional Commits on Windows (D-001) | What shipped, when, on which branch |
 | `review/*.html` export blocks (S41+) | Human disposition at structured gates |
 
@@ -78,7 +78,7 @@ when observability is claimed operational.
 | Engineering needs cost attribution | **Path A required** |
 | Langfuse compose not running | Hooks queue locally; **fail open** (S44) |
 
-Path B remains **optional depth** — document in [[track-a-setup]] and Ch. 05;
+Path B remains **optional depth** — document in [track-a-setup](../../05-build/execution-tools/track-a-setup.md) and Ch. 05;
 do not block POC or S47 handoff on OTEL wiring.
 
 ### Decision criteria
@@ -87,12 +87,12 @@ do not block POC or S47 handoff on OTEL wiring.
 | :---- | :---- |
 | Docker + OpenHands viable | Path A (+ Path B later for depth) |
 | VS Code / CLI authoring only | Path C + process trace |
-| Multi-day sessions | Path C + temporal layer ([[session-roadmap-s40-plus]] — S45, out of scope here) |
+| Multi-day sessions | Path C + temporal layer ([session-roadmap-s40-plus](../../context/system/sessions/session-roadmap-s40-plus.md) — S45, out of scope here) |
 | Langfuse UI down | Agent work continues; traces buffer or drop — never block |
 
 ### Stack reference (Path A — cite only)
 
-Directed chain from intake synthesis — full wiring in [[track-a-setup]]:
+Directed chain from intake synthesis — full wiring in [track-a-setup](../../05-build/execution-tools/track-a-setup.md):
 
 ```text
 OpenHands → LiteLLM (proxy) → OpenRouter / direct providers
@@ -142,16 +142,16 @@ fallback, virtual keys); OpenRouter is one upstream among many (LiteLLM guide §
 
 | Session | Work |
 | :------ | :--- |
-| S44 | Path C hook bridge + smoke trace | **Done** — see [[path-c-hook-contract]] |
+| S44 | Path C hook bridge + smoke trace | **Done** — see [path-c-hook-contract](../../05-build/execution-tools/path-c-hook-contract.md) |
 | S45 | Temporal awareness schema (referenced only — not in ADR-009 scope) |
 | S47 | Archive consumed `_inbox/` observability reports to `research/` |
 
 ## References
 
-- [[track-a-setup]] — Path A compose and Langfuse keys
-- [[session-roadmap-s40-plus]] — Paths brainstorm and ship bar
-- [[ADR-007-dual-execution-tracks]] — Track A vs B
-- arc42 §8 — [[../arc42/08-crosscutting-concepts#Observability]]
+- [track-a-setup](../../05-build/execution-tools/track-a-setup.md) — Path A compose and Langfuse keys
+- [session-roadmap-s40-plus](../../context/system/sessions/session-roadmap-s40-plus.md) — Paths brainstorm and ship bar
+- [ADR-007-dual-execution-tracks](ADR-007-dual-execution-tracks.md) — Track A vs B
+- arc42 §8 — [08-crosscutting-concepts](../arc42/08-crosscutting-concepts.md#observability)
 - Intake (consumed S42, archive S47): `_inbox/Langfuse Integration Report…`,
   `_inbox/LiteLLM + OpenRouter…`, `_inbox/PROJECT_EVALUATION_TRACK-A.md`
 

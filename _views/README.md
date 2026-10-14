@@ -12,7 +12,7 @@ and frozen history. Markdown canon (`STATE.md`, `_index/dashboard/`,
 surface. Agents patch embedded `DATA`; humans export decisions back via
 **Copy as markdown**.
 
-Design spec: [[html-views-dashboard-design|context/system/html-views-dashboard-design.md]].
+Design spec: [context/system/html-views-dashboard-design.md](../context/system/html-views-dashboard-design.md).
 
 ## Page registry
 
@@ -160,7 +160,7 @@ HTML comment metadata and a markdown table. Required comment fields:
 Pipe characters in table cells MUST be escaped as `\|`. Close gates add scope
 confirmation (past tense) per human gate shape. Implementation:
 `_shared/export.js`. Full contract:
-[[html-views-dashboard-design|context/system/html-views-dashboard-design.md]] §
+[context/system/html-views-dashboard-design.md](../context/system/html-views-dashboard-design.md) §
 Export contract.
 
 ## Viz catalog
@@ -211,8 +211,8 @@ the arc roadmap template.
 | When | Change | Snapshot |
 | :--- | :----- | :------- |
 | 2026-07-03 | A/B promote — kanban wins; `roadmap.layout-b.html` merged into `arc/_template/roadmap.html` | Human tested; no issues |
-| 2026-07-03 | Phase 5 — A/B framework registered | [[html-views-dashboard-plan\|context/system/plans/html-views-dashboard-plan.md]] |
-| 2026-07-03 | Phase 3 — proceed, validate, merge HTML gates + `gate.js` | [[html-views-dashboard-plan\|context/system/plans/html-views-dashboard-plan.md]] |
-| 2026-07-02 | Phase 2 — arc close snapshot, S41/S47 session close pages, session close template | [[html-views-dashboard-plan\|context/system/plans/html-views-dashboard-plan.md]] |
-| 2026-07-02 | Phase 1 — `render.js`, project dashboard, arc roadmap + template; schemas documented | [[html-views-dashboard-plan\|context/system/plans/html-views-dashboard-plan.md]] |
-| 2026-07-02 | Phase 0 start — shared kit (`shell.css`, `export.js`, `nav.js`) + registry | [[html-views-dashboard-plan\|context/system/plans/html-views-dashboard-plan.md]] |
+| 2026-07-03 | Phase 5 — A/B framework registered | [context/system/plans/html-views-dashboard-plan.md](../context/system/plans/html-views-dashboard-plan.md) |
+| 2026-07-03 | Phase 3 — proceed, validate, merge HTML gates + `gate.js` | [context/system/plans/html-views-dashboard-plan.md](../context/system/plans/html-views-dashboard-plan.md) |
+| 2026-07-02 | Phase 2 — arc close snapshot, S41/S47 session close pages, session close template | [context/system/plans/html-views-dashboard-plan.md](../context/system/plans/html-views-dashboard-plan.md) |
+| 2026-07-02 | Phase 1 — `render.js`, project dashboard, arc roadmap + template; schemas documented | [context/system/plans/html-views-dashboard-plan.md](../context/system/plans/html-views-dashboard-plan.md) |
+| 2026-07-02 | Phase 0 start — shared kit (`shell.css`, `export.js`, `nav.js`) + registry | [context/system/plans/html-views-dashboard-plan.md](../context/system/plans/html-views-dashboard-plan.md) |

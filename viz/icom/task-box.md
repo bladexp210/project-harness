@@ -11,7 +11,7 @@ tags: [viz, icom, dynamic, L4, harness]
 obey, produce, and who executes it?
 
 > [!NOTE] REAL — harness-meta
-> **View** of [[tasks/02-track-a-golden-path|04-your-agents/tasks/02-track-a-golden-path.md]].
+> **View** of [04-your-agents/tasks/02-track-a-golden-path.md](../../04-your-agents/tasks/02-track-a-golden-path.md).
 > Canon task file stays source of truth; this diagram is the L4 box rendering.
 
 ## Diagram
@@ -66,14 +66,14 @@ flowchart TB
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| Track A message order | [[../uml/sequence]] Variant B |
-| Track A vs B choice | [[../dmn/decision-table]] Variant B |
-| Agent pack structure | [[../c4/component]] |
-| Full convention | [[icom-plus-convention]] |
+| Track A message order | [sequence](../uml/sequence.md) Variant B |
+| Track A vs B choice | [decision-table](../dmn/decision-table.md) Variant B |
+| Agent pack structure | [component](../c4/component.md) |
+| Full convention | [icom-plus-convention](../../_playground/icom-plus-convention.md) |
 
 ## Where to go next
 
 - **Canon task file:** `04-your-agents/tasks/02-track-a-golden-path.md`
-- **ICOM+ section index:** [[README]]
+- **ICOM+ section index:** [README](README.md)
 - **Template:** `_templates/new-task.md`
-- **Track A setup:** [[track-a-setup]]
+- **Track A setup:** [track-a-setup](../../05-build/execution-tools/track-a-setup.md)

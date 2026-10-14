@@ -30,7 +30,7 @@ Sources: git log, Track A run log, session dashboard history, agent transcript.
 
 **Failure domain:** product · agent-execution · both
 
-**Technique used:** [e.g. trace analysis + 5 Whys — see [[06-learn/post-mortems/README|RCA picker]]]
+**Technique used:** [e.g. trace analysis + 5 Whys — see [RCA picker](../06-learn/post-mortems/README.md)]
 
 [Primary cause in plain English. Optional numbered **5 Whys** chain if helpful.]
 
@@ -52,8 +52,8 @@ not individual blame.
 | :---- | :---- | :---- | :---- |
 | | human / agent | file or date | todo |
 
-Untracked items do not close this post-mortem. Carry into [[03-plan/PROJECT-PLAN|PROJECT-PLAN]],
-[[global|constraints]], `context/`, [[DEBT-LEDGER]], or [[06-learn/boilerplate/README|boilerplate/]].
+Untracked items do not close this post-mortem. Carry into [PROJECT-PLAN](../03-plan/PROJECT-PLAN.md),
+[constraints](../03-plan/constraints/global.md), `context/`, [DEBT-LEDGER](../06-learn/DEBT-LEDGER.md), or [boilerplate/](../06-learn/boilerplate/README.md).
 
 ## Artifacts updated
 
@@ -65,7 +65,7 @@ Untracked items do not close this post-mortem. Carry into [[03-plan/PROJECT-PLAN
 
 [Paste or quote each relevant Gherkin `Then`/`And` with pointer to proof —
 commit hash, test output, or file path. Required when closing a failed task
-per [[ADR-002-modeling-conventions|ADR-002]].]
+per [ADR-002](../02-design/decisions/ADR-002-modeling-conventions.md).]
 
 ```gherkin
 Scenario:

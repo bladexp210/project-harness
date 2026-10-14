@@ -19,7 +19,7 @@ explore without breaking the book spine or failing validators.
 
 | # | Rule |
 | :-- | :-- |
-| 1 | **Not canon** — promote working results into `tasks/`, chapters, or [[viz/README|viz/]]. |
+| 1 | **Not canon** — promote working results into `tasks/`, chapters, or [viz/](../viz/README.md). |
 | 2 | **One folder per experiment** — each carries a `manifest.yaml` (see below). |
 | 3 | **Archive, don't delete** — stale work moves to `_playground/_archive/` (exploration memory). |
 | 4 | **4-day retention** — if not promoted within 4 days of last edit, auto-archive (human runs script). |

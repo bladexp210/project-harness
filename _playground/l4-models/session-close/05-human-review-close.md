@@ -14,11 +14,11 @@ tags: [playground, l4, session, close]
 | :---- | :---- |
 | **Task ID** | `t_05_human_review_close` |
 | **Task name** | Review close pack |
-| **Parent** | `wf_session_close` (L3 · [[L3-wf-session-close]]) |
+| **Parent** | `wf_session_close` (L3 · [L3-wf-session-close](L3-wf-session-close.md)) |
 | **Executor** | `exe_human_alex` · `human:Alex` |
 | **Supervisor** | `human:Alex` (gate before irreversible merge) |
 
-**Maps to:** Human gate before [[session-workflow]] checklist **E. Git**.
+**Maps to:** Human gate before [session-workflow](../../../context/system/session-workflow.md) checklist **E. Git**.
 
 **C4 link:** reviews **module** `m_book_repo` close artifacts (C4 Container).
 
@@ -28,20 +28,20 @@ tags: [playground, l4, session, close]
 
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
-| Draft `STATE.md` | file | IDE diff | `exe_agent_cursor` ← [[02-draft-state]] |
-| Draft dashboard L1–L3 | file | IDE diff | `exe_agent_cursor` ← [[03-draft-dashboard]] |
-| Bootstrap + merge PS blocks | shell | chat | `exe_agent_cursor` ← [[04-draft-bootstrap]] |
-| Final validate evidence | shell | chat | `exe_agent_cursor` ← [[01-final-validate]] |
+| Draft `STATE.md` | file | IDE diff | `exe_agent_cursor` ← [02-draft-state](02-draft-state.md) |
+| Draft dashboard L1–L3 | file | IDE diff | `exe_agent_cursor` ← [03-draft-dashboard](03-draft-dashboard.md) |
+| Bootstrap + merge PS blocks | shell | chat | `exe_agent_cursor` ← [04-draft-bootstrap](04-draft-bootstrap.md) |
+| Final validate evidence | shell | chat | `exe_agent_cursor` ← [01-final-validate](01-final-validate.md) |
 | Optional: human re-run `validate_md --all` | shell | terminal | `exe_human_alex` |
 
 ## Output
 
 | Artifact | Form | Where | To |
 | :------- | :--- | :---- | :--- |
-| **Approve** — OK to merge | signal | chat | `exe_human_alex` → [[06-human-merge-main]] |
-| **Reject STATE** — fix threads/position | signal | chat | `exe_agent_cursor` → [[02-draft-state]] |
-| **Reject dashboard** — fix zoom files | signal | chat | `exe_agent_cursor` → [[03-draft-dashboard]] |
-| **Reject bootstrap** — fix next-session block | signal | chat | `exe_agent_cursor` → [[04-draft-bootstrap]] |
+| **Approve** — OK to merge | signal | chat | `exe_human_alex` → [06-human-merge-main](06-human-merge-main.md) |
+| **Reject STATE** — fix threads/position | signal | chat | `exe_agent_cursor` → [02-draft-state](02-draft-state.md) |
+| **Reject dashboard** — fix zoom files | signal | chat | `exe_agent_cursor` → [03-draft-dashboard](03-draft-dashboard.md) |
+| **Reject bootstrap** — fix next-session block | signal | chat | `exe_agent_cursor` → [04-draft-bootstrap](04-draft-bootstrap.md) |
 
 ## Tools
 
@@ -55,7 +55,7 @@ tags: [playground, l4, session, close]
 
 | Type | Reference |
 | :--- | :-------- |
-| Policy | [[session-workflow]] — dashboard + STATE mandatory; canvas optional |
+| Policy | [session-workflow](../../../context/system/session-workflow.md) — dashboard + STATE mandatory; canvas optional |
 | Policy | D-004 — inaccurate STATE = disoriented next session |
 | Gherkin | see below |
 

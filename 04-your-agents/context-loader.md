@@ -8,7 +8,7 @@ tags: [agents, context, adr-006]
 # Context loader — teaching-block strip (ADR-006)
 
 The Ch. 04 context loader is the named consumer of the teaching-block
-convention from [[ADR-006-teaching-block-convention|ADR-006]]. When an agent
+convention from [ADR-006](../02-design/decisions/ADR-006-teaching-block-convention.md). When an agent
 loads a dual-purpose file as **task context**, strip instructional callouts;
 pass only artifact markdown to the model.
 
@@ -57,7 +57,7 @@ tasks/*.md  context_load[]
 `scripts/task_context.py` (Ch. 05) resolves paths from the assigned agent yaml
 and the task frontmatter, merges lists (agent defaults first, task paths
 append, deduped), then calls `load_task_context`. Documented in
-[[openhands]].
+[openhands](../05-build/execution-tools/openhands.md).
 
 ```powershell
 python scripts/task_context.py 04-your-agents/tasks/01-threat-model-premortem.md

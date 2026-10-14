@@ -56,5 +56,5 @@ tags: [playground, l1, session, capability]
 
 | Process ID | Name | File |
 | :--------- | :--- | :--- |
-| `proc_session_build` | Run one session build | [[L2-proc-session-build]] |
-| `proc_session_close` | Close session · merge `main` | [[../session-close/L2-proc-session-close|L2 close]] |
+| `proc_session_build` | Run one session build | [L2-proc-session-build](L2-proc-session-build.md) |
+| `proc_session_close` | Close session · merge `main` | [L2 close](../session-close/L2-proc-session-close.md) |

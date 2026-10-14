@@ -32,7 +32,7 @@ Three independent dimensions driven by criticality:
 | Dev Agent | agents/dev-agent.yaml | complexity | Execute bounded tasks |
 | General Tester | agents/tester-agent.yaml | fast | "Your job is to break this" |
 | Security Tester | agents/security-tester.yaml | capable | Injection, auth bypass, CVE patterns |
-| Evaluator | agents/evaluator.yaml | cheap/fast | Score options against criteria. Find what each costs. Bias mitigations required — see [[evaluator]]. |
+| Evaluator | agents/evaluator.yaml | cheap/fast | Score options against criteria. Find what each costs. Bias mitigations required — see [evaluator](../../04-your-agents/evaluator.md). |
 | Red-team | agents/red-team-agent.yaml | frontier | Challenge decisions before they are made. Holds the security/compliance seat: runs ADR pre-mortems, owns the threat model (trust boundaries, abuse cases, AI-specific threats), challenges use-case must-have lane omissions. Fork a specialist if post-mortems show the charter overloaded. |
 
 **Post-mortem support:** rohansx/reflect MCP — not an agent, infrastructure.
@@ -47,7 +47,7 @@ AI agents reduce **accidental** complexity — boilerplate, test scaffolding,
 trace plumbing — not **essential** complexity in your domain model, compliance
 rules, or user workflows. If a difficulty would survive a vendor or framework
 change, it deserves design time (ADR, layer decision), not a larger prompt. See
-the Brooks test in [[02-design/README|Ch. 02]] five-paper checklist.
+the Brooks test in [Ch. 02](../../02-design/README.md) five-paper checklist.
 
 ---
 

@@ -39,7 +39,7 @@ flowchart LR
 
 ## Dual path
 
-Every demanding section offers two entry points ([[book-architecture]]):
+Every demanding section offers two entry points ([book-architecture](../../system/book-architecture.md)):
 
 | Path | Reader signal | Content shape |
 | :---- | :---- | :---- |
@@ -72,5 +72,5 @@ Gap labels on L2:
 ## Harness vs reader product
 
 Replace this file with role-based flows, UI shells, and latency budgets from
-your [[02-design/layers/ux|UX layer design]]. Keep the **dual path** pattern
+your [UX layer design](../../../02-design/layers/ux.md). Keep the **dual path** pattern
 if your docs serve both humans and agents.

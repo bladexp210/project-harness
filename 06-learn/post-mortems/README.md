@@ -17,8 +17,8 @@ review gates) — not the model or the human in isolation.
    `POSTMORTEM-YYYY-MM-DD-<task-or-session-id>.md`
 2. Fill every section before the next task on the same scope starts.
 3. Carry **Action items** into PROJECT-PLAN, constraints, context files, or
-   [[DEBT-LEDGER]] — untracked action items do not reduce recurrence.
-4. Promote reusable fixes to [[06-learn/boilerplate/README|boilerplate/]].
+   [DEBT-LEDGER](../DEBT-LEDGER.md) — untracked action items do not reduce recurrence.
+4. Promote reusable fixes to [boilerplate/](../boilerplate/README.md).
 
 ## When to write
 
@@ -31,7 +31,7 @@ review gates) — not the model or the human in isolation.
 
 ## Worked harness example
 
-See [[example-harness-doc-only-gap]] — fictional S22-style gap analysis showing
+See [example-harness-doc-only-gap](example-harness-doc-only-gap.md) — fictional S22-style gap analysis showing
 how to quote Gherkin evidence and file constraint updates.
 
 ## RCA technique picker
@@ -72,6 +72,6 @@ actionable fix. **Recurring rule:** start at L1 before per-task traces.
 
 **Track B trace primitive:** reconstruct agent steps from `logs/sessions/`,
 Langfuse Path C, and git timestamps before choosing a deeper technique. See
-[[path-c-hook-contract]] and [[harness-session-close-checklist]].
+[path-c-hook-contract](../../05-build/execution-tools/path-c-hook-contract.md) and [harness-session-close-checklist](../boilerplate/specs/harness-session-close-checklist.md).
 
 Provenance: `research/archive/Root Cause Analysis Techniques for AI-Assisted Software Development.md`.

@@ -16,10 +16,10 @@ tags:
 
 ## Context
 
-[[ADR-010-vscode-hub-barbell|ADR-010]] split book-owned execution core from
+[ADR-010](ADR-010-vscode-hub-barbell.md) split book-owned execution core from
 reader-owned **tooling-manifest** (product names). Host facts — OS, shell,
 path style, copy-paste dialect — were still **implicit**: D-001 read as
-"Windows PowerShell only" across `session-workflow`, [[Agents.md|Agents]], and
+"Windows PowerShell only" across `session-workflow`, [Agents](../../Agents.md), and
 `project.md`. The next reader on macOS or WSL would get wrong command blocks
 and unsafe git guidance.
 
@@ -58,7 +58,7 @@ Book chapters reference D-001; **host profile holds the instance**.
 | Track B build / meta-work with shell blocks | Yes |
 | Pure prose / ADR writing | Usually no |
 
-Add row to [[Agents.md|Agents]] load table. Optional later: `task_context.py`
+Add row to [Agents](../../Agents.md) load table. Optional later: `task_context.py`
 auto-include for `shell:`-tagged tasks.
 
 **Reversibility & blast radius:** Remove `host.md` and revert D-001 wording —
@@ -100,7 +100,7 @@ none.
 
 ## Reference
 
-- Living instance: [[host|constraints/host]]
-- Template: [[host-profile|_templates/host-profile.md]]
-- Prior seam: [[ADR-010-vscode-hub-barbell]]
-- Git handoff: [[handoff-and-git]]
+- Living instance: [constraints/host](../../03-plan/constraints/host.md)
+- Template: [_templates/host-profile.md](../../_templates/host-profile.md)
+- Prior seam: [ADR-010-vscode-hub-barbell](ADR-010-vscode-hub-barbell.md)
+- Git handoff: [handoff-and-git](../../context/architecture/communication/handoff-and-git.md)

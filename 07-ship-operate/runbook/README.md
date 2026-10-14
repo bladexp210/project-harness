@@ -24,7 +24,7 @@ This book maintains one worked example for its own operational surface:
 
 | Runbook | Covers |
 | :---- | :---- |
-| [[example-harness-track-a-runbook]] | `validate_md.py`, pre-commit, Track A Docker stack health |
+| [example-harness-track-a-runbook](example-harness-track-a-runbook.md) | `validate_md.py`, pre-commit, Track A Docker stack health |
 
 Your reader product replaces this with your API, database, and deployment
 targets.
@@ -33,6 +33,6 @@ targets.
 
 Reference runbook paths in:
 
-- [[03-plan/PROJECT-PLAN|PROJECT-PLAN]] operational tasks
+- [PROJECT-PLAN](../../03-plan/PROJECT-PLAN.md) operational tasks
 - Post-mortem **Artifacts updated** sections
 - Layer 2 context if the service is architecturally significant

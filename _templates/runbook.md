@@ -67,7 +67,7 @@ tags: [runbook]
 
 If this service or a capability within it will be **retired** (Ch. 07 — not
 whole-product sunset): deprecate date, migration path, credential revocation
-checklist. See [[ADR-003-removal-vocabulary]].
+checklist. See [ADR-003-removal-vocabulary](../02-design/decisions/ADR-003-removal-vocabulary.md).
 
 ## Contacts and escalation
 

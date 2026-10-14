@@ -9,9 +9,9 @@ tags: [state, handoff, workflow]
 # Session workflow — bootstrap, build, close
 
 Mandatory procedure for human–agent sessions on this repo. Complements
-[[STATE]] (current truth) and [[_index/dashboard/README|dashboard]] (visual
+[STATE](../../STATE.md) (current truth) and [dashboard](../../_index/dashboard/README.md) (visual
 status at three zoom levels). Git writes stay on the **host shell** (D-001) per
-[[host|constraints/host]].
+[constraints/host](../../03-plan/constraints/host.md).
 
 ## Roles
 
@@ -32,10 +32,10 @@ status at three zoom levels). Git writes stay on the **host shell** (D-001) per
 
 ### Phase 1 — Plan (agent, read-only)
 
-1. Read [[Agents.md|Agents]] → [[STATE]] → `_index/dashboard/01-context.md`.
+1. Read [Agents](../../Agents.md) → [STATE](../../STATE.md) → `_index/dashboard/01-context.md`.
 2. Copy **Next session bootstrap** from STATE into the plan (branch name,
    primary, load first, defer, human gate).
-3. Reply using the **session plan shape** in [[Agents.md|Agents]] § Session
+3. Reply using the **session plan shape** in [Agents](../../Agents.md) § Session
    start — scope future tense, questions, evidence table, decision rule.
 4. **Stop.** Wait for human **proceed** or scope change.
 
@@ -81,7 +81,7 @@ close draft is the **postcondition** evidence pass before merge is offered.
 
 The agent completes the close checklist **before** suggesting merge. The human
 validates **both** the session work **and** the handoff docs in one gate — then
-runs git on the host shell (D-001) per [[host|constraints/host]]. **Never merge
+runs git on the host shell (D-001) per [constraints/host](../../03-plan/constraints/host.md). **Never merge
 with stale STATE or dashboard.**
 
 ### Order (non-negotiable)
@@ -115,7 +115,7 @@ HTML is the review surface only.
 - [ ] **Current branch** → `main` after merge instructions
 - [ ] **Current position** — update Snapshot + Milestones; replace **Last closed
       session**; prepend **Recent sessions** table (max **four** rows); shift
-      fifth row to [[session-position-archive]]; never append narrative paragraphs
+      fifth row to [session-position-archive](sessions/session-position-archive.md); never append narrative paragraphs
 
 ### C. Dashboard (`_index/dashboard/`)
 
@@ -173,7 +173,7 @@ Canvas at session close is **optional** (`canvases/project-state.canvas.tsx`) �
 dashboard + STATE are **mandatory**.
 
 **Roadmap documents:** multi-session arcs require **Target snapshot (SNN end state)**
-— see [[roadmap-document-shape]] (mandatory section order + close rules).
+— see [roadmap-document-shape](roadmap-document-shape.md) (mandatory section order + close rules).
 
 ## Batch discipline during build
 
@@ -184,7 +184,7 @@ After each logical batch:
    the human explicitly asks.
 
 **Markdown tables:** rows must be consecutive (no blank lines between `| … |`
-lines). Broken tables fail `validate_md` — see [[book-architecture]].
+lines). Broken tables fail `validate_md` — see [book-architecture](book-architecture.md).
 
 ## Failure modes
 
@@ -199,5 +199,5 @@ lines). Broken tables fail `validate_md` — see [[book-architecture]].
 
 ## Reference
 
-Full session prose history: [[session-docs]]. Improvement analysis:
+Full session prose history: [session-docs](session-docs.md). Improvement analysis:
 `project-harness-improvement-proposal.md` (vault root).

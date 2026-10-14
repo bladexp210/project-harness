@@ -12,13 +12,13 @@ OpenHands is the book's **ideal (Track A)** execution runtime: a self-hosted,
 Docker-based loop where an LLM reads your repo, edits files, runs commands,
 and iterates until the task's acceptance criteria are met. Design work stays in
 your design tool (Ch. 00); OpenHands owns **bounded build tasks** from
-`tasks/*.md`. For Track B fallback, see [[track-b-checklist]].
+`tasks/*.md`. For Track B fallback, see [track-b-checklist](track-b-checklist.md).
 
 > [!LEARN] Learn It
 > **Why OpenHands here:** local control, full repo access, reproducible
 > sandboxes, and a path to LiteLLM-backed model aliases (same pattern as
-> Ch. 04 agent yaml). Track B (IDE/CLI) uses [[track-b-checklist]] instead
-> of per-tool guides — see [[ADR-007-dual-execution-tracks]].
+> Ch. 04 agent yaml). Track B (IDE/CLI) uses [track-b-checklist](track-b-checklist.md) instead
+> of per-tool guides — see [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md).
 
 > [!TIP] Fast Track
 > Install → point at repo → assemble context → paste prompt → review diff →
@@ -30,7 +30,7 @@ your design tool (Ch. 00); OpenHands owns **bounded build tasks** from
 | Requirement | Notes |
 | :---- | :---- |
 | Docker | OpenHands runs in containers — see [OpenHands docs](https://docs.openhands.dev/) |
-| Git repo | This vault cloned; branch per session (`session-NN/<topic>`); target layout: [[bare-worktree-setup]] |
+| Git repo | This vault cloned; branch per session (`session-NN/<topic>`); target layout: [bare-worktree-setup](bare-worktree-setup.md) |
 | LiteLLM config | Model aliases from agent yaml (`frontier-llm`, `capable-llm`, …) |
 | Python 3 | Context assembly uses `scripts/task_context.py` (stdlib + PyYAML if installed) |
 
@@ -40,7 +40,7 @@ when you fill it — the book does not pin a version for you.
 ## Context before code
 
 Agents must not receive raw dual-purpose chapter files. The execution path
-loads **artifact-only** markdown per [[context-loader]] and ADR-006:
+loads **artifact-only** markdown per [context-loader](../../04-your-agents/context-loader.md) and ADR-006:
 
 ```mermaid
 sequenceDiagram
@@ -75,14 +75,14 @@ python scripts/task_context.py 04-your-agents/tasks/01-threat-model-premortem.md
 
 Follow [OpenHands installation](https://github.com/All-Hands-AI/OpenHands)
 for Docker compose or desktop — mount **one session worktree** as the workspace
-(see [[bare-worktree-setup]]). A single clone is an acceptable ramp until you
+(see [bare-worktree-setup](bare-worktree-setup.md)). A single clone is an acceptable ramp until you
 adopt bare + worktrees.
 
 ## Run a task
 
 ### 1. Pick the task
 
-Open the task file (example: [[tasks/01-threat-model-premortem]]). Confirm:
+Open the task file (example: [01-threat-model-premortem](../../04-your-agents/tasks/01-threat-model-premortem.md)). Confirm:
 
 - `agent` field matches a yaml in `04-your-agents/agents/`
 - `context_load` lists every input the agent needs
@@ -100,7 +100,7 @@ should remain. ADRs and `context/system/sessions/` pass through unchanged.
 
 ### 3. Open OpenHands
 
-- Workspace: **session worktree** directory on branch `session-NN/<topic>` — see [[bare-worktree-setup]]
+- Workspace: **session worktree** directory on branch `session-NN/<topic>` — see [bare-worktree-setup](bare-worktree-setup.md)
 - Model: match the task's agent yaml (`red-team-agent` → `frontier-llm`)
 
 ### 4. Initial prompt template
@@ -124,7 +124,7 @@ You are the {agent role} for this project.
 
 ### 5. Human review gate (mandatory)
 
-Per [[global|constraints]] and D-001: **you** review every diff on Windows,
+Per [constraints](../../03-plan/constraints/global.md) and D-001: **you** review every diff on Windows,
 run `python scripts/validate_md.py --all`, then commit with Conventional
 Commits. The agent suggests; you approve.
 
@@ -137,7 +137,7 @@ git commit -m "type(scope): subject" -m "Body with why."
 ## Harness example — task 01
 
 The book's first execution exercise is the red-team pre-mortem on
-[[threat-model]] — smallest task that exercises agent assignment, context
+[threat-model](../../02-design/threat-model.md) — smallest task that exercises agent assignment, context
 load, and Gherkin closure without product code.
 
 ```powershell
@@ -166,7 +166,7 @@ Document the switch in a short ADR if it affects team workflow.
 
 ## Reference
 
-- Agent roster: [[agent-team]]
-- Loader spec: [[context-loader]]
-- Git layout: [[bare-worktree-setup]]
+- Agent roster: [agent-team](../../context/system/agent-team.md)
+- Loader spec: [context-loader](../../04-your-agents/context-loader.md)
+- Git layout: [bare-worktree-setup](bare-worktree-setup.md)
 - Seed repo: `github.com/All-Hands-AI/OpenHands`

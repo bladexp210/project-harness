@@ -111,7 +111,7 @@ sequenceDiagram
 
 | Message | Meaning |
 | :------ | :------ |
-| LiteLLM health | Prerequisite before step 1 (see [[task-box]]) |
+| LiteLLM health | Prerequisite before step 1 (see [task-box](../icom/task-box.md)) |
 | Scope files only | `openhands.md` log + `project.md` Models |
 | Diff for review | Human gate — no agent commit |
 | Virtual key | OpenHands uses LiteLLM virtual key |
@@ -123,7 +123,7 @@ sequenceDiagram
 | Title = question | Task 02 message trace |
 | Labels ≤ 5 words | Yes |
 | Embedded legend | Above |
-| Pairs with ICOM | [[../icom/task-box]] |
+| Pairs with ICOM | [task-box](../icom/task-box.md) |
 
 ---
 
@@ -131,13 +131,13 @@ sequenceDiagram
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| C4 runtime on boxes | [[../c4/dynamic]] |
-| Gateway branching | [[../bpmn/process-subset]] |
-| State machines | [[state]] |
-| Deployment nodes | [[../c4/deployment]] |
+| C4 runtime on boxes | [dynamic](../c4/dynamic.md) |
+| Gateway branching | [process-subset](../bpmn/process-subset.md) |
+| State machines | [state](state.md) |
+| Deployment nodes | [deployment](../c4/deployment.md) |
 
 ## Where to go next
 
-- **UML section index:** [[README]]
-- **C4 Dynamic alternative:** [[../c4/dynamic]]
-- **Track A setup:** [[track-a-setup]]
+- **UML section index:** [README](README.md)
+- **C4 Dynamic alternative:** [dynamic](../c4/dynamic.md)
+- **Track A setup:** [track-a-setup](../../05-build/execution-tools/track-a-setup.md)

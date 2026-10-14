@@ -8,7 +8,7 @@ tags: [context, task-03, harness]
 
 # Implementation — populating the context tree (task 03)
 
-Narrow context for [[04-your-agents/tasks/03-populate-context-tree|Task 03]].
+Narrow context for [Task 03](../../../04-your-agents/tasks/03-populate-context-tree.md).
 Layer 2 arch files describe domains; this file lists exactly what task 03
 creates and how to verify it.
 
@@ -27,7 +27,7 @@ creates and how to verify it.
 
 ## PROJECT-PLAN linkage
 
-Row 03 in [[03-plan/PROJECT-PLAN|PROJECT-PLAN]] points to the task file.
+Row 03 in [PROJECT-PLAN](../../../03-plan/PROJECT-PLAN.md) points to the task file.
 Depends on task 02 (Track A proof). Unblocks task 04 (Ch. 06 learn loop, S23).
 
 ## Verification commands

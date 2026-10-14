@@ -15,7 +15,7 @@ three-layer `context/` tree from Ch. 04 (S22 worked example) plus a trimmed
 > [!LEARN] Learn It
 > The harness repo teaches with **harness-meta** context (`context/` in this
 > book). Your product replaces Layer 2 and Layer 3 with distillations from
-> [[02-design/layers/data|Ch. 02 layer designs]]. Layer 1 (`context/system/`)
+> [Ch. 02 layer designs](../../../02-design/layers/data.md). Layer 1 (`context/system/`)
 > holds cross-cutting notes agents load on most tasks.
 
 > [!TIP] Fast Track
@@ -91,14 +91,14 @@ python scripts/task_context.py path/to/your-task.md
 ```
 
 Preview stripped context before sending to an agent. See
-[[context/README|context/README.md]] in the harness for the full layer map.
+[context/README.md](context/README.md) in the harness for the full layer map.
 
 ## Reference in this book
 
 | Topic | Where |
 | :---- | :---- |
 | Context tree pattern | `context/README.md` (harness-meta example) |
-| Engineering handoff | [[engineering-handoff-checklist]] |
-| Populate context (task 03) | [[tasks/03-populate-context-tree]] |
-| Git bare + worktrees (full) | [[bare-worktree-setup]] |
+| Engineering handoff | [engineering-handoff-checklist](../../engineering-handoff-checklist.md) |
+| Populate context (task 03) | [03-populate-context-tree](../../../04-your-agents/tasks/03-populate-context-tree.md) |
+| Git bare + worktrees (full) | [bare-worktree-setup](../../../05-build/execution-tools/bare-worktree-setup.md) |
 | Agent contracts | Ch. 04 `agents/*.yaml` |

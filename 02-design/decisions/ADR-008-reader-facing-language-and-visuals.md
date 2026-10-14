@@ -15,7 +15,7 @@ tags:
 
 ## Context
 
-The book serves **complete novices and seasoned designers** ([[Agents.md|Agents]]).
+The book serves **complete novices and seasoned designers** ([Agents](../../Agents.md)).
 Many readers use English as a second or third language. Experts still lose time
 when prose hides structure behind jargon, long sentences, or in-group shorthand
 ("human gate," "canon home," "stub expansion").
@@ -24,7 +24,7 @@ ADR-006 solved **machine** legibility (strip teaching blocks for agents). This A
 solves **human** legibility: lower decode cost so capacity goes to competence and
 problem-solving — not to deciphering book-culture.
 
-The [[manifesto]] already commits to trust and hand-off readability. Session 14
+The [manifesto](../../00-start-here/manifesto.md) already commits to trust and hand-off readability. Session 14
 human direction: adopt the same standard in co-author chat and in every
 reader-facing file.
 
@@ -66,7 +66,7 @@ with the plain phrase in reader-facing text.
 | Parts and connections | Mermaid `flowchart` | ADR-002: ≤ 20 nodes |
 | Order of handoffs | Mermaid `sequenceDiagram` | Same |
 | Compare two paths | Markdown table (2+ columns) | Prefer over prose paragraphs |
-| Repeatable procedure | Numbered checklist table | See [[track-b-checklist]] |
+| Repeatable procedure | Numbered checklist table | See [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) |
 | States | `stateDiagram-v2` | When status matters |
 
 Every diagram gets **one caption line** under it — fill in for the reader job:
@@ -79,7 +79,7 @@ No diagram without a stated reader job. **Markdown tables:** pipe rows must be
 
 ### 4. Dual path unchanged
 
-[[book-architecture]] scaffold + fast track stays. ADR-008 tightens **both**
+[book-architecture](../../context/system/book-architecture.md) scaffold + fast track stays. ADR-008 tightens **both**
 paths — not dumber content, less ceremony:
 
 - `[!LEARN]` — full section shape (purpose → visual → steps → exceptions)
@@ -97,7 +97,7 @@ At section end, when a decision or skill should be confirmed:
 Use for "stop and verify" — not for general tips (those stay `[!TIP]`).
 
 **Human gate pages** (task review, session close, merge approval) follow the
-six-step shape in [[Agents.md|Agents]] § How to communicate. Full templates
+six-step shape in [Agents](../../Agents.md) § How to communicate. Full templates
 below. Confirmed Session 15 (task 01 pre-mortem review).
 
 #### Step 1 — What your review will decide (future tense, **start**)
@@ -193,7 +193,7 @@ uses it first; git write actions as copy-paste blocks only (D-001).
 
 ### 7. Agent chat (co-author sessions)
 
-Summarized in [[Agents.md|Agents]] § How to communicate. Full rules here.
+Summarized in [Agents](../../Agents.md) § How to communicate. Full rules here.
 
 ## Why
 
@@ -233,8 +233,8 @@ Same legibility thesis as the manifesto addendum on plain language.
 
 ## Consequences
 
-- [[Agents.md|Agents]] gains § How to communicate (pointer here).
-- [[manifesto]] gains addendum § Plain language and visuals.
+- [Agents](../../Agents.md) gains § How to communicate (pointer here).
+- [manifesto](../../00-start-here/manifesto.md) gains addendum § Plain language and visuals.
 - New co-author and chapter work defaults to section shape + language rules.
 - book-architecture execution-tools line already superseded by ADR-007
   (Track B checklist, not per-tool stubs) — update when that file is next edited.

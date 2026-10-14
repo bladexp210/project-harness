@@ -41,7 +41,7 @@ flowchart LR
     C07 --> C08[08 Sunset]
 ```
 
-Legend: **done** 00–03 · **partial** 04–08 · **meta** `_playground/` + `context/system/` + **`viz/`** + **`arc42/`** + **`review/`** + **ADR-009–011**. Partial chapters: see [[02-containers]].
+Legend: **done** 00–03 · **partial** 04–08 · **meta** `_playground/` + `context/system/` + **`viz/`** + **`arc42/`** + **`review/`** + **ADR-009–011**. Partial chapters: see [02-containers](02-containers.md).
 
 Weighted spine progress ≈ **98%**. Post-arc42 arc S41–S47 **complete**. Mission: solo POC → engineering handoff **achieved**.
 

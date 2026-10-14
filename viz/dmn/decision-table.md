@@ -16,7 +16,7 @@ tags: [viz, dmn, decision, L3, L4, harness]
 
 > [!TIP] When to use which
 > Use **Variant A** at the Plan → Execute gateway. Use **Variant B** at Task 02
-> mechanism selection (see [[../icom/task-box]] Controls).
+> mechanism selection (see [task-box](../icom/task-box.md) Controls).
 
 ---
 
@@ -48,7 +48,7 @@ tags: [viz, dmn, decision, L3, L4, harness]
 | Revise plan | Updated chat plan; still no branch |
 | Clarify | Human answers Q1–Qn from session plan |
 | Re-plan | New defer/primary lists |
-| Stay in Plan | Agent waits — per [[session-workflow]] |
+| Stay in Plan | Agent waits — per [session-workflow](../../context/system/session-workflow.md) |
 
 ### ESL checklist — Variant A
 
@@ -57,7 +57,7 @@ tags: [viz, dmn, decision, L3, L4, harness]
 | Title = question | When to leave Plan |
 | Labels ≤ 5 words | Yes |
 | Embedded legend | Above |
-| Pairs with BPMN A | [[../bpmn/process-subset]] Variant A |
+| Pairs with BPMN A | [process-subset](../bpmn/process-subset.md) Variant A |
 
 ---
 
@@ -78,7 +78,7 @@ tags: [viz, dmn, decision, L3, L4, harness]
 | Column | Role |
 | :----- | :---- |
 | Docker available | Compose can start on documented host |
-| API keys configured | `.env` per [[track-a-setup]] — not committed |
+| API keys configured | `.env` per [track-a-setup](../../05-build/execution-tools/track-a-setup.md) — not committed |
 | LiteLLM health | HTTP 200 before OpenHands |
 | Outcome | Track selection or blocked state |
 
@@ -87,7 +87,7 @@ tags: [viz, dmn, decision, L3, L4, harness]
 | Outcome | Canon reference |
 | :------ | :-------------- |
 | Track A | Task 02 Mechanisms table — ideal path |
-| Track B | [[track-b-checklist]] — fallback only with blocker note |
+| Track B | [track-b-checklist](../../05-build/execution-tools/track-b-checklist.md) — fallback only with blocker note |
 | Block | Second Gherkin scenario in task 02 |
 
 ### ESL checklist — Variant B
@@ -97,7 +97,7 @@ tags: [viz, dmn, decision, L3, L4, harness]
 | Title = question | Track A or B for task 02 |
 | Labels ≤ 5 words | Yes |
 | Embedded legend | Above |
-| Pairs with ICOM | [[../icom/task-box]] |
+| Pairs with ICOM | [task-box](../icom/task-box.md) |
 
 ---
 
@@ -105,13 +105,13 @@ tags: [viz, dmn, decision, L3, L4, harness]
 
 | Also draw when | Diagram |
 | :------------- | :------ |
-| Process flow around gateway | [[../bpmn/process-subset]] |
-| State after decision | [[../uml/state]] |
-| ICOM Controls column | [[../icom/task-box]] |
-| Irreversible gate Hoare fields | [[icom-plus-irreversible-gates]] |
+| Process flow around gateway | [process-subset](../bpmn/process-subset.md) |
+| State after decision | [state](../uml/state.md) |
+| ICOM Controls column | [task-box](../icom/task-box.md) |
+| Irreversible gate Hoare fields | [icom-plus-irreversible-gates](../../context/system/icom-plus-irreversible-gates.md) |
 
 ## Where to go next
 
-- **DMN section index:** [[README]]
+- **DMN section index:** [README](README.md)
 - **Task 02 acceptance:** `04-your-agents/tasks/02-track-a-golden-path.md`
-- **ADR dual tracks:** [[ADR-007-dual-execution-tracks]]
+- **ADR dual tracks:** [ADR-007-dual-execution-tracks](../../02-design/decisions/ADR-007-dual-execution-tracks.md)

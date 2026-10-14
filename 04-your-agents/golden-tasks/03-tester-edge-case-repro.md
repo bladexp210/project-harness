@@ -23,12 +23,12 @@ produce a failing repro: health check not cited in the log row.
 
 ## Inputs
 
-- [[tasks/02-track-a-golden-path]] (acceptance criteria — artifact)
+- [02-track-a-golden-path](../tasks/02-track-a-golden-path.md) (acceptance criteria — artifact)
 - Tester agent defaults (`lifecycle-playbook-seed.md`, `agent-team.md`)
 
 ## Controls
 
-Inherited constraints: [[global|constraints]].
+Inherited constraints: [constraints](../../03-plan/constraints/global.md).
 
 **Scope — modify:** none (fixture — report only)
 

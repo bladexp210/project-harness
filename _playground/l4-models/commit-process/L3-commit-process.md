@@ -12,7 +12,7 @@ tags: [playground, l3, commit]
 the session branch?
 
 This is **Track B** (book repo session work), not reader product architecture.
-Governed by [[session-workflow]] batch discipline and D-001 (git on Windows only).
+Governed by [session-workflow](../../../context/system/session-workflow.md) batch discipline and D-001 (git on Windows only).
 
 **Workflow ID:** `wf_commit_process` · **C4 link:** spans session-build **module**
 `m_book_repo` (Container diagram label unchanged).
@@ -25,7 +25,7 @@ Governed by [[session-workflow]] batch discipline and D-001 (git on Windows only
 | :---- | :---- |
 | **Workflow ID** | `wf_commit_process` |
 | **Workflow name** | Commit one logical batch |
-| **Parent** | `proc_session_build` (L2 · [[L2-proc-session-build]]) |
+| **Parent** | `proc_session_build` (L2 · [L2-proc-session-build](L2-proc-session-build.md)) |
 | **Level** | L3 (process stack) |
 
 ### Orchestrator
@@ -38,7 +38,7 @@ and git author on the protected path (D-001). **Not** the same as per-task Execu
 | Artifact | Form | Where | From |
 | :------- | :--- | :---- | :--- |
 | Modified files on session branch | file | worktree | `exe_agent_cursor` |
-| `Agents.md` + [[global]] commit rules | file | repo paths | `human:Alex` |
+| `Agents.md` + [global](../../../03-plan/constraints/global.md) commit rules | file | repo paths | `human:Alex` |
 | Session intent / prior batch output | signal | chat | `human:Alex` |
 
 ### Output
@@ -71,10 +71,10 @@ flowchart LR
 
 | # | Task | File |
 | :-: | :--- | :--- |
-| 01 | Validate batch | [[01-validate-batch]] |
-| 02 | Draft commit blocks | [[02-draft-commit-blocks]] |
-| 03 | Human review diff | [[03-human-review-diff]] |
-| 04 | Human git commit | [[04-human-git-commit]] |
+| 01 | Validate batch | [01-validate-batch](01-validate-batch.md) |
+| 02 | Draft commit blocks | [02-draft-commit-blocks](02-draft-commit-blocks.md) |
+| 03 | Human review diff | [03-human-review-diff](03-human-review-diff.md) |
+| 04 | Human git commit | [04-human-git-commit](04-human-git-commit.md) |
 
 Handoff rule: task **Output to** must match next task **Input from** (or **to**
 recipient who then supplies next input).
